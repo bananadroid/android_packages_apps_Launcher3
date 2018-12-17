@@ -16,6 +16,9 @@
 -->
 <resources>
 
+    <!-- QuickSpace -->
+    <dimen name="quickspace_title_size">24dp</dimen>
+
     <!-- Search box radius -->
     <dimen name="bg_searchbox_radius">58dp</dimen>
 
