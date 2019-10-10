@@ -32,4 +32,7 @@
     <!-- Default icon pack package. Set to "android" to use default / original icons -->
     <string name="icon_pack_default_pkg" translatable="false">android</string>
 
+    <!-- String representing the fragment class for about activity.-->
+    <string name="about_fragment_name" translatable="false">com.android.launcher3.settings.SettingsAbout$AboutFragment</string>
+
 </resources>
