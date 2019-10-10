@@ -97,4 +97,11 @@
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">Use taskbar</string>
     <string name="pref_allow_phone_taskbar_summary">For opening and switching apps anywhere</string>
+
+    <!-- About info -->
+    <string name="about_banana_title" translatable="false">Banana Home</string>
+    <string name="about_thanks_cat">Special thanks to</string>
+    <string name="about">About</string>
+    <string name="about_summary">Info about the Banana Home</string>
+    <string name="about_app_version">Launcher for Android 14</string>
 </resources>
