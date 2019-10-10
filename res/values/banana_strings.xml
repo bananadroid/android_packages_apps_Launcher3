@@ -58,4 +58,11 @@
     <string name="custom_seekbar_default_value">by default</string>
     <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
     <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+
+    <!-- About info -->
+    <string name="about_banana_title" translatable="false">Banana Home</string>
+    <string name="about_thanks_cat">Special thanks to</string>
+    <string name="about">About</string>
+    <string name="about_summary">Info about the Banana Home</string>
+    <string name="about_app_version">Launcher for Android 14</string>
 </resources>
