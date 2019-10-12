@@ -244,6 +244,7 @@ public class SettingsMisc extends FragmentActivity
         @Override
         public void onDestroy() {
             super.onDestroy();
+            LauncherAppState.getInstanceNoCreate().checkIfRestartNeeded();
         }
     }
 }
