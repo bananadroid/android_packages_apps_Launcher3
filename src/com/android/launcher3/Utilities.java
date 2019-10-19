@@ -17,6 +17,7 @@
 package com.android.launcher3;
 
 import static com.android.launcher3.model.data.ItemInfoWithIcon.FLAG_ICON_BADGED;
+import static com.android.launcher3.util.Executors.MODEL_EXECUTOR;
 
 import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
@@ -129,6 +130,7 @@ public final class Utilities {
 
     public static final String ICON_SIZE = "pref_custom_icon_size";
     public static final String KEY_ALL_APPS_BACKGROUND_ALPHA = "pref_all_apps_scrim_alpha";
+    public static final String DESKTOP_SHOW_QSB = "pref_desktop_show_qsb";
 
     /**
      * Set on a motion event dispatched from the nav bar. See {@link MotionEvent#setEdgeFlags(int)}.
@@ -709,6 +711,10 @@ public final class Utilities {
     public static int getIconSizeModifier(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getInt(ICON_SIZE, 100);
+    }
+
+    public static boolean showDesktopQsb(Context context) {
+        return getPrefs(context).getBoolean(DESKTOP_SHOW_QSB, true);
     }
 
     public static void restart(final Context context) {
