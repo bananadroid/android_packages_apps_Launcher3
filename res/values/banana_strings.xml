@@ -117,4 +117,8 @@
     <string name="enable_wallpaper_zoom_title">Enable wallpaper zooming</string>
     <string name="enable_wallpaper_zoom_summary">Zoom in or out the wallpaper when using drawer or recent apps</string>
 
+    <!-- Show dock search widget -->
+    <string name="dock_search_title">Google search bar</string>
+    <string name="dock_search_summary">Show search bar in the bottom dock</string>
+
 </resources>

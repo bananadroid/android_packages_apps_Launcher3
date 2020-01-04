@@ -20,4 +20,7 @@
 
     <!-- Bottomsheet bg color -->
     <color name="app_info_bottom_sheet_bg">#ffffff</color>
+
+    <color name="search_ripple">#0D888888</color>
+
 </resources>

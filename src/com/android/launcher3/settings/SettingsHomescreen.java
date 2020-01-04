@@ -158,6 +158,14 @@ public class SettingsHomescreen extends FragmentActivity
                     return true;
                 }
             });
+
+            Preference showDocksearch = findPreference(Utilities.KEY_DOCK_SEARCH);
+            showDocksearch.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    Utilities.restart(getActivity());
+                    return true;
+                }
+            });
         }
 
         @Override

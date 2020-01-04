@@ -132,6 +132,8 @@ public final class Utilities {
     public static final String KEY_ALL_APPS_BACKGROUND_ALPHA = "pref_all_apps_scrim_alpha";
     public static final String KEY_ALLOW_WALLPAPER_ZOOM = "pref_allow_wallpaper_zoom";
     public static final String DESKTOP_SHOW_QSB = "pref_desktop_show_qsb";
+    public static final String KEY_DOCK_SEARCH = "pref_dock_search";
+    public static final String SEARCH_PACKAGE = "com.google.android.googlequicksearchbox";
 
     /**
      * Set on a motion event dispatched from the nav bar. See {@link MotionEvent#setEdgeFlags(int)}.
@@ -703,6 +705,19 @@ public final class Utilities {
         public int getIntrinsicWidth() {
             return mSize;
         }
+    }
+
+    public static boolean showQSB(Context context, Launcher launcher) {
+        LauncherAppState appState = LauncherAppState.getInstance(launcher);
+        if (!appState.isSearchAppAvailable()) {
+            return false;
+        }
+        return isQSBEnabled(context);
+    }
+
+    public static boolean isQSBEnabled(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(KEY_DOCK_SEARCH, true);
     }
 
     public static boolean useSleepGesture(Context context) {
