@@ -289,4 +289,7 @@
     <string name="about_thanks_cat">Special thanks to</string>
     <string name="about">About</string>
     <string name="about_summary">Info about the Banana Home</string>
+
+    <!-- Preference default value -->
+    <string name="pref_value_default">Default</string>
 </resources>
