@@ -9,6 +9,13 @@
         android:title="@string/title_show_google_app"/>
 
     <SwitchPreference
+        android:key="pref_sleep_gesture"
+        android:title="@string/pref_sleep_gesture_title"
+        android:summary="@string/pref_sleep_gesture_summary"
+        android:defaultValue="true"
+        android:persistent="true"/>
+
+    <SwitchPreference
         android:key="pref_add_icon_to_home"
         android:title="@string/auto_add_shortcuts_label"
         android:summary="@string/auto_add_shortcuts_description"
