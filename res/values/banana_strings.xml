@@ -251,4 +251,8 @@
     <string name="quickspace_grt_midnight">Solemn midnight.</string>
     <string name="quickspace_grt_general">Good day.</string>
     <string name="extended_clock_text">It\'s</string>
+    
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Suggestions</string>
+    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
 </resources>
