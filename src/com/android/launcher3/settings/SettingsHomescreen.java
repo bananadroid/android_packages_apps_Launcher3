@@ -18,12 +18,14 @@ package com.android.launcher3.settings;
 
 import static androidx.core.view.accessibility.AccessibilityNodeInfoCompat.ACTION_ACCESSIBILITY_FOCUS;
 
+import static com.banana.launcher.OverlayCallbackImpl.KEY_ENABLE_MINUS_ONE;
+
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
-import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
@@ -38,14 +40,18 @@ import androidx.preference.PreferenceGroup.PreferencePositionCallback;
 import androidx.preference.PreferenceScreen;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.launcher3.LauncherAppState;
 import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
+import com.android.launcher3.config.FeatureFlags;
+import com.android.launcher3.uioverrides.plugins.PluginManagerWrapper;
+import com.android.launcher3.util.SecureSettingsObserver;
 
 /**
- * Settings activity for Launcher.
+ * Home screen settings activity for Launcher.
  */
-public class SettingsActivity extends FragmentActivity
+public class SettingsHomescreen extends FragmentActivity
         implements OnPreferenceStartFragmentCallback, OnPreferenceStartScreenCallback,
         SharedPreferences.OnSharedPreferenceChangeListener{
 
@@ -58,8 +64,6 @@ public class SettingsActivity extends FragmentActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-
         if (savedInstanceState == null) {
             Bundle args = new Bundle();
             String prefKey = getIntent().getStringExtra(EXTRA_FRAGMENT_ARG_KEY);
@@ -69,21 +73,12 @@ public class SettingsActivity extends FragmentActivity
 
             final FragmentManager fm = getSupportFragmentManager();
             final Fragment f = fm.getFragmentFactory().instantiate(getClassLoader(),
-                    getString(R.string.settings_fragment_name));
+                    getString(R.string.home_screen_settings_fragment_name));
             f.setArguments(args);
             // Display the fragment as the main content.
             fm.beginTransaction().replace(android.R.id.content, f).commit();
         }
         Utilities.getPrefs(getApplicationContext()).registerOnSharedPreferenceChangeListener(this);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -116,19 +111,18 @@ public class SettingsActivity extends FragmentActivity
     public boolean onPreferenceStartScreen(PreferenceFragmentCompat caller, PreferenceScreen pref) {
         Bundle args = new Bundle();
         args.putString(PreferenceFragmentCompat.ARG_PREFERENCE_ROOT, pref.getKey());
-        return startFragment(getString(R.string.settings_title), args, pref.getKey());
+        return startFragment(getString(R.string.home_category_title), args, pref.getKey());
     }
 
     /**
      * This fragment shows the launcher preferences.
      */
-    public static class LauncherSettingsFragment extends PreferenceFragmentCompat {
+    public static class HomescreenSettingsFragment extends PreferenceFragmentCompat {
 
         private String mHighLightKey;
         private boolean mPreferenceHighlighted = false;
 
         protected static final String GSA_PACKAGE = "com.google.android.googlequicksearchbox";
-        protected static final String DPS_PACKAGE = "com.google.android.as";
 
         private Preference mShowGoogleAppPref;
 
@@ -145,7 +139,7 @@ public class SettingsActivity extends FragmentActivity
             }
 
             getPreferenceManager().setSharedPreferencesName(LauncherFiles.SHARED_PREFERENCES_KEY);
-            setPreferencesFromResource(R.xml.launcher_preferences, rootKey);
+            setPreferencesFromResource(R.xml.launcher_home_screen_preferences, rootKey);
 
             PreferenceScreen screen = getPreferenceScreen();
             for (int i = screen.getPreferenceCount() - 1; i >= 0; i--) {
@@ -171,7 +165,27 @@ public class SettingsActivity extends FragmentActivity
          * will remove that preference from the list.
          */
         protected boolean initPreference(Preference preference) {
+            switch (preference.getKey()) {
+                case KEY_ENABLE_MINUS_ONE:
+                    mShowGoogleAppPref = preference;
+                    updateIsGoogleAppEnabled();
+                    return true;
+            }
             return true;
+        }
+
+        public static boolean isGSAEnabled(Context context) {
+            try {
+                return context.getPackageManager().getApplicationInfo(GSA_PACKAGE, 0).enabled;
+            } catch (PackageManager.NameNotFoundException e) {
+                return false;
+            }
+        }
+
+        private void updateIsGoogleAppEnabled() {
+            if (mShowGoogleAppPref != null) {
+                mShowGoogleAppPref.setEnabled(isGSAEnabled(getContext()));
+            }
         }
 
         @Override
@@ -187,6 +201,7 @@ public class SettingsActivity extends FragmentActivity
                     requestAccessibilityFocus(getListView());
                 }
             }
+            updateIsGoogleAppEnabled();
         }
 
         private PreferenceHighlighter createHighlighter() {
