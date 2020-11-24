@@ -128,6 +128,7 @@ public final class Utilities {
     public static final String SLEEP_GESTURE = "pref_sleep_gesture";
 
     public static final String ICON_SIZE = "pref_custom_icon_size";
+    public static final String KEY_ALL_APPS_BACKGROUND_ALPHA = "pref_all_apps_scrim_alpha";
 
     /**
      * Set on a motion event dispatched from the nav bar. See {@link MotionEvent#setEdgeFlags(int)}.
@@ -718,5 +719,10 @@ public final class Utilities {
             }
             android.os.Process.killProcess(android.os.Process.myPid());
         });
+    }
+
+    public static int getAllAppsScrimAlpha(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getInt(KEY_ALL_APPS_BACKGROUND_ALPHA, 100);
     }
 }
