@@ -98,4 +98,7 @@
     <!-- Show labels on icon -->
     <string name="desktop_show_qsb_title">At a Glance</string>
     <string name="desktop_show_qsb_summary">Show "At a Glance" on homescreen</string>
+
+    <!-- Recents screen, close app -->
+    <string name="recents_close_app">Close app</string>
 </resources>
