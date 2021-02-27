@@ -79,4 +79,10 @@
     <string name="paused_apps_dialog_title">App paused</string>
     <string name="paused_apps_dialog_message">%1$s was directly paused from the launcher</string>
     <string name="paused_apps_drop_target_label">Pause app</string>
+
+    <!-- Icon size -->
+    <string name="icon_size_title">Icon size</string>
+
+    <!-- Font size -->
+    <string name="font_size_title">Font size</string>
 </resources>
