@@ -46,6 +46,8 @@ import com.android.launcher3.testing.TestLogging;
 import com.android.launcher3.testing.TestProtocol;
 import com.android.launcher3.views.OptionsPopupView;
 
+import app.lawnchair.gestures.SwipeDownGesture;
+
 /**
  * Helper class to handle touch on empty space in workspace and show options popup on long press
  */
@@ -72,6 +74,7 @@ public class WorkspaceTouchListener extends GestureDetector.SimpleOnGestureListe
     private int mLongPressState = STATE_CANCELLED;
 
     private final GestureDetector mGestureDetector;
+    private final SwipeDownGesture mSwipeDown;
 
     private final Context mContext;
 
@@ -83,10 +86,12 @@ public class WorkspaceTouchListener extends GestureDetector.SimpleOnGestureListe
         // likely to cause movement.
         mTouchSlop = 2 * ViewConfiguration.get(launcher).getScaledTouchSlop();
         mGestureDetector = new GestureDetector(mContext, this);
+        mSwipeDown = new SwipeDownGesture(workspace.getContext());
     }
 
     @Override
     public boolean onTouch(View view, MotionEvent ev) {
+        mSwipeDown.onTouch(view, ev);
         mGestureDetector.onTouchEvent(ev);
 
         int action = ev.getActionMasked();
