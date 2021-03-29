@@ -24,6 +24,6 @@
         android:shadowDy="0"
         android:shadowRadius="9"
         android:textColor="#ffffff"
-        android:textSize="24sp" />
+        android:textSize="28sp" />
 
 </FrameLayout>
