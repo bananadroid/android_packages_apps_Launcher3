@@ -34,7 +34,7 @@ import android.view.View;
 import android.view.View.OnTouchListener;
 import android.view.ViewConfiguration;
 
-import com.android.internal.util.banana.bananaUtils;
+import com.android.internal.util.banana.ActionUtils;
 import com.android.launcher3.AbstractFloatingView;
 import com.android.launcher3.CellLayout;
 import com.android.launcher3.DeviceProfile;
@@ -191,7 +191,7 @@ public class WorkspaceTouchListener extends GestureDetector.SimpleOnGestureListe
     @Override
     public boolean onDoubleTap(MotionEvent event) {
         if (Utilities.useSleepGesture(mContext))
-            bananaUtils.switchScreenOff(mContext);
+            ActionUtils.switchScreenOff(mContext);
         return true;
     }
 }
