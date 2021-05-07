@@ -235,6 +235,17 @@ public class SettingsIcons extends FragmentActivity
                         }
                     });
                     return true;
+
+                case Utilities.FONT_SIZE:
+                    final CustomSeekBarPreference fontSizes = (CustomSeekBarPreference)
+                            findPreference(Utilities.FONT_SIZE);
+                    fontSizes.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                        public boolean onPreferenceChange(Preference preference, Object newValue) {
+                            LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                            return true;
+                        }
+                    });
+                    return true;
             }
             return true;
         }
