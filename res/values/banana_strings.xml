@@ -108,4 +108,8 @@
 
     <!-- Recents screen, close app -->
     <string name="recents_close_app">Close app</string>
+
+    <!-- Font size -->
+    <string name="font_size_title">Font size</string>
+
 </resources>
