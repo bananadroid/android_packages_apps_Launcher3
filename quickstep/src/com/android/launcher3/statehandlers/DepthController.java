@@ -145,7 +145,8 @@ public class DepthController implements StateHandler<LauncherState>,
                     // To handle the case where window token is invalid during last setDepth call.
                     IBinder windowToken = mLauncher.getRootView().getWindowToken();
                     if (windowToken != null) {
-                        mWallpaperManager.setWallpaperZoomOut(windowToken, mDepth);
+                        mWallpaperManager.setWallpaperZoomOut(windowToken,
+                            Utilities.canZoomWallpaper(mLauncher) ? mDepth : 1);
                     }
                 }
 
@@ -238,7 +239,8 @@ public class DepthController implements StateHandler<LauncherState>,
         ensureDependencies();
         IBinder windowToken = mLauncher.getRootView().getWindowToken();
         if (windowToken != null) {
-            mWallpaperManager.setWallpaperZoomOut(windowToken, mDepth);
+            mWallpaperManager.setWallpaperZoomOut(windowToken,
+                Utilities.canZoomWallpaper(mLauncher) ? mDepth : 1);
         }
 
         if (supportsBlur) {

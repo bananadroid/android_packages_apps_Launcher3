@@ -130,6 +130,7 @@ public final class Utilities {
     public static final String ICON_SIZE = "pref_custom_icon_size";
     public static final String FONT_SIZE = "pref_custom_font_size";
     public static final String KEY_ALL_APPS_BACKGROUND_ALPHA = "pref_all_apps_scrim_alpha";
+    public static final String KEY_ALLOW_WALLPAPER_ZOOM = "pref_allow_wallpaper_zoom";
     public static final String DESKTOP_SHOW_QSB = "pref_desktop_show_qsb";
 
     /**
@@ -735,5 +736,10 @@ public final class Utilities {
     public static int getAllAppsScrimAlpha(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getInt(KEY_ALL_APPS_BACKGROUND_ALPHA, 75);
+    }
+
+    public static boolean canZoomWallpaper(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(KEY_ALLOW_WALLPAPER_ZOOM, true);
     }
 }
