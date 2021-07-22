@@ -19,7 +19,7 @@
         android:key="pref_dock_search"
         android:title="@string/dock_search_title"
         android:summary="@string/dock_search_summary"
-        android:defaultValue="true" />
+        android:defaultValue="false" />
 
     <SwitchPreference
         android:key="pref_sleep_gesture"
