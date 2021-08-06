@@ -66,6 +66,14 @@ public class LineageUtils {
         return keyguardManager != null && keyguardManager.isKeyguardSecure();
     }
 
+    public static boolean isPackageEnabled(Context context, String pkgName) {
+        try {
+            ApplicationInfo ai = context.getPackageManager().getApplicationInfo(pkgName, 0);
+            return ai.enabled;
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
+    }
 
     public static boolean isPackageInstalled(Context context, String pkg, boolean ignoreState) {
         if (pkg != null) {

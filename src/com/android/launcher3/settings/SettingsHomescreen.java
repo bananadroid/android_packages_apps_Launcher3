@@ -47,6 +47,7 @@ import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.config.FeatureFlags;
+import com.android.launcher3.lineage.LineageUtils;
 import com.android.launcher3.uioverrides.plugins.PluginManagerWrapper;
 import com.android.launcher3.util.SecureSettingsObserver;
 
@@ -181,6 +182,8 @@ public class SettingsHomescreen extends FragmentActivity
                     mShowGoogleAppPref = preference;
                     updateIsGoogleAppEnabled();
                     return true;
+                case Utilities.KEY_DOCK_SEARCH:
+                    return LineageUtils.isPackageEnabled(getActivity(), Utilities.SEARCH_PACKAGE);
             }
             return true;
         }

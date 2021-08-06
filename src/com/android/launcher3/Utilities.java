@@ -74,6 +74,7 @@ import com.android.launcher3.graphics.TintedDrawableSpan;
 import com.android.launcher3.icons.IconProvider;
 import com.android.launcher3.icons.LauncherIcons;
 import com.android.launcher3.icons.ShortcutCachingLogic;
+import com.android.launcher3.lineage.LineageUtils;
 import com.android.launcher3.model.data.ItemInfo;
 import com.android.launcher3.model.data.ItemInfoWithIcon;
 import com.android.launcher3.pm.ShortcutConfigActivityInfo;
@@ -707,9 +708,8 @@ public final class Utilities {
         }
     }
 
-    public static boolean showQSB(Context context, Launcher launcher) {
-        LauncherAppState appState = LauncherAppState.getInstance(launcher);
-        if (!appState.isSearchAppAvailable()) {
+    public static boolean showQSB(Context context) {
+        if (!LineageUtils.isPackageEnabled(context, SEARCH_PACKAGE)) {
             return false;
         }
         return isQSBEnabled(context);
