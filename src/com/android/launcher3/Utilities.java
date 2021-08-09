@@ -134,6 +134,7 @@ public final class Utilities {
     public static final String KEY_ALLOW_WALLPAPER_ZOOM = "pref_allow_wallpaper_zoom";
     public static final String DESKTOP_SHOW_QSB = "pref_desktop_show_qsb";
     public static final String KEY_DOCK_SEARCH = "pref_dock_search";
+    public static final String KEY_MINUS_ONE = "pref_enable_minus_one";
     public static final String SEARCH_PACKAGE = "com.google.android.googlequicksearchbox";
 
     /**
@@ -718,6 +719,18 @@ public final class Utilities {
     public static boolean isQSBEnabled(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_DOCK_SEARCH, true);
+    }
+
+    public static boolean showMinusOne(Context context) {
+        if (!LineageUtils.isPackageEnabled(context, SEARCH_PACKAGE)) {
+            return false;
+        }
+        return isMinusOneEnabled(context);
+    }
+
+    public static boolean isMinusOneEnabled(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(KEY_MINUS_ONE, true);
     }
 
     public static boolean useSleepGesture(Context context) {

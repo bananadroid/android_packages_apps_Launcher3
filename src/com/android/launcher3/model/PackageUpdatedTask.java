@@ -347,7 +347,7 @@ public class PackageUpdatedTask extends BaseModelUpdateTask {
             bindUpdatedWidgets(dataModel);
         }
 
-        if (needsRestart && (Utilities.isQSBEnabled(context))) {
+        if (needsRestart && (Utilities.isQSBEnabled(context) || Utilities.isMinusOneEnabled(context))) {
             Utilities.restart(context);
         }
     }
