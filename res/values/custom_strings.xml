@@ -124,4 +124,8 @@
     <string name="about">About</string>
     <string name="about_summary">Info about the Banana Home</string>
     <string name="about_app_version">Launcher for 12.1</string>
+    
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Show hotseat background</string>
+    <string name="hotseat_bg_summary">Adds a translucent background to the app dock</string>
 </resources>
