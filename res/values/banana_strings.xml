@@ -17,7 +17,8 @@
     <!-- Application name -->
     <string name="custom_app_name" translatable="false">Banana Home</string>
 
-    <!-- Settings -->
+    <!-- Show top shadow -->
+    <string name="show_top_shadow">Show top shadow</string>
 
     <!-- Edit workspace -->
     <string name="settings_lock_layout_title">Lock layout</string>
