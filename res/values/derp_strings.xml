@@ -20,33 +20,33 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <string-array translatable="false" name="welcome_message_variants">
-        <item>Thank you for choosing BananaDroid</item>
-        <item>Welcome Banana Lover</item>
-        <item>Eat Banana &amp; Stay Healthy</item>
-        <item>Have a great banana day</item>
-        <item>Ready to grab some bananas?</item>
-        <item>Don\'t forget to be happy</item>
-        <item>Brush your teeth!</item>
-        <item>Ente kadang kadang ente</item>
-        <item>Yo Ndak Tau Kok Nanya Saya</item>
-        <item>Try to be a rainbow in someone\'s cloud</item>
+        <item>#GetBanana &#127834;</item>
+        <item>#EatBanana &#129425;</item>
+        <item>#GetHungry &#127858;</item>
+        <item>#StayHealthy &#127853;</item>
+        <item>#StaySafe &#127851;</item>
+        <item>#KeepYourSmile &#129418;</item>
+        <item>#LoveYourself &#127834;</item>
+        <item>&#127925; Ojo Dibandingke - Abah Lala</item>
+        <item>&#127925; Beauty and The Banana - Celine Dion</item>
+        <item>&#127925; Cidro - Didi Kempot</item>
+        <item>&#127925; Rindu Semalam - Titi Kamal</item>
     </string-array>
-
-    <!-- Quickspace PSA - Custom messages for the glance -->
-    <string name="quickspace_psa_title">Show a random message</string>
-    <string name="quickspace_psa_summary">Show some nice messages sometimes on At a Glance.</string>
 
     <string-array name="quickspace_psa_morning">
         <item>Good morning!</item>
-        <item>Good morning, gamer!</item>
+        <item>Good morning my friend!</item>
         <item>What a beautiful day!</item>
         <item>Have a nice day!</item>
+        <item>Good morning beauty/handsome! - not an automated message</item>
         <item>What about a small 5 minutes nap?</item>
         <item>That\'s one way to wake up.</item>
         <item>You should change your alarm sounds.</item>
         <item>Looks like it\'s a beautiful day, isn\'t it?</item>
         <item>Let\'s get this bread.</item>
         <item>Check the weather just in case</item>
+        <item>I\'m not alexa, swipe to the left for Google Feed!</item>
+        <item>The weather for today is.. oh wait i don\'t have weatherclient &#128557;</item>
         <item>Feeling a bit sleepy yet</item>
         <item>Have you looked outside yet?</item>
         <item>Let\'s get this done.</item>
@@ -64,46 +64,32 @@
         <item>Time to charge the batteries!</item>
         <item>Tomorrow might be a great day</item>
         <item>Get your bones ready for tomorrow</item>
+        <item>Wala na, finish na.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good night?</item>
+        <item>Um... good mornight?</item>
+        <item>You sure like coffee...</item>
         <item>It\'s a bit late now</item>
+        <item>Have you ever think about space at this time?</item>
+        <item>Sleep is for the weak!</item>
         <item>You should fix your sleep schedule</item>
         <item>Are you more productive at this time?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>It do be like that sometimes</item>
-        <item>Is it time to flash another ROM already?</item>
-        <item>Hyped about Android 12?</item>
-        <item>Oh hey, what\'s up?</item>
-        <item>Time to brag my #setup</item>
-        <item>How many screenshots do you take?</item>
-        <item>Is your device derped?</item>
-        <item>I wish I could use VoLTE</item>
-        <item>Have fun!</item>
-        <item>Let\'s get this grind, gamer!</item>
-        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>You need Derp Launcher Premium to see this</item>
-        <item>Remember the lineage of the unicorn</item>
-        <item>A carbonized owl statue</item>
-        <item>...cause 404 sucks</item>
-        <item>Eat your veggies and send logs</item>
-        <item>Oh no, it\'s updog again</item>
-        <item>I\'ve come to make an announcement</item>
-        <item>What is a kang?</item>
-        <item>How is everything going?</item>
-        <item>How to cherry-pick correctly?</item>
-        <item>Thank you for your support</item>
-        <item>Are you guys really giving us &quot;teasers&quot; about adding paid features on a ROM that was free to use previously?</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>If you love an app, please, support it by purchasing it</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>What a buggy experience, isn\'t it?</item>
-        <item>nice</item>
-        <item>Enjoy the sunset!</item>
-        <item>Get Derped</item>
-        <item>#StayDerped</item>
-        <item>rm -rf \/</item>
+        <item>Thank you for choosing BananaDroid</item>
+        <item>Welcome Banana Lover</item>
+        <item>Eat Banana &amp; Stay Healthy</item>
+        <item>Have a great banana day</item>
+        <item>Ready to grab some bananas?</item>
+        <item>Don\'t forget to be happy</item>
+        <item>Brush your teeth!</item>
+        <item>Ente kadang kadang ente</item>
+        <item>Yo Ndak Tau Kok Nanya Saya</item>
+        <item>Try to be a rainbow in someone\'s cloud</item>
+        <item>When nothing goes right... Go left</item>
+        <item>Farting every day makes your day easier</item>
+        <item>make a smile your best friend</item>
     </string-array>
 
+    <string name="custom_date_strings">EEE, MMM d</string>
 </resources>
