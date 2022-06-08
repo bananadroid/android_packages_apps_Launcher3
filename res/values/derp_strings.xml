@@ -38,18 +38,44 @@
         <item>Good morning my friend!</item>
         <item>What a beautiful day!</item>
         <item>Have a nice day!</item>
-        <item>Good morning beauty/handsome! - not an automated message</item>
-        <item>What about a small 5 minutes nap?</item>
+        <item>Health Glance: A little exercise would be nice</item>
+        <item>Good morning beauty! - not dfntly automated</item>
+        <item>Uhhh.. 5 more minutes...</item>
+        <item>I pour milk first before cereal...</item>
+        <item>Good morning handsome! - not dfntly automated</item>
+        <item>The weather is good, i mean 32C. unsupported msg.</item>
+        <item>Weather is cold hot winter,spring, summer or fall &#128191;</item>
         <item>That\'s one way to wake up.</item>
+        <item>Rest in peace melatonin.</item>
         <item>You should change your alarm sounds.</item>
         <item>Looks like it\'s a beautiful day, isn\'t it?</item>
         <item>Let\'s get this bread.</item>
         <item>Check the weather just in case</item>
         <item>I\'m not alexa, swipe to the left for Google Feed!</item>
-        <item>The weather for today is.. oh wait i don\'t have weatherclient &#128557;</item>
+        <item>The weather for today is.. idk</item>
         <item>Feeling a bit sleepy yet</item>
         <item>Have you looked outside yet?</item>
+        <item>Health Glance: Stay Hydrated!</item>
         <item>Let\'s get this done.</item>
+    </string-array>
+    <string-array name="quickspace_psa_noon">
+        <item>Good afternoon..</item>
+        <item>The dawn will arrive sooner or later..</item>
+        <item>Health Glance: Stay Hydrated!</item>
+        <item>A mineral water would be nice.</item>
+        <item>Go touch some grass!</item>
+        <item>Do something befor the day ends!</item>
+        <item>Get some snacks while you\'re at it.</item>
+        <item>I want to buy some banana now..</item>
+        <item>Go out and have fun!</item>
+        <item>If a good time to go out and eat.</item>
+        <item>Did you have fun today?</item>
+        <item>We\'re almost there! Hang on!</item>
+        <item>Let\'s go for some banana!</item>
+        <item>It\'s nice to sleep under a tree..</item>
+        <item>I love watching the sunset..</item>
+        <item>Have you eaten your banana?</item>
+        <item>How about some drinks?</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
         <item>Good night!</item>
@@ -89,6 +115,73 @@
         <item>When nothing goes right... Go left</item>
         <item>Farting every day makes your day easier</item>
         <item>make a smile your best friend</item>
+    </string-array>
+    <string-array name="quickspace_psa_morning_title">
+        <item>#BananaInTheMorning &#127834;</item>
+        <item>&#128191; Always With Me - Youmi Kimura</item>
+        <item>&#128191; In The Morning - The Bee Gees</item>
+        <item>&#128191; Don\'t Worry - Tony Q Rastafara</item>
+        <item>&#128191; Selamat Pagi - RAN</item>
+        <item>&#128191; Vintage - Niki</item>
+        <item>#BananaStarted &#9728;&#65039;</item>
+        <item>#GoodMorning &#9728;&#65039;</item>
+        <item>#KingOfBanana &#128081;</item>
+        <item>#BananaMood &#9728;&#65039;</item>
+        <item>#GreenBanana &#127834;</item>
+    </string-array>
+    <string-array name="quickspace_psa_noon_title">
+        <item>#NoonBanana &#127834;</item>
+        <item>&#128191; Niki - Every Summertime</item>
+        <item>&#128191; Owl City - Fireflies</item>
+        <item>&#128191; Rendy Pandugo - I Don\'t Care</item>
+        <item>&#128191; Coldplay - Viva La Vida</item>
+        <item>&#128191; Ed Sheeran - Castle on The Hill</item>
+        <item>#Sunset &#127751;</item>
+        <item>#AfterWork &#127834;</item>
+        <item>#KeepSpirit &#128081;</item>
+        <item>#AfterBanana &#9729;&#65039;</item>
+        <item>#Afternoon &#127751;</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening_title">
+        <item>#BananaMoon &#127769;</item>
+        <item>&#128191; The Kinks - Afternoon Tea</item>
+        <item>&#128191; Stephanie Poetri - Selfish</item>
+        <item>&#128191; Fourtwnty - Hitam Putih</item>
+        <item>&#128191; Owl City - Fireflies</item>
+        <item>&#128191; Eminem - Love Yourself</item>
+        <item>#BananaNight &#127769;</item>
+        <item>#BananaLight &#127775;</item>
+        <item>#Goodnight &#127769;</item>
+        <item>#Sleepwell &#128564;</item>
+        <item>#DinnerChickenWinner &#127834;</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight_title">
+        <item>#GetHelp</item>
+        <item>#AreYouOk</item>
+        <item>#SleepNow</item>
+        <item>#GettingDrowzy</item>
+        <item>#Call911</item>
+        <item>#RestinPeace</item>
+        <item>#IfYouWontSleepIwill</item>
+        <item>#RoadToHeaven101</item>
+        <item>#YouWillbe404</item>
+    </string-array>
+    <string-array name="quickspace_psa_random_title">
+        <item>#GetBanana &#127834;</item>
+        <item>#EatBanana &#129425;</item>
+        <item>#GetHungry &#127858;</item>
+        <item>#StayHealthy &#127853;</item>
+        <item>#StaySafe &#127851;</item>
+        <item>#KeepYourSmile &#129418;</item>
+        <item>#LoveYourself &#127834;</item>
+        <item>#OneEarth &#127835;</item>
+        <item>&#128191; Cidro - Didi Kempot</item>
+        <item>&#128191; Ojo Dibandingke - Abah Lala</item>
+        <item>&#128191; Dunia Tipu Tipu - Yura Yunita</item>
+        <item>&#128191; I\'m Yours - Jason Mraz</item>
+        <item>&#128191; With or Without You - U2</item>
+        <item>&#128191; One Summer\'s Day - Joe Hisaishi</item>
+        <item>&#128191; Glimpse of Us - Joji</item>
     </string-array>
 
     <string name="custom_date_strings">EEE, MMM d</string>
