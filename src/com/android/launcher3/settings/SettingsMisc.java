@@ -140,6 +140,7 @@ public class SettingsMisc extends CollapsingToolbarBaseActivity
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) { 
         switch (key) {
             case Utilities.KEY_RECENTS_BLUR:
+            case Utilities.KEY_VIBRATION_TOGGLE:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:
