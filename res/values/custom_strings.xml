@@ -99,7 +99,7 @@
 
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar">Use taskbar</string>
-    <string name="pref_allow_phone_taskbar_desc">For opening and switching apps anywhere</string>
+    <string name="pref_allow_phone_taskbar_desc">For opening and switching apps anywhere(user must switch to gesture mode first for stable experience)</string>
 
     <!-- Recent Grid -->
     <string name="pref_allow_phone_overview_grid">Grid style recent apps</string>
