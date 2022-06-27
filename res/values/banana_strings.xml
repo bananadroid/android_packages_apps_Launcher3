@@ -50,4 +50,7 @@
     <string name="quickspace_grt_general">Good day.</string>
     <string name="extended_clock_text">It\'s</string>
 
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">Wallpaper scrolling</string>
+    <string name="allow_wallpaper_scrolling_desc">Wallpaper scrolling effect for multiple screens</string>
 </resources>
