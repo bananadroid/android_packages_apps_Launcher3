@@ -40,7 +40,7 @@ import java.math.BigDecimal;
 public class MemInfoView extends TextView {
 
     // When to show GB instead of MB
-    private static final int UNIT_CONVERT_THRESHOLD = 1024; /* MiB */
+    private static final int UNIT_CONVERT_THRESHOLD = 1000; /* MiB */
 
     private static final BigDecimal GB2MB = new BigDecimal(1000);
 
