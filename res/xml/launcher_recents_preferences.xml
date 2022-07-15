@@ -38,4 +38,26 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/actions_category_title">
+
+        <SwitchPreference
+            android:key="pref_recents_screenshot"
+            android:title="@string/recents_screenshot_title"
+            android:defaultValue="true"
+            android:persistent="true" />
+
+        <SwitchPreference
+            android:key="pref_recents_kill_app"
+            android:title="@string/recents_kill_app"
+            android:defaultValue="true"
+            android:persistent="true" />
+
+        <SwitchPreference
+            android:key="pref_recents_lens"
+            android:title="@string/recents_lens_title"
+            android:defaultValue="false"
+            android:persistent="true" />
+    </PreferenceCategory>
+
 </androidx.preference.PreferenceScreen>

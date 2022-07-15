@@ -27,9 +27,11 @@
         android:orientation="horizontal">
 
         <Space
+            android:id="@+id/screenshot_space"
             android:layout_width="0dp"
             android:layout_height="1dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/action_screenshot"
@@ -37,13 +39,15 @@
             android:layout_width="60dp"
             android:layout_height="42dp"
             android:foreground="@drawable/ic_screenshot_recents"
-            android:foregroundGravity="center"/>
+            android:foregroundGravity="center"
+            android:visibility="gone" />
 
         <Space
             android:id="@+id/lens_space"
             android:layout_width="0dp"
             android:layout_height="1dp"
-            android:layout_weight="1" />
+            android:layout_weight="1" 
+            android:visibility="gone" />
             
         <Button
             android:id="@+id/action_lens"
@@ -51,12 +55,15 @@
             android:layout_width="60dp"
             android:layout_height="42dp"
             android:foreground="@drawable/ic_lens_themed"
-            android:foregroundGravity="center"/>
+            android:foregroundGravity="center"
+            android:visibility="gone" />
 
         <Space
+            android:id="@+id/kill_app_space"
             android:layout_width="0dp"
             android:layout_height="1dp"
-            android:layout_weight="1" />
+            android:layout_weight="1" 
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/kill_app"
@@ -64,7 +71,8 @@
             android:layout_width="60dp"
             android:layout_height="42dp"
             android:foreground="@drawable/ic_kill_app_recents"
-            android:foregroundGravity="center"/>
+            android:foregroundGravity="center"
+            android:visibility="gone" />
 
         <Space
             android:id="@+id/action_split_space"

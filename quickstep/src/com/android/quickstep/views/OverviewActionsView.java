@@ -17,6 +17,7 @@
 package com.android.quickstep.views;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Rect;
 import android.util.AttributeSet;
@@ -48,7 +49,7 @@ import java.lang.annotation.RetentionPolicy;
  * View for showing action buttons in Overview
  */
 public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayout
-        implements OnClickListener, Insettable {
+        implements OnClickListener, Insettable, SharedPreferences.OnSharedPreferenceChangeListener {
 
     private final Rect mInsets = new Rect();
 
@@ -83,6 +84,10 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
     private static final int INDEX_FULLSCREEN_ALPHA = 2;
     private static final int INDEX_HIDDEN_FLAGS_ALPHA = 3;
 
+    private static final String KEY_RECENTS_SCREENSHOT = "pref_recents_screenshot";
+    private static final String KEY_RECENTS_KILL_APP = "pref_recents_kill_app";
+    private static final String KEY_RECENTS_LENS = "pref_recents_lens";
+
     private final MultiValueAlpha mMultiValueAlpha;
     private Button mSplitButton;
 
@@ -98,6 +103,10 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
     @Nullable
     protected DeviceProfile mDp;
 
+    private boolean mScreenshot;
+    private boolean mKillApp;
+    private boolean mLens;
+
     public OverviewActionsView(Context context) {
         this(context, null);
     }
@@ -110,15 +119,35 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
         super(context, attrs, defStyleAttr, 0);
         mMultiValueAlpha = new MultiValueAlpha(this, 5);
         mMultiValueAlpha.setUpdateVisibility(true);
+        SharedPreferences prefs = Utilities.getPrefs(context);
+        mScreenshot = prefs.getBoolean(KEY_RECENTS_SCREENSHOT, true);
+        mKillApp = prefs.getBoolean(KEY_RECENTS_KILL_APP, true);
+        mLens = prefs.getBoolean(KEY_RECENTS_LENS, false);
+        prefs.registerOnSharedPreferenceChangeListener(this);
+    }
+
+    private void updateVisibilities() {
+        View screenshot = findViewById(R.id.action_screenshot);
+        screenshot.setOnClickListener(this);
+        screenshot.setVisibility(mScreenshot ? VISIBLE : GONE);
+        findViewById(R.id.screenshot_space).setVisibility(mScreenshot ? VISIBLE : GONE);
+
+        View lens = findViewById(R.id.action_lens);
+        lens.setOnClickListener(this);
+        lens.setVisibility(mLens && Utilities.isGSAEnabled(getContext()) ? VISIBLE : GONE);
+        findViewById(R.id.lens_space).setVisibility(mLens && Utilities.isGSAEnabled(getContext()) ? VISIBLE : GONE);
+        
+        View killApp = findViewById(R.id.kill_app);
+        killApp.setOnClickListener(this);
+        killApp.setVisibility(mKillApp ? VISIBLE : GONE);
+        findViewById(R.id.kill_app_space).setVisibility(mKillApp ? VISIBLE : GONE);
     }
 
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        findViewById(R.id.action_screenshot).setOnClickListener(this);
-        View lens = findViewById(R.id.action_lens);
-        findViewById(R.id.action_lens).setOnClickListener(this);
-        findViewById(R.id.kill_app).setOnClickListener(this);
+        updateVisibilities();
+
         mSplitButton = findViewById(R.id.action_split);
         mSplitButton.setOnClickListener(this);
     }
@@ -160,6 +189,20 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
         mInsets.set(insets);
         updateVerticalMargin(SysUINavigationMode.getMode(getContext()));
         updateHorizontalPadding();
+    }
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
+        if (key.equals(KEY_RECENTS_SCREENSHOT)) {
+            mScreenshot = prefs.getBoolean(KEY_RECENTS_SCREENSHOT, true);
+            updateVisibilities();
+        } else if (key.equals(KEY_RECENTS_KILL_APP)) {
+            mKillApp = prefs.getBoolean(KEY_RECENTS_KILL_APP, true);
+            updateVisibilities();
+        } else if (key.equals(KEY_RECENTS_LENS)) {
+            mLens = prefs.getBoolean(KEY_RECENTS_LENS, false);
+            updateVisibilities();
+        }
     }
 
     public void updateHiddenFlags(@ActionsHiddenFlags int visibilityFlags, boolean enable) {
