@@ -35,6 +35,15 @@
             android:min="0"
             settings:units="%"
             android:defaultValue="80" />
+
+        <com.android.launcher3.settings.preferences.CustomSeekBarPreference
+            android:key="pref_recents_blur"
+            android:title="@string/background_blur_title"
+            android:persistent="true"
+            android:max="175"
+            android:min="0"
+            settings:units="px"
+            android:defaultValue="23" />
     </PreferenceCategory>
 
 </androidx.preference.PreferenceScreen>
