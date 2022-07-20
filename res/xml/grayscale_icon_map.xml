@@ -3959,4 +3959,8 @@
         drawable="@drawable/you"
         name="You Browser"
         package="com.you.browser" />
+    <icon
+        drawable="@drawable/ic_gamespace"
+        name="Game Space"
+        package="io.chaldeaprjkt.gamespace" />
 </icons>
