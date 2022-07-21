@@ -91,7 +91,7 @@ public class OverviewState extends LauncherState {
 
     @Override
     public int getVisibleElements(Launcher launcher) {
-        return MID_CLEAR_ALL_BUTTON | MEMINFO;
+        return MID_CLEAR_ALL_BUTTON | OVERVIEW_ACTIONS | MEMINFO;
     }
 
     @Override
