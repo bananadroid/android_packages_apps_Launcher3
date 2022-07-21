@@ -26,7 +26,8 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.FrameLayout.LayoutParams;
 import android.widget.TextView;
-import android.graphics.Color;
+import com.android.launcher3.util.Themes;
+import android.graphics.Typeface;
 
 import com.android.launcher3.anim.AlphaUpdateListener;
 import com.android.launcher3.DeviceProfile;
@@ -135,8 +136,10 @@ public class MemInfoView extends TextView {
         String text = String.format(mMemInfoText,
             unitConvert(availMemMiB, false), unitConvert(totalMemMiB, true));
         setText(text);
-        setTextColor(Color.parseColor("#FFFFFF"));
-        setTextSize(13);
+        int rcntsMemTxt = Themes.getAttrColor(getContext(), android.R.attr.textColorPrimary);
+        setTextColor(rcntsMemTxt);
+        setTextSize(10);
+        setTypeface(Typeface.create(Themes.getDefaultBodyFont(getContext()), Typeface.BOLD));
     }
 
     private class MemInfoWorker implements Runnable {

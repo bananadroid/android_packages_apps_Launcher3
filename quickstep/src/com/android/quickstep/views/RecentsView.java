@@ -707,8 +707,9 @@ public abstract class RecentsView<ACTIVITY_TYPE extends StatefulActivity<STATE_T
         mEmptyIcon = context.getDrawable(R.drawable.ic_empty_recents);
         mEmptyIcon.setCallback(this);
         mEmptyMessage = context.getText(R.string.recents_empty_message_custom);
+        int rcntsIcon = Themes.getAttrColor(context, android.R.attr.textColorPrimary);
         mEmptyMessagePaint = new TextPaint();
-        mEmptyMessagePaint.setColor(Color.parseColor("#FFFFFF"));
+        mEmptyMessagePaint.setColor(rcntsIcon);
         mEmptyMessagePaint.setTextSize(getResources()
                 .getDimension(R.dimen.recents_empty_message_text_size));
         mEmptyMessagePaint.setTypeface(Typeface.create(Themes.getDefaultBodyFont(context),
