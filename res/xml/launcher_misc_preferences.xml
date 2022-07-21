@@ -16,7 +16,8 @@
 -->
 <androidx.preference.PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:launcher="http://schemas.android.com/apk/res-auto">
+    xmlns:launcher="http://schemas.android.com/apk/res-auto"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.launcher3">
 
     <SwitchPreference
         android:key="pref_allow_phone_taskbar"
@@ -44,10 +45,25 @@
         <intent android:action="android.settings.ACTION_CONTENT_SUGGESTIONS_SETTINGS" />
     </androidx.preference.PreferenceScreen>
 
+   <com.android.launcher3.settings.preferences.CustomSeekBarPreference
+        android:key="pref_recents_blur"
+        android:title="@string/background_blur_title"
+        android:persistent="true"
+        android:max="75"
+        android:min="0"
+        settings:units="px"
+        android:defaultValue="23" />
+        
+    <com.android.settingslib.widget.FooterPreference
+        android:key="blur_tips"
+        android:title="@string/blur_tips_summary"
+        android:selectable="false"/>
+
     <Preference
         android:key="pref_developer_options"
         android:persistent="false"
         android:title="@string/dev_options_title"
         android:summary="@string/dev_options_desc"
         android:fragment="com.android.launcher3.settings.DeveloperOptionsFragment"/>
+        
 </androidx.preference.PreferenceScreen>

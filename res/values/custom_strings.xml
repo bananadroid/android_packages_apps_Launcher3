@@ -145,5 +145,7 @@
     <string name="background_opacity_title">Background opacity</string>
     
     <!-- Background blur -->
-    <string name="background_blur_title">Recents background blur</string>
+    <string name="background_blur_title">Launcher blur radius</string>
+    <string name="blur_tips_summary">1. The amount of blur radius used when rendering non-opaque/transparent background(set to 0 to disable).\n\n2. This change requires launcher restart, force stopping the launcher or simply swiping/pressing back to main settings after changing configuration/s will trigger the app restart.</string>
+    <string name="restart_tips">Some changes requires launcher restart, force stopping the launcher or simply swiping/pressing back to main settings after changing configuration/s will trigger the app restart.</string>
 </resources>
