@@ -49,5 +49,4 @@
         android:min="0"
         settings:units="%"
         android:defaultValue="80" />
-
 </androidx.preference.PreferenceScreen>

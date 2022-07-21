@@ -124,4 +124,9 @@
             android:dependency="pref_dock_search" />
     </PreferenceCategory>
 
+    <com.android.settingslib.widget.FooterPreference
+        android:key="restart_tips"
+        android:title="@string/restart_tips"
+        android:selectable="false"/>
+
 </androidx.preference.PreferenceScreen>
