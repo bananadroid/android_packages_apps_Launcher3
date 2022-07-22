@@ -58,6 +58,13 @@
             android:title="@string/recents_lens_title"
             android:defaultValue="false"
             android:persistent="true" />
+            
+        <SwitchPreference
+            android:key="pref_show_meminfo"
+            android:title="@string/recents_meminfo"
+            android:defaultValue="false"
+            android:persistent="true" />
+
     </PreferenceCategory>
 
 </androidx.preference.PreferenceScreen>

@@ -28,6 +28,7 @@ import android.widget.FrameLayout.LayoutParams;
 import android.widget.TextView;
 import com.android.launcher3.util.Themes;
 import android.graphics.Typeface;
+import com.android.launcher3.Utilities;
 
 import com.android.launcher3.anim.AlphaUpdateListener;
 import com.android.launcher3.DeviceProfile;
@@ -135,6 +136,12 @@ public class MemInfoView extends TextView {
     private void updateMemInfoText(long availMemMiB, long totalMemMiB) {
         String text = String.format(mMemInfoText,
             unitConvert(availMemMiB, false), unitConvert(totalMemMiB, true));
+        if (!Utilities.isShowMeminfo(getContext())) {
+           setText(null);
+           setVisibility(GONE);
+           setAlpha(0);
+           return;
+       }
         setText(text);
         int rcntsMemTxt = Themes.getAttrColor(getContext(), android.R.attr.textColorPrimary);
         setTextColor(rcntsMemTxt);

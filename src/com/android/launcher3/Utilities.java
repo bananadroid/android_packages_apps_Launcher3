@@ -165,6 +165,7 @@ public final class Utilities {
     public static final String KEY_RECENTS_BLUR = "pref_recents_blur";
     public static final String KEY_DRAWER_SEARCHBAR = "pref_drawer_searchbar";
     public static final String KEY_VIBRATION_TOGGLE = "pref_recents_vibration";
+    public static final String KEY_SHOW_MEMINFO = "pref_show_meminfo";
 
     /**
      * Returns true if theme is dark.
@@ -1005,5 +1006,10 @@ public final class Utilities {
     public static boolean recentsScrollVibration(Context context) {
     	SharedPreferences prefs = getPrefs(context.getApplicationContext());
     	return prefs.getBoolean(KEY_VIBRATION_TOGGLE, true);
+   }
+   
+    public static boolean isShowMeminfo(Context context) {
+    	SharedPreferences prefs = getPrefs(context.getApplicationContext());
+    	return prefs.getBoolean(KEY_SHOW_MEMINFO, false);
    }
 }
