@@ -166,6 +166,7 @@ public final class Utilities {
     public static final String KEY_DRAWER_SEARCHBAR = "pref_drawer_searchbar";
     public static final String KEY_VIBRATION_TOGGLE = "pref_recents_vibration";
     public static final String KEY_SHOW_MEMINFO = "pref_show_meminfo";
+    public static final String KEY_FORCE_WHITE_LABEL = "pref_force_white_label";
 
     /**
      * Returns true if theme is dark.
@@ -1011,5 +1012,10 @@ public final class Utilities {
     public static boolean isShowMeminfo(Context context) {
     	SharedPreferences prefs = getPrefs(context.getApplicationContext());
     	return prefs.getBoolean(KEY_SHOW_MEMINFO, false);
+   }
+   
+    public static boolean getIsForceWhitelabel(Context context) {
+    	SharedPreferences prefs = getPrefs(context.getApplicationContext());
+    	return prefs.getBoolean(KEY_FORCE_WHITE_LABEL, false);
    }
 }
