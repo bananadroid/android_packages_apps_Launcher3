@@ -158,6 +158,9 @@
     <string name="recents_screenshot_title">Screenshot</string>
     <string name="recents_lens_title">Lens</string>
     <string name="recents_meminfo">Memory info</string>
+    <string name="recents_meminfo_height">Memory info bottom margin</string>
+    <string name="recents_closeall_height">Close all button bottom margin</string>
 
     <string name="drawer_white_labels">Forced white label</string>
+    <string name="force_white_meminfo">Forced white Memory info text</string>
 </resources>

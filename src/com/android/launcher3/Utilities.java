@@ -167,6 +167,9 @@ public final class Utilities {
     public static final String KEY_VIBRATION_TOGGLE = "pref_recents_vibration";
     public static final String KEY_SHOW_MEMINFO = "pref_show_meminfo";
     public static final String KEY_FORCE_WHITE_LABEL = "pref_force_white_label";
+    public static final String KEY_MEMINFO_HEIGHT = "pref_meminfo_height";
+    public static final String KEY_CLOSEALL_HEIGHT = "pref_close_all_height";
+    public static final String KEY_FORCE_WHITE_MEMINFO = "pref_force_white_meminfo";
 
     /**
      * Returns true if theme is dark.
@@ -1018,4 +1021,19 @@ public final class Utilities {
     	SharedPreferences prefs = getPrefs(context.getApplicationContext());
     	return prefs.getBoolean(KEY_FORCE_WHITE_LABEL, false);
    }
+   
+    public static boolean getIsForceWhiteMemInfo(Context context) {
+    	SharedPreferences prefs = getPrefs(context.getApplicationContext());
+    	return prefs.getBoolean(KEY_FORCE_WHITE_MEMINFO, false);
+   }
+
+    public static int getMemInfoHeight(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getInt(KEY_MEMINFO_HEIGHT, 4);
+    }
+    
+    public static int getCloseAllHeight(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getInt(KEY_CLOSEALL_HEIGHT, 86);
+    }
 }

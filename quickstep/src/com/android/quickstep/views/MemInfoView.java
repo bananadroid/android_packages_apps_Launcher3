@@ -27,6 +27,7 @@ import android.view.View;
 import android.widget.FrameLayout.LayoutParams;
 import android.widget.TextView;
 import com.android.launcher3.util.Themes;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import com.android.launcher3.Utilities;
 
@@ -143,10 +144,14 @@ public class MemInfoView extends TextView {
            return;
        }
         setText(text);
-        int rcntsMemTxt = Themes.getAttrColor(getContext(), android.R.attr.textColorPrimary);
-        setTextColor(rcntsMemTxt);
         setTextSize(10);
         setTypeface(Typeface.create(Themes.getDefaultBodyFont(getContext()), Typeface.BOLD));
+        if (Utilities.getIsForceWhiteMemInfo(getContext())) {
+          setTextColor(Color.WHITE);
+        } else {
+          int rcntsMemTxt = Themes.getAttrColor(getContext(), android.R.attr.textColorPrimary);
+          setTextColor(rcntsMemTxt);
+        }
     }
 
     private class MemInfoWorker implements Runnable {

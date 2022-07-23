@@ -438,16 +438,12 @@ public class DeviceProfile {
         overviewGridSideMargin = isLandscape
                 ? res.getDimensionPixelSize(R.dimen.overview_grid_side_margin_landscape)
                 : res.getDimensionPixelSize(R.dimen.overview_grid_side_margin_portrait);
+        
+        midClearAllMarginGesturePx = pxFromDp(Utilities.getCloseAllHeight(context), mMetrics);
+        midClearAllMarginThreeButtonPx = pxFromDp(Utilities.getCloseAllHeight(context), mMetrics);
 
-        midClearAllMarginGesturePx = res.getDimensionPixelSize(
-                R.dimen.mid_clear_all_bottom_margin_gesture);
-        midClearAllMarginThreeButtonPx = res.getDimensionPixelSize(
-                R.dimen.mid_clear_all_bottom_margin_three_button);
-
-        memInfoMarginGesturePx = res.getDimensionPixelSize(
-                R.dimen.meminfo_bottom_margin_gesture);
-        memInfoMarginThreeButtonPx = res.getDimensionPixelSize(
-                R.dimen.meminfo_bottom_margin_three_button);
+        memInfoMarginGesturePx = pxFromDp(Utilities.getMemInfoHeight(context), mMetrics);
+        memInfoMarginThreeButtonPx = pxFromDp(Utilities.getMemInfoHeight(context), mMetrics);
 
         // Calculate all of the remaining variables.
         extraSpace = updateAvailableDimensions(res);

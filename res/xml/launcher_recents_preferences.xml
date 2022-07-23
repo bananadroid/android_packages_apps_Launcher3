@@ -65,6 +65,36 @@
             android:defaultValue="false"
             android:persistent="true" />
 
+        <SwitchPreference
+            android:key="pref_force_white_meminfo"
+            android:title="@string/force_white_meminfo"
+            android:dependency="pref_show_meminfo"
+            android:defaultValue="false"
+            android:persistent="true" />
+
+        <com.android.launcher3.settings.preferences.CustomSeekBarPreference
+            android:key="pref_meminfo_height"
+            android:title="@string/recents_meminfo_height"
+            android:dependency="pref_show_meminfo"
+            android:persistent="true"
+            android:max="120"
+            android:min="0"
+            settings:units="dp"
+            android:defaultValue="4" />
+
+        <com.android.launcher3.settings.preferences.CustomSeekBarPreference
+            android:key="pref_close_all_height"
+            android:title="@string/recents_closeall_height"
+            android:persistent="true"
+            android:max="120"
+            android:min="0"
+            settings:units="dp"
+            android:defaultValue="86" />
+
     </PreferenceCategory>
 
+    <com.android.settingslib.widget.FooterPreference
+        android:key="restart_tips"
+        android:title="@string/restart_tips"
+        android:selectable="false"/>
 </androidx.preference.PreferenceScreen>
