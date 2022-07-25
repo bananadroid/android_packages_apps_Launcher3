@@ -143,6 +143,7 @@ import com.android.launcher3.folder.FolderIcon;
 import com.android.launcher3.icons.BitmapRenderer;
 import com.android.launcher3.icons.IconCache;
 import com.android.launcher3.keyboard.ViewGroupFocusHelper;
+import com.android.launcher3.lineage.icon.IconPackStore;
 import com.android.launcher3.lineage.LineageUtils;
 import com.android.launcher3.logger.LauncherAtom;
 import com.android.launcher3.logging.FileLog;
@@ -561,9 +562,25 @@ public class Launcher extends StatefulActivity<LauncherState> implements Launche
     }
 
     @Override
-    public void onSharedPreferenceChanged(SharedPreferences SharedPrefs, String key) {
-        if (key.equals(KEY_DARK_STATUS_BAR)) {
-            recreate();
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) { 
+        switch (key) {
+            case KEY_DARK_STATUS_BAR:
+            case Utilities.DESKTOP_SHOW_QUICKSPACE:
+            case Utilities.KEY_RECENTS_BLUR:
+            case Utilities.KEY_VIBRATION_TOGGLE:
+            case Utilities.KEY_FORCE_WHITE_MEMINFO:
+            case Utilities.KEY_DOCK_SEARCH:
+            case Utilities.KEY_DOCK_THEME:
+            case Utilities.KEY_SEARCH_RADIUS:
+            case Utilities.KEY_STATUS_BAR:
+            case Utilities.SHOW_HOTSEAT_BG:
+            case Utilities.KEY_DRAWER_SEARCHBAR:
+            case Utilities.KEY_FORCE_WHITE_LABEL:
+            case IconPackStore.KEY_ICON_PACK:
+                recreate();
+                break;
+            default:
+                break;
         }
     }
 

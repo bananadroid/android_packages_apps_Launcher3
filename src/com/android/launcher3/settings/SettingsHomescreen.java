@@ -97,11 +97,6 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) { 
         switch (key) {
             case Utilities.KEY_DOCK_SEARCH:
-            case Utilities.KEY_DOCK_THEME:
-            case Utilities.KEY_SEARCH_RADIUS:
-            case Utilities.KEY_STATUS_BAR:
-            case Utilities.DESKTOP_SHOW_QUICKSPACE:
-            case Utilities.SHOW_HOTSEAT_BG:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:

@@ -100,7 +100,6 @@ public class SettingsRecents extends CollapsingToolbarBaseActivity
         switch (key) {
             case Utilities.KEY_MEMINFO_HEIGHT:
             case Utilities.KEY_CLOSEALL_HEIGHT:
-            case Utilities.KEY_FORCE_WHITE_MEMINFO:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:

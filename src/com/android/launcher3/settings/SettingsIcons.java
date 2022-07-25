@@ -219,13 +219,7 @@ public class SettingsIcons extends CollapsingToolbarBaseActivity
         }
 
         @Override
-        public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
-            switch (key) {
-                case IconPackStore.KEY_ICON_PACK:
-                    updatePreferences();
-                    break;
-            }
-        }
+        public void onSharedPreferenceChanged(SharedPreferences prefs, String key) { }
 
         protected String getParentKeyForPref(String key) {
             return null;
