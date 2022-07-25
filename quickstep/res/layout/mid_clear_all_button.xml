@@ -7,5 +7,5 @@
     android:textSize="16sp"
     android:fontFamily="@*android:string/config_headlineFontFamily"
     android:text="@string/recents_close_all"
-    android:textColor="?android:attr/textColorPrimary"
+    android:textColor="@color/mid_clear_all_foreground_color"
     android:visibility="gone"/>
