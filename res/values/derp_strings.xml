@@ -27,101 +27,81 @@
         <item>#StaySafe &#127851;</item>
         <item>#KeepYourSmile &#129418;</item>
         <item>#LoveYourself &#127834;</item>
-        <item>&#127925; Ojo Dibandingke - Abah Lala</item>
-        <item>&#127925; Beauty and The Banana - Celine Dion</item>
-        <item>&#127925; Cidro - Didi Kempot</item>
-        <item>&#127925; Rindu Semalam - Titi Kamal</item>
+        <item>Welcome to BananaDroid</item>
+        <item>Enjoy your banana!</item>
+        <item>Please enjoy our delicacies &#127834;</item>
     </string-array>
 
     <string-array name="quickspace_psa_morning">
-        <item>Good morning!</item>
-        <item>Good morning my friend!</item>
-        <item>What a beautiful day!</item>
-        <item>Have a nice day!</item>
-        <item>Health Glance: A little exercise would be nice</item>
-        <item>Good morning beauty! - not dfntly automated</item>
-        <item>Uhhh.. 5 more minutes...</item>
-        <item>I pour milk first before cereal...</item>
-        <item>Good morning handsome! - not dfntly automated</item>
-        <item>The weather is good, i mean 32C. unsupported msg.</item>
-        <item>Weather is cold hot winter,spring, summer or fall &#128191;</item>
-        <item>That\'s one way to wake up.</item>
-        <item>Rest in peace melatonin.</item>
-        <item>You should change your alarm sounds.</item>
-        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
-        <item>Let\'s get this bread.</item>
-        <item>Check the weather just in case</item>
-        <item>I\'m not alexa, swipe to the left for Google Feed!</item>
-        <item>The weather for today is.. idk</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Health Glance: Stay Hydrated!</item>
-        <item>Let\'s get this done.</item>
+        <item>A little walk seems nice.</item>
+        <item>Brush your teeth mindfully.</item>
+        <item>Start your day hydrated!</item>
+        <item>Get some exercise!</item>
+        <item>Stretch things out!</item>
+        <item>Try starting your day with positivity.</item>
+        <item>It is morning right now.</item>
+        <item>Don\'t forget to check your battery levels!</item>
+        <item>Please don\'t forget to prepare your breakfast.</item>
+        <item>Please check the weather, just in case.</item>
+        <item>Don\'t forget to check your notes!</item>
+        <item>Remember to check your email/messages.</item>
+        <item>Please check your schedule if you have one.</item>
+        <item>You can disable me via home settings.</item>
+        <item>Toggling the switch can fix stucked responses.</item>
+        <item>Enjoy a cup of coffee.</item>
+        <item>Don\'t forget about protein.</item>
+        <item>Eggs make a simple, nutritious breakfast.</item>
+        <item>Enjoy your breakfast.</item>
     </string-array>
     <string-array name="quickspace_psa_noon">
-        <item>Good afternoon..</item>
-        <item>The dawn will arrive sooner or later..</item>
-        <item>Health Glance: Stay Hydrated!</item>
-        <item>A mineral water would be nice.</item>
-        <item>Go touch some grass!</item>
-        <item>Do something befor the day ends!</item>
-        <item>Get some snacks while you\'re at it.</item>
-        <item>I want to buy some banana now..</item>
-        <item>Go out and have fun!</item>
-        <item>If a good time to go out and eat.</item>
-        <item>Did you have fun today?</item>
-        <item>We\'re almost there! Hang on!</item>
-        <item>Let\'s go for some banana!</item>
-        <item>It\'s nice to sleep under a tree..</item>
-        <item>I love watching the sunset..</item>
-        <item>Have you eaten your banana?</item>
-        <item>How about some drinks?</item>
+        <item>Don\'t forget to stay hydrated!</item>
+        <item>Remember to eat some snacks.</item>
+        <item>UV rays are more harmful in the afternoon.</item>
+        <item>It is afternoon right now.</item>
+        <item>Don\'t forget to check your battery levels!</item>
+        <item>Remember to check your email/messages.</item>
+        <item>Please check your to-do list if you have one.</item>
+        <item>Don\'t forget to prepare your dinner.</item>
+        <item>You can disable me via home settings.</item>
+        <item>Toggling the switch can fix stucked responses.</item>
+        <item>Have some fun.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>Good Evening!</item>
-        <item>The night comes..</item>
-        <item>Don\'t forget to eat your dinner!</item>
-        <item>Time to relax and eat fries.</item>
-        <item>How about watching something a good movie?</item>
-        <item>Hello, how are you?</item>
-        <item>Maybe try watching some youtube videos</item>
-        <item>Its not bad to watch some news isn\'t it?</item>
-        <item>The eve comes!</item>
-        <item>Hey charge me already!</item>
-        <item>If you\'re aren\'t tired, well I am.</item>
-        <item>A good BULALO soup seems nice.</item>
-        <item>Where iss thee sauccee!!!???</item>
-        <item>Cup noodles is good for your health.. hey its sarcasm btw</item>
-        <item>Health Glance: Don\'t forget to drink water!</item>
-        <item>Health Glance: Don\'t forget to eat your dinner!</item>
-        <item>The day is almost done. Good job surviving!</item>
-        <item>You are amazing, now take some rest!</item>
-        <item>How\'s your day?</item>
-        <item>If you failed today, you can fail again tomorrow, chill.</item>
+        <item>Don\'t forget to stay hydrated!</item>
+        <item>8 hours of sleep is a must.</item>
+        <item>It is evening right now.</item>
+        <item>Remember to full charge me before you sleep.</item>
+        <item>Remember to check your email/messages.</item>
+        <item>Please check your to-do list if you have one.</item>
+        <item>Don\'t forget to eat your dinner.</item>
+        <item>Remember to check the lights and sockets.</item>
+        <item>You can disable me via home settings.</item>
+        <item>Toggling the switch can fix stucked responses.</item>
+        <item>Try to relax and do some rest.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
-        <item>Good night!</item>
-        <item>Sleep well!</item>
-        <item>See you tomorrow!</item>
-        <item>Sweet dreams!</item>
-        <item>Don\'t stay up too long</item>
-        <item>Have a good sleep</item>
-        <item>Get some sleep</item>
-        <item>Time to relax</item>
-        <item>Enjoy the night!</item>
-        <item>Time to charge the batteries!</item>
-        <item>Tomorrow might be a great day</item>
-        <item>Get your bones ready for tomorrow</item>
-        <item>Wala na, finish na.</item>
+        <item>Don\'t drink too much water before sleeping.</item>
+        <item>It is evening right now.</item>
+        <item>Try to avoid overnight charging if possible.</item>
+        <item>Remember to check your email/messages.</item>
+        <item>Please check your to-do list if you have one.</item>
+        <item>Don\'t forget to eat your dinner.</item>
+        <item>8 hours of sleep is a must.</item>
+        <item>You can disable me via home settings.</item>
+        <item>Toggling the switch can fix stucked responses.</item>
+        <item>Enjoy your sleep.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
-        <item>Um... good mornight?</item>
-        <item>You sure like coffee...</item>
-        <item>It\'s a bit late now</item>
-        <item>Have you ever think about space at this time?</item>
-        <item>Sleep is for the weak!</item>
-        <item>You should fix your sleep schedule</item>
-        <item>Are you more productive at this time?</item>
+        <item>Sleep defficiency is bad for your health.</item>
+        <item>Don\'t forget to stay hydrated.</item>
+        <item>Being sleep deficit can break melatonin production.</item>
+        <item>It is midnight right now.</item>
+        <item>Remember to take consideration for day duties.</item>
+        <item>You might have a important schedule during the day.</item>
+        <item>Don\'t forget to sleep/prepare your breakfast.</item>
+        <item>You can disable me via home settings.</item>
+        <item>Toggling the switch can fix stucked responses.</item>
+        <item>Please take care of yourself.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
         <item>Thank you for choosing BananaDroid</item>
@@ -137,84 +117,6 @@
         <item>When nothing goes right... Go left</item>
         <item>Farting every day makes your day easier</item>
         <item>make a smile your best friend</item>
-    </string-array>
-    <string-array name="quickspace_psa_morning_title">
-        <item>#BananaInTheMorning &#127834;</item>
-        <item>&#128191; Always With Me - Youmi Kimura</item>
-        <item>&#128191; In The Morning - The Bee Gees</item>
-        <item>&#128191; Don\'t Worry - Tony Q Rastafara</item>
-        <item>&#128191; Selamat Pagi - RAN</item>
-        <item>&#128191; Vintage - Niki</item>
-        <item>#BananaStarted &#9728;&#65039;</item>
-        <item>#GoodMorning &#9728;&#65039;</item>
-        <item>#KingOfBanana &#128081;</item>
-        <item>#BananaMood &#9728;&#65039;</item>
-        <item>#GreenBanana &#127834;</item>
-    </string-array>
-    <string-array name="quickspace_psa_noon_title">
-        <item>#NoonBanana &#127834;</item>
-        <item>&#128191; Niki - Every Summertime</item>
-        <item>&#128191; Owl City - Fireflies</item>
-        <item>&#128191; Rendy Pandugo - I Don\'t Care</item>
-        <item>&#128191; Coldplay - Viva La Vida</item>
-        <item>&#128191; Ed Sheeran - Castle on The Hill</item>
-        <item>#Sunset &#127751;</item>
-        <item>#AfterWork &#127834;</item>
-        <item>#KeepSpirit &#128081;</item>
-        <item>#AfterBanana &#9729;&#65039;</item>
-        <item>#Afternoon &#127751;</item>
-    </string-array>
-    <string-array name="quickspace_psa_early_evening_title">
-        <item>#MoonRice &#127769;</item>
-        <item>&#128191; My way - Presley Elvis</item>
-        <item>&#128191; Pop! - Nayeon </item>
-        <item>&#128191; Two Less Lonely People in the world - Supply Air</item>
-        <item>&#128191; Nickelback - This Afternoon</item>
-        <item>&#128191; Afternoon - Youth Lagoon</item>
-        <item>#GoodEve &#127769;</item>
-        <item>#Dinner &#127775;</item>
-        <item>#EatRice4Dinner &#127769;</item>
-    </string-array>
-    <string-array name="quickspace_psa_evening_title">
-        <item>#BananaMoon &#127769;</item>
-        <item>&#128191; The Kinks - Afternoon Tea</item>
-        <item>&#128191; Stephanie Poetri - Selfish</item>
-        <item>&#128191; Fourtwnty - Hitam Putih</item>
-        <item>&#128191; Owl City - Fireflies</item>
-        <item>&#128191; Eminem - Love Yourself</item>
-        <item>#BananaNight &#127769;</item>
-        <item>#BananaLight &#127775;</item>
-        <item>#Goodnight &#127769;</item>
-        <item>#Sleepwell &#128564;</item>
-        <item>#DinnerChickenWinner &#127834;</item>
-    </string-array>
-    <string-array name="quickspace_psa_midnight_title">
-        <item>#GetHelp</item>
-        <item>#AreYouOk</item>
-        <item>#SleepNow</item>
-        <item>#GettingDrowzy</item>
-        <item>#Call911</item>
-        <item>#RestinPeace</item>
-        <item>#IfYouWontSleepIwill</item>
-        <item>#RoadToHeaven101</item>
-        <item>#YouWillbe404</item>
-    </string-array>
-    <string-array name="quickspace_psa_random_title">
-        <item>#GetBanana &#127834;</item>
-        <item>#EatBanana &#129425;</item>
-        <item>#GetHungry &#127858;</item>
-        <item>#StayHealthy &#127853;</item>
-        <item>#StaySafe &#127851;</item>
-        <item>#KeepYourSmile &#129418;</item>
-        <item>#LoveYourself &#127834;</item>
-        <item>#OneEarth &#127835;</item>
-        <item>&#128191; Cidro - Didi Kempot</item>
-        <item>&#128191; Ojo Dibandingke - Abah Lala</item>
-        <item>&#128191; Dunia Tipu Tipu - Yura Yunita</item>
-        <item>&#128191; I\'m Yours - Jason Mraz</item>
-        <item>&#128191; With or Without You - U2</item>
-        <item>&#128191; One Summer\'s Day - Joe Hisaishi</item>
-        <item>&#128191; Glimpse of Us - Joji</item>
     </string-array>
 
     <string name="custom_date_strings">EEE, MMM d</string>

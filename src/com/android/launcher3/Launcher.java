@@ -1096,7 +1096,11 @@ public class Launcher extends StatefulActivity<LauncherState> implements Launche
             mOverlayManager.onActivityPaused(this);
         }
        if (mQuickSpace != null) {
+        if (hasBeenResumed()) {
+            mQuickSpace.onResume();
+        } else {
             mQuickSpace.onPause();
+        }
         }
         if (!isStarted()) {
             mOverlayManager.onActivityStopped(this);
@@ -1217,8 +1221,13 @@ public class Launcher extends StatefulActivity<LauncherState> implements Launche
 
         if (!mDeferOverlayCallbacks) {
             mOverlayManager.onActivityPaused(this);
+           if (mQuickSpace != null) {
+              mQuickSpace.onPause();
+           }
         }
+
         mAppWidgetHost.setActivityResumed(false);
+
     }
 
     /**

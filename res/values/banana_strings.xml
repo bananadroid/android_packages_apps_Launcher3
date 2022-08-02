@@ -31,8 +31,8 @@
     <string name="settings_edit_widgets_error">It\'s not possible to add widgets to the home screen</string>
 
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
-    <string name="show_quickspace_summary">Requires dark/light theme toggle to work.</string>
+    <string name="show_quickspace_title">At A Glance wannabe</string>
+    <string name="show_quickspace_summary">At A Glance wannabe - toggle switch in case message doesn\'t update.</string>
     <string name="abbrev_wday_month_day_no_year" translatable="false">EEEEMMMd</string>
 
 </resources>

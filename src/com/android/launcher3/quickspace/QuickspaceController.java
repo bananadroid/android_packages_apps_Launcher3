@@ -22,6 +22,8 @@ import android.os.Handler;
 import android.provider.Settings;
 import android.util.Log;
 
+import com.android.launcher3.quickspace.QuickEventsController;
+
 import java.util.ArrayList;
 
 public class QuickspaceController {
