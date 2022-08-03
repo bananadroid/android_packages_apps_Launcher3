@@ -32,7 +32,9 @@
 
     <!-- QuickSpace -->
     <string name="show_quickspace_title">At A Glance wannabe</string>
-    <string name="show_quickspace_summary">At A Glance wannabe - toggle switch in case message doesn\'t update.</string>
+    <string name="show_quickspace_summary">A copy of Google\'s at a glance widget</string>
+    <string name="show_quickspace_msg_title">Random at a glance messages</string>
+    <string name="show_quickspace_msg_summary">Show random at a glance messages based on the time of the day - toggle switch in case message doesn\'t update</string>
     <string name="abbrev_wday_month_day_no_year" translatable="false">EEEEMMMd</string>
 
 </resources>

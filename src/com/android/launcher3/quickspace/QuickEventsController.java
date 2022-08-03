@@ -60,7 +60,7 @@ public class QuickEventsController {
 
     public QuickEventsController(Context context) {
         mContext = context;
-        initQuickEvents();
+          initQuickEvents();
     }
 
     public void initQuickEvents() {

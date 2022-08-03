@@ -566,6 +566,7 @@ public class Launcher extends StatefulActivity<LauncherState> implements Launche
         switch (key) {
             case KEY_DARK_STATUS_BAR:
             case Utilities.DESKTOP_SHOW_QUICKSPACE:
+            case Utilities.KEY_QUICK_EVENTS_MSGS:
             case Utilities.KEY_RECENTS_BLUR:
             case Utilities.KEY_VIBRATION_TOGGLE:
             case Utilities.KEY_FORCE_WHITE_RECENTS:

@@ -57,6 +57,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     public ViewGroup mQuickspaceContent;
     public ImageView mEventSubIcon;
     public TextView mEventTitleSub;
+    public View mQuickEventsView;
 
     public boolean mFinishedInflate;
 
@@ -88,9 +89,18 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         mEventTitleSub.setOnClickListener(mQEController.getAction());
         mEventSubIcon.setImageTintList(mColorStateList);
         mEventSubIcon.setImageResource(mQEController.getActionIcon());
+        loadQuickEvents();
         bindClock(true);
     }
 
+    private final void loadQuickEvents() {
+        if (Utilities.showQuickEventsMsgs(getContext())) {
+          mQuickEventsView.setVisibility(View.VISIBLE);
+        } else {
+          mQuickEventsView.setVisibility(View.GONE);
+        }
+    }
+    
     private final void bindClock(boolean forced) {
         mClockView.setOnClickListener(mActionReceiver.getCalendarAction());
         if (forced) {
@@ -101,6 +111,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     private final void loadViews() {
         mEventTitleSub = (TextView) findViewById(R.id.quick_event_title_sub);
         mEventSubIcon = (ImageView) findViewById(R.id.quick_event_icon_sub);
+        mQuickEventsView = (View) findViewById(R.id.quick_events_messages);
         mQuickspaceContent = (ViewGroup) findViewById(R.id.quickspace_content);
         mClockView = (DateTextView) findViewById(R.id.clock_view);
     }
