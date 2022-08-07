@@ -54,7 +54,7 @@ public class QuickEventsController {
     private BroadcastReceiver mPSAListener = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            psonalityEvent();
+            updateQuickEvents();
         }
     };
 
@@ -85,10 +85,6 @@ public class QuickEventsController {
     }
 
     public void updateQuickEvents() {
-        psonalityEvent();
-    }
-
-    public void psonalityEvent() {
         if (!mRunning) return;
         
         mEventTitleSub = mContext.getResources().getStringArray(R.array.quickspace_psa_random)[getLuckyNumber(0,22)];
@@ -194,8 +190,6 @@ public class QuickEventsController {
     }
 
     public void onResume() {
-        mRunning = true;
-        registerPSAListener();
-        mRegistered = true;
+    	initQuickEvents();
     }
 }
