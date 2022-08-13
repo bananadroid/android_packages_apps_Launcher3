@@ -170,7 +170,7 @@ public final class Utilities {
     public static final String KEY_FORCE_WHITE_LABEL = "pref_force_white_label";
     public static final String KEY_MEMINFO_HEIGHT = "pref_meminfo_height";
     public static final String KEY_CLOSEALL_HEIGHT = "pref_close_all_height";
-    public static final String KEY_FORCE_WHITE_MEMINFO = "pref_force_white_meminfo";
+    public static final String KEY_FORCE_WHITE_RECENTS = "pref_force_white_recents";
 
     /**
      * Returns true if theme is dark.
@@ -1024,9 +1024,9 @@ public final class Utilities {
     	return prefs.getBoolean(KEY_FORCE_WHITE_LABEL, false);
    }
    
-    public static boolean getIsForceWhiteMemInfo(Context context) {
+    public static boolean getIsForceWhiteRecents(Context context) {
     	SharedPreferences prefs = getPrefs(context.getApplicationContext());
-    	return prefs.getBoolean(KEY_FORCE_WHITE_MEMINFO, false);
+    	return prefs.getBoolean(KEY_FORCE_WHITE_RECENTS, false);
    }
 
     public static int getMemInfoHeight(Context context) {

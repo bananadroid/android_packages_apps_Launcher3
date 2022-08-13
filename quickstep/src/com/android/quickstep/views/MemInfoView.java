@@ -138,15 +138,15 @@ public class MemInfoView extends TextView {
         String text = String.format(mMemInfoText,
             unitConvert(availMemMiB, false), unitConvert(totalMemMiB, true));
         if (!Utilities.isShowMeminfo(getContext())) {
-           setText(null);
-           setVisibility(GONE);
+           setText(" ");
+           setVisibility(INVISIBLE);
            setAlpha(0);
            return;
        }
         setText(text);
         setTextSize(10);
         setTypeface(Typeface.create(Themes.getDefaultBodyFont(getContext()), Typeface.BOLD));
-        if (Utilities.getIsForceWhiteMemInfo(getContext())) {
+        if (Utilities.getIsForceWhiteRecents(getContext())) {
           setTextColor(Color.WHITE);
         } else {
           int rcntsMemTxt = Themes.getAttrColor(getContext(), android.R.attr.textColorPrimary);

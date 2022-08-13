@@ -66,9 +66,8 @@
             android:persistent="true" />
 
         <SwitchPreference
-            android:key="pref_force_white_meminfo"
-            android:title="@string/force_white_meminfo"
-            android:dependency="pref_show_meminfo"
+            android:key="pref_force_white_recents"
+            android:title="@string/force_white_recents"
             android:defaultValue="false"
             android:persistent="true" />
 

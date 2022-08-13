@@ -708,7 +708,7 @@ public abstract class RecentsView<ACTIVITY_TYPE extends StatefulActivity<STATE_T
         mEmptyIcon.setCallback(this);
         mEmptyMessage = context.getText(R.string.recents_empty_message_custom);
         mEmptyMessagePaint = new TextPaint();
-        if (Utilities.getIsForceWhiteMemInfo(getContext())) {
+        if (Utilities.getIsForceWhiteRecents(getContext())) {
           mEmptyIcon.setTint(Color.WHITE);
           mEmptyMessagePaint.setColor(Color.WHITE);
         } else {

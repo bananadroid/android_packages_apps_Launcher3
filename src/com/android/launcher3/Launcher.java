@@ -568,7 +568,7 @@ public class Launcher extends StatefulActivity<LauncherState> implements Launche
             case Utilities.DESKTOP_SHOW_QUICKSPACE:
             case Utilities.KEY_RECENTS_BLUR:
             case Utilities.KEY_VIBRATION_TOGGLE:
-            case Utilities.KEY_FORCE_WHITE_MEMINFO:
+            case Utilities.KEY_FORCE_WHITE_RECENTS:
             case Utilities.KEY_DOCK_SEARCH:
             case Utilities.KEY_DOCK_THEME:
             case Utilities.KEY_SEARCH_RADIUS:
