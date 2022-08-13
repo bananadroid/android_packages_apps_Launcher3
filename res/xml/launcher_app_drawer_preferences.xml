@@ -59,7 +59,7 @@
         android:max="100"
         android:min="0"
         settings:units="%"
-        android:defaultValue="80" />
+        android:defaultValue="100" />
         
     <com.android.settingslib.widget.FooterPreference
         android:key="restart_tips"
