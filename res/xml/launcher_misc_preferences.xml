@@ -55,10 +55,10 @@
         android:key="pref_recents_blur"
         android:title="@string/background_blur_title"
         android:persistent="true"
-        android:max="75"
-        android:min="0"
+        android:max="100"
+        android:min="1"
         settings:units="px"
-        android:defaultValue="23" />
+        android:defaultValue="100" />
         
     <com.android.settingslib.widget.FooterPreference
         android:key="blur_tips"
