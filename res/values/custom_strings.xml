@@ -163,4 +163,6 @@
 
     <string name="drawer_white_labels">Forced white label</string>
     <string name="force_white_recents">Forced white tint for recent view resources</string>
+
+    <string name="qsb_search_hint" translatable="false">Searching for something?</string>
 </resources>
