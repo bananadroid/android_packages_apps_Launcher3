@@ -38,15 +38,15 @@
         <item>Start your day hydrated!</item>
         <item>Get some exercise!</item>
         <item>Stretch things out!</item>
-        <item>Try starting your day with positivity.</item>
+        <item>Start your day with positivity.</item>
         <item>It is morning right now.</item>
-        <item>Don\'t forget to check your battery levels!</item>
-        <item>Please don\'t forget to prepare your breakfast.</item>
-        <item>Please check the weather, just in case.</item>
+        <item>Always check device\'s battery levels!</item>
+        <item>Don\'t forget to prepare breakfast.</item>
+        <item>Check the weather, just in case.</item>
         <item>Don\'t forget to check your notes!</item>
-        <item>Remember to check your email/messages.</item>
-        <item>Please check your schedule if you have one.</item>
-        <item>You can disable me via home settings.</item>
+        <item>Always check your email/messages.</item>
+        <item>Check your schedule if you have one.</item>
+        <item>Enjoy your day.</item>
         <item>Toggling the switch can fix stucked responses.</item>
         <item>Enjoy a cup of coffee.</item>
         <item>Don\'t forget about protein.</item>
@@ -58,26 +58,26 @@
         <item>Remember to eat some snacks.</item>
         <item>UV rays are more harmful in the afternoon.</item>
         <item>It is afternoon right now.</item>
-        <item>Don\'t forget to check your battery levels!</item>
+        <item>Always check device\'s battery levels!</item>
         <item>Remember to check your email/messages.</item>
         <item>Please check your to-do list if you have one.</item>
         <item>Don\'t forget to prepare your dinner.</item>
-        <item>You can disable me via home settings.</item>
-        <item>Toggling the switch can fix stucked responses.</item>
+        <item>Enjoy your day.</item>
+        <item>Re-enable glance to fix stucked responses.</item>
         <item>Have some fun.</item>
     </string-array>
     <string-array name="quickspace_psa_early_evening">
-        <item>Don\'t forget to stay hydrated!</item>
+        <item>Always stay hydrated!</item>
         <item>8 hours of sleep is a must.</item>
         <item>It is evening right now.</item>
         <item>Remember to full charge me before you sleep.</item>
         <item>Remember to check your email/messages.</item>
         <item>Please check your to-do list if you have one.</item>
-        <item>Don\'t forget to eat your dinner.</item>
-        <item>Remember to check the lights and sockets.</item>
-        <item>You can disable me via home settings.</item>
-        <item>Toggling the switch can fix stucked responses.</item>
-        <item>Try to relax and do some rest.</item>
+        <item>Remember to eat dinner.</item>
+        <item>Always check the lights and sockets.</item>
+        <item>Enjoy the night.</item>
+        <item>Re-enable glance to fix stucked responses.</item>
+        <item>Relax and do some rest.</item>
     </string-array>
     <string-array name="quickspace_psa_evening">
         <item>Don\'t drink too much water before sleeping.</item>
@@ -85,10 +85,10 @@
         <item>Try to avoid overnight charging if possible.</item>
         <item>Remember to check your email/messages.</item>
         <item>Please check your to-do list if you have one.</item>
-        <item>Don\'t forget to eat your dinner.</item>
+        <item>Remember to eat dinner.</item>
         <item>8 hours of sleep is a must.</item>
-        <item>You can disable me via home settings.</item>
-        <item>Toggling the switch can fix stucked responses.</item>
+        <item>Enjoy the night.</item>
+        <item>Re-enable glance to fix stucked responses.</item>
         <item>Enjoy your sleep.</item>
     </string-array>
     <string-array name="quickspace_psa_midnight">
@@ -99,8 +99,8 @@
         <item>Remember to take consideration for day duties.</item>
         <item>You might have a important schedule during the day.</item>
         <item>Don\'t forget to sleep/prepare your breakfast.</item>
-        <item>You can disable me via home settings.</item>
-        <item>Toggling the switch can fix stucked responses.</item>
+        <item>Enjoy the midnight.</item>
+        <item>Re-enable glance to fix stucked responses.</item>
         <item>Please take care of yourself.</item>
     </string-array>
     <string-array name="quickspace_psa_random">
@@ -120,6 +120,7 @@
     </string-array>
 
     <string name="custom_date_strings">EEE, MMM d</string>
+    <string name="custom_date_strings_extended">EEEE, MMM d</string>
 
     <!-- AppInfo -->
     <string name="app_info_subtext">Swipe down to close app info</string>

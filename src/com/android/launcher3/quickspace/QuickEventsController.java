@@ -38,11 +38,12 @@ public class QuickEventsController {
     private Context mContext;
 
     private String mEventTitleSub;
+    private String mGreetingsExt;
     private OnClickListener mEventTitleSubAction = null;
     private int mEventSubIcon;
 
-    private boolean mRunning;
-    private boolean mRegistered;
+    private boolean mRunning = true;
+    private boolean mRegistered = false;
 
     // PSA + Personality
     private String[] mPSAMorningStr;
@@ -60,18 +61,17 @@ public class QuickEventsController {
 
     public QuickEventsController(Context context) {
         mContext = context;
-          initQuickEvents();
+        initQuickEvents();
     }
 
     public void initQuickEvents() {
-    	mRunning = true;
         registerPSAListener();
-        mRegistered = true;
         updateQuickEvents();
     }
 
     private void registerPSAListener() {
         if (mRegistered) return;
+        mRegistered = true;
         IntentFilter psonalityIntent = new IntentFilter();
         psonalityIntent.addAction(Intent.ACTION_TIME_TICK);
         psonalityIntent.addAction(Intent.ACTION_TIME_CHANGED);
@@ -81,6 +81,7 @@ public class QuickEventsController {
 
     private void unregisterPSAListener() {
        if (!mRegistered) return;
+       mRegistered = false;
         mContext.unregisterReceiver(mPSAListener);
     }
 
@@ -88,7 +89,8 @@ public class QuickEventsController {
         if (!mRunning) return;
         
         mEventTitleSub = mContext.getResources().getStringArray(R.array.quickspace_psa_random)[getLuckyNumber(0,22)];
-        mEventSubIcon = R.drawable.ic_quickspace_derp;
+        mGreetingsExt = mContext.getResources().getString(R.string.quickspace_grt_general);
+        mEventSubIcon = R.drawable.ic_quickspace_info;
 
         mEventTitleSubAction = new OnClickListener() {
             @Override
@@ -110,7 +112,6 @@ public class QuickEventsController {
         mPSAAfterNoonStr = mContext.getResources().getStringArray(R.array.quickspace_psa_noon);
         mPSARandomStr = mContext.getResources().getStringArray(R.array.quickspace_psa_random);
         int psaLength;
-        int psaLengthT;
 
         // Clean the onClick event to avoid any weird behavior
         mEventTitleSubAction = new OnClickListener() {
@@ -124,37 +125,37 @@ public class QuickEventsController {
             case 5: case 6: case 7: case 8: case 9: case 10:
                 psaLength = mPSAMorningStr.length - 1;
                 mEventTitleSub = mPSAMorningStr[getLuckyNumber(0, psaLength)];
-                mEventSubIcon = R.drawable.ic_quickspace_morning;
+                mGreetingsExt = mContext.getResources().getString(R.string.quickspace_grt_morning);
                 break;
 
             case 21: case 22: case 23: case 0: 
                 psaLength = mPSAEvenStr.length - 1;
                 mEventTitleSub = mPSAEvenStr[getLuckyNumber(0, psaLength)];
-                mEventSubIcon = R.drawable.ic_quickspace_evening;
+                mGreetingsExt = mContext.getResources().getString(R.string.quickspace_grt_night);
                 break;
                 
             case 18: case 19: case 20:
                 psaLength = mPSAEarlyEvenStr.length - 1;
                 mEventTitleSub = mPSAEarlyEvenStr[getLuckyNumber(0, psaLength)];
-                mEventSubIcon = R.drawable.ic_quickspace_early_evening;
+                mGreetingsExt = mContext.getResources().getString(R.string.quickspace_grt_evening);
                 break;
 
              case 15: case 16: case 17:
                 psaLength = mPSAAfterNoonStr.length - 1;
                 mEventTitleSub = mPSAAfterNoonStr[getLuckyNumber(0, psaLength)];
-                mEventSubIcon = R.drawable.ic_quickspace_noon;
+                mGreetingsExt = mContext.getResources().getString(R.string.quickspace_grt_afternoon);
                 break;
 
             case 1: case 2: case 3: case 4:
                 psaLength = mPSAMidniteStr.length - 1;
                 mEventTitleSub = mPSAMidniteStr[getLuckyNumber(0, psaLength)];
-                mEventSubIcon = R.drawable.ic_quickspace_midnight;
+                mGreetingsExt = mContext.getResources().getString(R.string.quickspace_grt_midnight);
                 break;
                 
             case 11: case 12: case 13: case 14: 
                 psaLength = mPSARandomStr.length - 1;
                 mEventTitleSub = mPSARandomStr[getLuckyNumber(0, psaLength)];
-                mEventSubIcon = R.drawable.ic_quickspace_derp;
+                mGreetingsExt = mContext.getResources().getString(R.string.quickspace_grt_general);
                 break;
 
             default:
@@ -164,6 +165,10 @@ public class QuickEventsController {
 
     public String getActionTitle() {
         return mEventTitleSub;
+    }
+
+    public String getGreetings() {
+        return mGreetingsExt;
     }
 
     public OnClickListener getAction() {
@@ -186,10 +191,10 @@ public class QuickEventsController {
     public void onPause() {
         mRunning = false;
         unregisterPSAListener();
-        mRegistered = false;
     }
 
     public void onResume() {
-    	initQuickEvents();
+        mRunning = true;
+        registerPSAListener();
     }
 }

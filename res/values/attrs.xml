@@ -60,6 +60,8 @@
     <attr name="qsbIconTintQuaternary" format="color" />
     <attr name="qsbIconTintSecondary" format="color" />
     <attr name="qsbIconTintTertiary" format="color" />
+    
+    <attr name="widgetTextColor" format="color" />
 
     <!-- BubbleTextView specific attributes. -->
     <declare-styleable name="BubbleTextView">

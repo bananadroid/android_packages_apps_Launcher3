@@ -33,8 +33,21 @@
     <!-- QuickSpace -->
     <string name="show_quickspace_title">At A Glance wannabe</string>
     <string name="show_quickspace_summary">A copy of Google\'s at a glance widget</string>
-    <string name="show_quickspace_msg_title">Random at a glance messages</string>
-    <string name="show_quickspace_msg_summary">Show random at a glance messages based on the time of the day - toggle switch in case message doesn\'t update</string>
+    <string name="show_quickspace_msg_title">Random At a glance messages</string>
+    <string name="show_quickspace_msg_summary">Show random messages below at a glance - toggle switch in case message doesn\'t update</string>
+    <string name="extended_quickspace_title">Extended At a glance</string>
+    <string name="extended_quickspace_summary">Extended version of at a glance wannabe widget</string>
     <string name="abbrev_wday_month_day_no_year" translatable="false">EEEEMMMd</string>
+
+    <string name="qsb_search_hint" >Searching for something?</string>
+
+    <!-- Greetings -->
+    <string name="quickspace_grt_morning">Good morning.</string>
+    <string name="quickspace_grt_evening">Good evening.</string>
+    <string name="quickspace_grt_afternoon">Good afternoon.</string>
+    <string name="quickspace_grt_night">Good night.</string>
+    <string name="quickspace_grt_midnight">Solemn midnight.</string>
+    <string name="quickspace_grt_general">Good day.</string>
+    <string name="extended_clock_text">It\'s</string>
 
 </resources>
