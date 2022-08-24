@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2022 crDroid Android Project
+     Copyright (C) 2022 riceDroid Android Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- General -->
+    <string name="settings_title">Ayarlar</string>
+
+    <!-- Categories -->
+    <string name="home_category_title">Ana ekran</string>
+    <string name="home_category_summary">Google now panelini ve daha fazlasını ayarlayın</string>
+    <string name="icons_category_title">Simgeler</string>
+    <string name="icons_category_summary">Simge boyutu ve daha fazlasını ayarlayın</string>
+    <string name="app_drawer_category_title">Uygulama çekmecesi</string>
+    <string name="app_drawer_category_summary">Uygulama çekmecenizi ayarlayın</string>
+    <string name="recents_category_title">Son uygulamalar</string>
+    <string name="recents_category_summary">Ön izleme ekranını özelleştirin</string>
+    <string name="misc_category_title">Çeşitli</string>
+    <string name="misc_category_summary">Diğer seçenekler</string>
+    <string name="dev_options_title">Geliştirici seçenekleri</string>
+    <string name="dev_options_desc">Bazı gizli özellikleri etkinleştirin</string>
+    <string name="general_category_title">Genel</string>
+    <string name="interface_category_title">Arayüz</string>
+    <string name="search_bar_category_title">Arama çubuğu</string>
+    <string name="actions_category_title">Hızlı eylemler</string>
+
+    <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
+    <string name="title_show_google_app">Google uygulamasına erişmek için kaydırın</string>
+    <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_left">Ana sayfadan sağa kaydırdığınızda</string>
+    <!-- Settings message explaining when the -1 screen is available on an RTL device. [CHAR LIMIT=100] -->
+    <string name="msg_minus_one_on_right">Ana sayfadan sola kaydırdığınızda</string>
+
+    <!-- Folder titles -->
+    <string name="google_folder_title" translatable="false">Google</string>
+
+    <!-- Hide labels -->
+    <string name="desktop_show_labels">Ana ekranda simge etiketleri</string>
+    <string name="drawer_show_labels">Uygulama çekmecesinde simge etiketleri</string>
+
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Değer: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">varsayılan olarak</string>
+    <string name="custom_seekbar_default_value_to_set">Varsayılan değer: <xliff:g id="v">%s</xliff:g>\nAyarlamak için uzun bas</string>
+    <string name="custom_seekbar_default_value_is_set">Varsayılan değer ayarlandı</string>
+
+    <!-- Icon size -->
+    <string name="icon_size_title">Simge boyutu</string>
+
+    <!-- Font size -->
+    <string name="font_size_title">Yazı tipi boyutu</string>
+
+    <!-- App label - max lines -->
+    <string name="icon_max_lines_title">Uygulama etiketi için maksiumum satır</string>
+
+    <!-- DT2S -->
+    <string name="pref_sleep_gesture_title">Çift dokunarak uyutma</string>
+    <string name="pref_sleep_gesture_summary">Ekranı kapatmak için boş bir alana çift dokun</string>
+
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Ara</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Sesli arama</string>
+    <string name="dock_search_title">Google arama çubuğu</string>
+    <string name="dock_search_summary">Arama çubuğunu alt kısımda göster</string>
+    <string name="dock_theme_title">Temalı arama çubuğu simgeleri</string>
+    <string name="dock_theme_summary">Arama çubuğu için temalı simgeler kullan</string>
+    <string name="search_radius_title">Köşe yarıçapı</string>
+
+    <!-- Recents -->
+    <string name="action_lens">Lens</string>
+
+    <!-- Homescreen Statusbar -->
+    <string name="show_statusbar_title">Durum Çubuğu</string>
+
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Öneriler</string>
+    <string name="suggestion_pref_screen_desc">Tüm uygulamalar &amp; Ana ekran için öneriler</string>
+
+    <!-- Icon pack -->
+    <string name="icon_pack_title">Simge paketi</string>
+    <string name="icon_pack_default_label">Varsayılan</string>
+    <string name="icon_pack_add">Daha fazla yükleyin</string>
+    <string name="icon_pack_no_market">Uygulama marketinde kullanılabilir simge paketi yok</string>
+
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar">Görev çubuğunu kullan</string>
+    <string name="pref_allow_phone_taskbar_desc">Uygulamaları herhangi bir yerde açmak ve değiştirmek için</string>
+
+    <!-- Recent Grid -->
+    <string name="pref_allow_phone_overview_grid">Izgara stili</string>
+    <string name="pref_allow_phone_overview_grid_desc">Genel bakış listesinde daha fazla son kullanılan uygulamalar</string>
+
+    <!-- Row Height -->
+    <string name="row_height_title">Satır yüksekliği</string>
+
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Üst gölge</string>
+    
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s kullanılabilir | %2$s</string>
+    
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Tüm uygulamalarda tema simgeleri</string>
+    <string name="pref_themed_icons_summary">Tüm ana ekran alt kısım ve uygulamalar için tema simgeleri</string>
+
+    <!-- About info -->
+    <string name="about_rice_title" translatable="false">Sushi Launcher</string>
+    <string name="about_thanks_cat">Teşekkürler</string>
+    <string name="about">Hakkında</string>
+    <string name="about_summary">Sushi Launcher hakkında bilgi</string>
+    <string name="about_app_version">Version 3.0</string>
+    
+    <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Alt kısım arka planını göster</string>
+    <string name="hotseat_bg_summary">Uygulama bölmesine yarı saydam arka plan uygular</string>
+
+    <!-- Trust apps -->
+     <string name="trust_apps_manager_name">Gizli &amp; Korunan uygulamalar</string>
+    <string name="trust_apps_auth_manager">Gizli ve korunan uygulamaları yönetmek için kilidi açın</string>
+    <string name="trust_apps_auth_open_app">%1$s açmak için kimlik doğrula</string>
+    <string name="trust_apps_loading">Yükleniyor\u2026</string>
+    <string name="trust_apps_no_lock_error">Uygulama erişimini kısıtlamak için lütfen güvenli bir kilit ekranı ayarlayın</string>
+    <string name="trust_apps_help">Yardım</string>
+    <string name="trust_apps_info_hidden">Gizli uygulamalar ve widget\'ları uygulama menüsünde gizlidir</string>
+    <string name="trust_apps_info_protected">Korunan uygulamaların başlatıcıdan açılması için kimlik doğrulama gerekir</string>
+
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Arka plan bulanıklığı</string>
+    
+    <!-- Background blur -->
+    <string name="background_blur_title">Başlatıcı bulanıklık seviyesi</string>
+    <string name="blur_tips_summary">1. Yarı saydam/saydam arka plan oluştururken uygulanan bulanıklık derecesi(devre dışı bırakmak için 0 olarak ayarlayın).\n\n2. Değişikliklerin etikili olması için başlatıcının yeniden başlatılması gerekir, başlatıcıyı zorla yeniden başlatın veya geri tuşuyla ana ekrana çıkmak da başlatıcının yeniden başlamasını sağlar.</string>
+    <string name="restart_tips">Bazı değişikliklerin etkili olması için yeniden başlatma gerekir, başlatıcıyı zorla yeniden başlatın veya geri tuşuyla ana ekrana çıkmak da başlatıcının yeniden başlamasını sağlar.</string>
+
+    <!-- App drawer searchbar -->
+    <string name="drawer_searchbar_title">Çekmece arama çubuğunu etkinleştir/devre dışı bırak</string>
+    
+   <!-- Recents Scroll Vibration -->
+    <string name="pref_recents_vibration_title">Son uyuglamalarda titreşimi etkinleştir</string>
+    
+    <string name="recents_kill_app">Uygulamayı sonlandır</string>
+
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">Ekran görüntüsü</string>
+    <string name="recents_lens_title">Lens</string>
+    <string name="recents_meminfo">Bellek bilgisi</string>
+    <string name="recents_meminfo_height">Bellek bilgisi alt sınırı</string>
+    <string name="recents_closeall_height">Tümünü temizle tuşu alt sınırı</string>
+
+    <string name="drawer_white_labels">Beyaz etikete zorla</string>
+    <string name="force_white_meminfo">Bellek bilgisi metnini beyaz göstermeye zorla</string>
+
+    <string-array translatable="false" name="welcome_message_variants">
+        <item>#GetRiced &#127834;</item>
+        <item>#Calamares &#129425;</item>
+        <item>#GetCurry &#127858;</item>
+        <item>#UnliRice &#127834;</item>
+        <item>Welcome to riceDroid</item>
+        <item>Enjoy your stay!</item>
+        <item>Please enjoy our delicacies &#127834;</item>
+    </string-array>
+    
+    <string-array name="quickspace_psa_morning">
+        <item>Biraz yürüyüş iyi görünüyor.</item>
+        <item>Dişlerini özenle fırçala.</item>
+        <item>Güne su ile başla!</item>
+        <item>Biraz egzersiz yap!</item>
+        <item>Vücudu germek iyidir!</item>
+        <item>Güne pozitif başlamaya çalış.</item>
+        <item>Şu an sabah.</item>
+        <item>Pil seviyeni kontrol etmeyi unutma!</item>
+        <item>Lütfen kahvaltını hazırlamayı unutma.</item>
+        <item>Her ihtimale karşı lütfen hava durumunu kontrol et.</item>
+        <item>Notlarını kontrol etmeyi unutma!</item>
+        <item>E-postalarını kontrol etmeyi unutma.</item>
+        <item>Varsa programını kontrol etmeyi unutma.</item>
+        <item>İyi günler.</item>
+        <item>Açıp kapatmak takılmış yanıtları düzeltebilir.</item>
+        <item>Bir fincan kahvenin tadını çıkar.</item>
+        <item>Protein almayı unutma.</item>
+        <item>Yumurta basit, besleyici bir kahvaltı olur.</item>
+        <item>Kahvaltının tadını çıkar.</item>
+    </string-array>
+    <string-array name="quickspace_psa_noon">
+        <item>Su içmeyi unutma!</item>
+        <item>Biraz aperatif yemeyi unutma.</item>
+        <item>Ultraviyole ışınları öğleden sonra daha zararlıdır.</item>
+        <item>Şu an öğleden sonra.</item>
+        <item>Pil seviyeni kontrol etmeyi unutma!</item>
+        <item>E-postalarını kontrol etmeyi unutma.</item>
+        <item>Lütfen varsa yapılacaklar listeni kontrol et.</item>
+        <item>Akşam yemeğini hazırlamayı unutma.</item>
+        <item>İyi günler.</item>
+        <item>Açıp kapatmak takılmış yanıtları düzeltebilir.</item>
+        <item>İyi eğlenceler.</item>
+    </string-array>
+    <string-array name="quickspace_psa_early_evening">
+        <item>Su içmeyi unutma!</item>
+        <item>8 saat uyumalısın.</item>
+        <item>Şu an akşam.</item>
+        <item>Uyumadan önce telefonunu şarj etmeyi unutma.</item>
+        <item>E-postalarını kontrol etmeyi unutma.</item>
+        <item>Lütfen varsa yapılacaklar listeni kontrol et.</item>
+        <item>Akşam yemeğini yemeyi unutma.</item>
+        <item>Işıkları ve prizleri kontrol etmeyi unutma.</item>
+        <item>İyi akşamlar.</item>
+        <item>Açıp kapatmak takılmış yanıtları düzeltebilir.</item>
+        <item>Rahatlamaya ve biraz dinlenmeye çalış.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Uyumadan önce çok fazla su içme.</item>
+        <item>Şu an gece.</item>
+        <item>Eğer mümkünse gece telefonu aşırı şarj etmekten kaçın.</item>
+        <item>E-postalarını kontrol etmeyi unutma.</item>
+        <item>Lütfen varsa yapılacaklar listeni kontrol et.</item>
+        <item>Akşam yemeğini yemeyi unutma..</item>
+        <item>8 saat uyumalısın.</item>
+        <item>İyi geceler.</item>
+        <item>Açıp kapatmak takılmış yanıtları düzeltebilir.</item>
+        <item>İyi uykular.</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Yetersiz uyku sağlığınız için iyi değildir.</item>
+        <item>Su içmeyi unutma.</item>
+        <item>Uyku eksikliği melatonin üretimini bozabilir.</item>
+        <item>Şu an gece yarısı.</item>
+        <item>Günlük rutinleri dikkate almayı unutma.</item>
+        <item>Gün içinde önemli bir programın olabilir.</item>
+        <item>Uyumayı/Kahvaltı hazırlamayı unutma.</item>
+        <item>İyi geceler.</item>
+        <item>Açıp kapatmak takılmış yanıtları düzeltebilir.</item>
+        <item>Lütfen kendine dikkat et.</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Bu ROM da gizli paskalya yumurtaları vardır.</item>
+        <item>SimplyWeather uygulamasını kontrol etmeyi unutma.</item>
+        <item>Gün için de ultraviyole ışınlarından kaçınmaya çalış.</item>
+        <item>Su iç!</item>
+        <item>Gün içinde daha fazla su içmelisin.</item>
+        <item>Gülmek kan dolaşımını hızlandırabilir.</item>
+        <item>Çikolata antioksidan içerir.</item>
+        <item>Kaygı kötü kokuları daha kötü yapabilir.</item>
+        <item>Yumurta yemek reflekslerini geliştirir.</item>
+        <item>Öğlen yemeğini yemeyi unutma.</item>
+        <item>Pil seviyeni kontrol etmeyi unutma!</item>
+        <item>E-postalarını kontrol etmeyi unutma.</item>
+        <item>Lütfen varsa yapılacaklar listeni kontrol et.</item>
+        <item>Beni ana ekran ayarlarından devre dışı bırakabilirsin.</item>
+        <item>İyi geceler.</item>
+        <item>Açıp kapatmak takılmış yanıtları düzeltebilir.</item>
+        <item>Ginataan hindistan cevizi sütü ile tatlandırılmış bir besindir.</item>
+        <item>Çin Seddi pirinçle tutulur.</item>
+        <item>Tüm beyaz pirinç kahverengi başlar.</item>
+        <item>Bu saatte buz gibi bir içecek içinizi ferahlatabilir.</item>
+        <item>Mümkünse her zaman su getir.</item>
+        <item>Hayat kısa, eğlenceli hale getirin.</item>
+        <item>İyi günler!</item>
+    </string-array>
+
+    <string name="custom_date_strings_extended">EEEE, MMM d</string>
+
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Uygulama bilgisini kapatmak için aşağı kaydır</string>
+    <string name="app_info_version_value" translatable="false">%1$s (%2$d)</string>
+    <string name="app_info_source">Kaynak</string>
+    <string name="app_info_source_system">Sistem</string>
+    <string name="app_info_last_update">Son güncelleme</string>
+    <string name="app_info_version">Sürüm</string>
+    <string name="app_info_more">Daha fazlası</string>
+
+    <!-- Dark Status Bar -->
+    <string name="perf_dark_status_bar_title">Koyu durum çubuğu</string>
+    <string name="perf_dark_status_bar_summary">Ana ekranda koyu durum çubuğu kullan</string>
+    
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">Bir bakışta</string>
+    <string name="show_quickspace_summary">Google bir bakışta widget\'inin bir kopyası</string>
+    <string name="show_quickspace_msg_title">Rastgele bir bakışta mesajları</string>
+    <string name="show_quickspace_msg_summary">Rastgele mesajlar gösterir - mesajlar güncellenmezse kapatıp açın</string>
+    <string name="extended_quickspace_title">Gelişmiş bir bakışta</string>
+    <string name="extended_quickspace_summary">Bir bakışta widget\'inin gelişmiş versiyonu</string>
+    <string name="abbrev_wday_month_day_no_year" translatable="false">EEEEMMMd</string>
+	
+    <string name="qsb_search_hint">Birşey mi arıyorsun?</string>
+
+    <!-- Greetings -->
+    <string name="quickspace_grt_morning">Günaydın.</string>
+    <string name="quickspace_grt_evening">İyi günler.</string>
+    <string name="quickspace_grt_afternoon">İyi akşamlar.</string>
+    <string name="quickspace_grt_night">İyi geceler.</string>
+    <string name="quickspace_grt_midnight">İyi geceler.</string>
+    <string name="quickspace_grt_general">İyi günler.</string>
+    <string name="extended_clock_text">Şu an</string>
+
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">Duvar kağıdı kaydırma</string>
+    <string name="allow_wallpaper_scrolling_desc">Çoklu ekranlar için duvar kağıdı kaydırma efekti</string>	
+</resources>

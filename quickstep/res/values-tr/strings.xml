@@ -97,4 +97,6 @@
     <string name="taskbar_edu_previous" msgid="459202320127201702">"Geri"</string>
     <string name="taskbar_edu_close" msgid="887022990168191073">"Kapat"</string>
     <string name="taskbar_edu_done" msgid="6880178093977704569">"Bitti"</string>
+    <string name="recents_close_all">Tümünü temizle</string>
+    <string name="recents_empty_message_custom">Son uygulama yok</string>	
 </resources>
