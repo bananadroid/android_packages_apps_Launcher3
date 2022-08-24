@@ -577,6 +577,7 @@ public class Launcher extends StatefulActivity<LauncherState> implements Launche
             case Utilities.SHOW_HOTSEAT_BG:
             case Utilities.KEY_DRAWER_SEARCHBAR:
             case Utilities.KEY_FORCE_WHITE_LABEL:
+            case Utilities.KEY_KG_ANIMATION:
             case IconPackStore.KEY_ICON_PACK:
                 recreate();
                 break;

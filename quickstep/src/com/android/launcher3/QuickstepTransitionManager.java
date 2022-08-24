@@ -135,6 +135,7 @@ import com.android.systemui.shared.system.RemoteTransitionCompat;
 import com.android.systemui.shared.system.SyncRtSurfaceTransactionApplierCompat.SurfaceParams;
 import com.android.systemui.shared.system.WindowManagerWrapper;
 import com.android.wm.shell.startingsurface.IStartingWindowListener;
+import com.android.launcher3.Utilities;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -234,6 +235,7 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
 
     private final Interpolator mOpeningXInterpolator;
     private final Interpolator mOpeningInterpolator;
+    private boolean mKeyguardAnimation;
 
     public QuickstepTransitionManager(Context context) {
         mLauncher = Launcher.cast(Launcher.getLauncher(context));
@@ -265,6 +267,7 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
         mOpeningXInterpolator = AnimationUtils.loadInterpolator(context, R.interpolator.app_open_x);
         mOpeningInterpolator = AnimationUtils.loadInterpolator(context,
                 R.interpolator.three_point_fast_out_extra_slow_in);
+	mKeyguardAnimation = Utilities.isKeyguardAnimation(context);
     }
 
     @Override
@@ -1117,7 +1120,7 @@ public class QuickstepTransitionManager implements OnDeviceProfileChangeListener
                             CLOSING_TRANSITION_DURATION_MS, 0 /* statusBarTransitionDelay */,
                             mLauncher.getIApplicationThread()));
 
-            if (KEYGUARD_ANIMATION.get()) {
+            if (mKeyguardAnimation) {
                 mKeyguardGoingAwayRunner = createWallpaperOpenRunner(true /* fromUnlock */);
                 definition.addRemoteAnimation(
                         WindowManagerWrapper.TRANSIT_KEYGUARD_GOING_AWAY_ON_WALLPAPER,

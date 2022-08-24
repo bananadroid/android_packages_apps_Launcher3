@@ -53,4 +53,8 @@
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Wallpaper scrolling</string>
     <string name="allow_wallpaper_scrolling_desc">Wallpaper scrolling effect for multiple screens</string>
+
+    <!-- Keyguard Animation -->
+    <string name="pref_kg_animation_title">Keyguard unlock zoom animation</string>
+    <string name="pref_kg_animation_summary">Enable/disable lockscreen unlock zoom animation.</string>
 </resources>

@@ -173,6 +173,7 @@ public final class Utilities {
     public static final String KEY_MEMINFO_HEIGHT = "pref_meminfo_height";
     public static final String KEY_CLOSEALL_HEIGHT = "pref_close_all_height";
     public static final String KEY_FORCE_WHITE_RECENTS = "pref_force_white_recents";
+    public static final String KEY_KG_ANIMATION = "pref_kg_animation";
 
     /**
      * Returns true if theme is dark.
@@ -1050,4 +1051,9 @@ public final class Utilities {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getInt(KEY_CLOSEALL_HEIGHT, 86);
     }
+    
+    public static boolean isKeyguardAnimation(Context context) {
+    	SharedPreferences prefs = getPrefs(context.getApplicationContext());
+    	return prefs.getBoolean(KEY_KG_ANIMATION, true);
+   }
 }

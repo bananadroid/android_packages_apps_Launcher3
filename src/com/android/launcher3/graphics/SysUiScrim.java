@@ -214,7 +214,7 @@ public class SysUiScrim implements View.OnAttachStateChangeListener,
 
     @Override
     public void onViewAttachedToWindow(View view) {
-        if (!KEYGUARD_ANIMATION.get() && mTopScrim != null) {
+        if (!Utilities.isKeyguardAnimation(mRoot.getContext()) && mTopScrim != null) {
             IntentFilter filter = new IntentFilter(ACTION_SCREEN_OFF);
             filter.addAction(ACTION_USER_PRESENT); // When the device wakes up + keyguard is gone
             mRoot.getContext().registerReceiver(mReceiver, filter);
@@ -223,7 +223,7 @@ public class SysUiScrim implements View.OnAttachStateChangeListener,
 
     @Override
     public void onViewDetachedFromWindow(View view) {
-        if (!KEYGUARD_ANIMATION.get() && mTopScrim != null) {
+        if (!Utilities.isKeyguardAnimation(mRoot.getContext()) && mTopScrim != null) {
             mRoot.getContext().unregisterReceiver(mReceiver);
         }
     }
