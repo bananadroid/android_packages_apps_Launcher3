@@ -29,22 +29,17 @@
         android:visibility="gone"
         android:gravity="start"
         android:paddingStart="16dp"
-        android:paddingTop="6dp"
-        android:paddingBottom="6dp">
+        android:paddingTop="9dp">
 
         <com.android.launcher3.quickspace.views.DoubleShadowTextView
             android:id="@+id/extended_greetings"
+            style="@style/QuickSpaceText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start|center_vertical"
-            android:fontFamily="@*android:string/config_bodyFontFamily"
-            android:includeFontPadding="false"
             android:scrollHorizontally="true"
-            android:lineHeight="20sp"
             android:maxLines="1"
-            android:textColor="?attr/widgetTextColor"
-            android:textSize="16sp"
-            android:letterSpacing="0.02" />
+            android:textColor="?attr/widgetTextColor" />
 
     </LinearLayout>
 
@@ -55,25 +50,20 @@
         android:layout_gravity="center_vertical"
         android:gravity="start"
         android:paddingStart="16dp"
-        android:paddingTop="6dp"
-        android:paddingBottom="6dp">
+        android:paddingTop="9dp">
         
         <com.android.launcher3.quickspace.views.DoubleShadowTextView
             android:id="@+id/extended_greetings_clock"
+            style="@style/QuickSpaceText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start|center_vertical"
-            android:fontFamily="@*android:string/config_bodyFontFamily"
-            android:includeFontPadding="false"
             android:scrollHorizontally="true"
-            android:lineHeight="24sp"
             android:maxLines="1"
             android:textColor="?attr/widgetTextColor"
             android:text="@string/extended_clock_text"
-            android:textSize="@dimen/quickspace_title_size"
             android:visibility="gone"
-            android:paddingEnd="6dp"
-            android:letterSpacing="0.02" />
+            android:paddingEnd="6dp"/>
 
     <com.android.launcher3.quickspace.views.DateTextView
         android:id="@+id/clock_view"
@@ -81,12 +71,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start|center_vertical"
-        android:fontFamily="@*android:string/config_bodyFontFamily"
-        android:lineHeight="24sp"
         android:maxLines="1"
-        android:textColor="?workspaceTextColor"
-        android:textSize="@dimen/quickspace_title_size"
-        android:letterSpacing="0.02" />
+        android:textColor="?workspaceTextColor"/>
 
     </LinearLayout>
 
@@ -97,13 +83,12 @@
         android:layout_gravity="center_vertical"
         android:gravity="start"
         android:paddingStart="16dp"
-        android:paddingTop="6dp"
-        android:paddingBottom="6dp">
+        android:paddingTop="9dp">
 
 	<com.android.launcher3.quickspace.views.WeatherImage
         android:id="@+id/weather_image"
-        android:layout_width="24dp"
-        android:layout_height="24dp" />
+        android:layout_width="25dp"
+        android:layout_height="25dp" />
 
 	<com.android.launcher3.quickspace.views.WeatherText
         android:id="@+id/weather_temp"
@@ -128,8 +113,7 @@
         android:layout_gravity="center_vertical"
         android:visibility="gone"
         android:gravity="start"
-        android:paddingTop="6dp"
-        android:paddingBottom="6dp">
+        android:paddingTop="9dp">
 
         <ImageView
             android:id="@+id/quick_event_icon_sub"
@@ -141,19 +125,15 @@
 
         <com.android.launcher3.quickspace.views.DoubleShadowTextView
             android:id="@+id/quick_event_title_sub"
+            style="@style/QuickSpaceSubText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start|center_vertical"
-            android:fontFamily="@*android:string/config_bodyFontFamily"
             android:drawablePadding="6dp"
             android:layout_marginLeft="8dp"
-            android:includeFontPadding="false"
             android:scrollHorizontally="true"
-            android:lineHeight="16sp"
             android:maxLines="1"
-            android:textColor="?workspaceTextColor"
-            android:textSize="12sp"
-            android:letterSpacing="0.02" />
+            android:textColor="?workspaceTextColor" />
 
     </LinearLayout>
 
