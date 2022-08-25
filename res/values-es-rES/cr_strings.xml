@@ -24,6 +24,8 @@
     <string name="icons_category_summary">Configura el tamaño de los iconos y más</string>
     <string name="app_drawer_category_title">Cajón de aplicaciones</string>
     <string name="app_drawer_category_summary">Personaliza tu cajón de aplicaciones</string>
+    <string name="recents_category_title">Recientes</string>
+    <string name="recents_category_summary">Renovar la pantalla de resumen</string>
     <string name="misc_category_title">Varios</string>
     <string name="misc_category_summary">Otras opciones</string>
     <string name="dev_options_title">Opciones para desarrolladores</string>
@@ -31,6 +33,7 @@
     <string name="general_category_title">General</string>
     <string name="interface_category_title">Interfaz</string>
     <string name="search_bar_category_title">Barra de búsqueda</string>
+    <string name="actions_category_title">Acciones rápidas</string>
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Deslizar para acceder a la aplicación de Google</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
@@ -39,8 +42,8 @@
     <string name="msg_minus_one_on_right">Cuando deslizas a la derecha desde la pantalla de Inicio</string>
     <!-- Folder titles -->
     <!-- Hide labels -->
-    <string name="desktop_show_labels">Icon labels on desktop</string>
-    <string name="drawer_show_labels">Icon labels in drawer</string>
+    <string name="desktop_show_labels">Etiquetas de icono en escritorio</string>
+    <string name="drawer_show_labels">Etiquetas de icono en el cajón</string>
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Valor: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">predeterminado</string>
@@ -61,7 +64,7 @@ Mantén presionado para establecer</string>
     <string name="label_lens">Google Lens</string>
     <string name="label_voice_search">Búsqueda por voz</string>
     <string name="dock_search_title">Barra de búsqueda de Google</string>
-    <string name="dock_search_summary">Search bar in the bottom dock</string>
+    <string name="dock_search_summary">Barra de búsqueda en la parte inferior</string>
     <string name="dock_theme_title">Iconos temáticos</string>
     <string name="dock_theme_summary">Usar iconos temáticos para la barra de búsqueda</string>
     <string name="search_radius_title">Radio de esquina</string>
@@ -98,5 +101,165 @@ Mantén presionado para establecer</string>
     <!-- Row Height -->
     <string name="row_height_title">Altura de las filas</string>
     <!-- Top shadow -->
-    <string name="show_top_shadow">Top shadow</string>
+    <string name="show_top_shadow">Sombra superior</string>
+    <!-- Memory info -->
+    <string name="meminfo_text">%1$s disponible | %2$s</string>
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Todas las aplicaciones con iconos temáticos</string>
+    <string name="pref_themed_icons_summary">Alternar para cambiar entre la pantalla de inicio y todas las aplicaciones con iconos temáticos</string>
+     <!-- About info -->
+    <string name="about_thanks_cat">Agradecimientos especiales para</string>
+    <string name="about">Acerca de</string>
+    <string name="about_summary">Información acerca de Sushi Launcher</string>
+    <string name="about_app_version">Versión 3.0</string>
+     <!-- Hotseat Background -->
+    <string name="hotseat_bg_title">Mostrar fondo del punto de mira</string>
+    <string name="hotseat_bg_summary">Añade un fondo translúcido a la barra de aplicaciones</string>
+    <!-- Background opacity -->
+    <string name="background_opacity_title">Opacidad del fondo</string>
+    <!-- Background blur -->
+    <string name="background_blur_title">Radio de desenfoque del Lanzador</string>
+    <string name="blur_tips_summary">1. La cantidad del radio de desenfoque usado al renderizar un fondo no-opaco/transparente(establecer a 0 para desactivar).\n\n2. Los cambios requieren reiniciar el lanzador, fuerza parar el lanzador o simplemente desliza/presiona atrás a los ajustes principales tras cambiar la configuración desencadenará el reinicio de la aplicaicón.</string>
+    <string name="restart_tips">Algunos cambios requiren el reinicio del lanzador, fuerza la para del lanzador o simplemente desliza/presiona atrás a los ajustes principales tras cambiar la configuración desencadenará el reinicio de la aplicación.</string>
+    <!-- App drawer searchbar -->
+    <string name="drawer_searchbar_title">Activar/desactivar la barra de búsqueda en el cajón de aplicaciones</string>
+    <!-- Recents Scroll Vibration -->
+    <string name="pref_recents_vibration_title">Habilitar retroalimentación háptica al desplazar recientes</string>
+    <string name="recents_kill_app">Matar aplicación</string>
+    <!-- Recents icons -->
+    <string name="recents_screenshot_title">Captura de pantalla</string>
+    <string name="recents_lens_title">Lens</string>
+    <string name="recents_meminfo">Información de memoria</string>
+    <string name="recents_meminfo_height">Margen inferior la información de memoria</string>
+    <string name="recents_closeall_height">Margen inferior del botón de cerrar todo</string>
+    <string name="drawer_white_labels">Etiqueta blanca forzada</string>
+    <string name="force_white_recents">Tinta blanca forzada para los recursos de vista recientes</string>
+    <!-- AppInfo -->
+    <string name="app_info_subtext">Desliza hacia abajo para cerrar la información de la aplicación</string>
+    <string name="app_info_source">Origen</string>
+    <string name="app_info_source_system">Sistema</string>
+    <string name="app_info_last_update">Última actualización</string>
+    <string name="app_info_version">Versión</string>
+    <string name="app_info_more">Más</string>
+    <!-- Dark Status Bar -->
+    <string name="perf_dark_status_bar_title">Barra de estado oscura</string>
+    <string name="perf_dark_status_bar_summary">Usa la barra de estado oscura en la pantalla de Inicio</string>
+     <!-- QuickSpace -->
+    <string name="show_quickspace_title">Vista rápida con deseos</string>
+    <string name="show_quickspace_summary">Un copia del widget de vista rápida de Google</string>
+    <string name="show_quickspace_msg_title">Mensajes aleatorios de la vista rápida</string>
+    <string name="show_quickspace_msg_summary">Muestra mensajes aleatorios debajo de la vista - conmutar en caso de que el mensaje no se actualice</string>
+    <string name="extended_quickspace_title">Vista rápida extendida</string>
+    <string name="extended_quickspace_summary">Versión extendida del widget vista rápida con deseos</string>
+    <string name="qsb_search_hint" >¿Buscar algo?</string>
+    <!-- Greetings -->
+    <string name="quickspace_grt_morning">Buenos días.</string>
+    <string name="quickspace_grt_evening">Buenas noches.</string>
+    <string name="quickspace_grt_afternoon">Buenas tardes.</string>
+    <string name="quickspace_grt_night">Buenas noches.</string>
+    <string name="quickspace_grt_midnight">Solemne medianoche.</string>
+    <string name="quickspace_grt_general">Buen día.</string>
+    <string name="extended_clock_text">Son las</string>
+    <!-- Wallpaper scrolling -->
+    <string name="allow_wallpaper_scrolling">Desplazamiento del fondo de pantalla</string>
+    <string name="allow_wallpaper_scrolling_desc">Efecto de desplazamiento del fondo de pantalla para múltiples pantallas</string>
+    <!-- Keyguard Animation -->
+    <string name="pref_kg_animation_title">Animación de zoom en desbloqueo de seguridad de teclado</string>
+    <string name="pref_kg_animation_summary">Habilitar/Deshabilitar la animación del desbloqueo de la pantalla de bloqueo.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Un pequeño paseo parece agradable.</item>
+        <item>Cepíllate los dientes conscientemente.</item>
+        <item>¡Comienza tu día hidratado!</item>
+        <item>¡Haz ejercicio!</item>
+        <item>¡Estira las cosas!</item>
+        <item>Comienza tu día con positividad.</item>
+        <item>Es por la mañana ahora mismo.</item>
+        <item>¡Comprueba siempre los niveles de batería del dispositivo!</item>
+        <item>No olvides prepararte el desayuno.</item>
+        <item>Consulta el tiempo, por si acaso.</item>
+        <item>¡No olvides comprobar tus notas!</item>
+        <item>Comprueba tus correos/mensajes.</item>
+        <item>Comprueba tu horario si tienes uno.</item>
+        <item>Disfruta de tu día.</item>
+        <item>Conmutar la palanca puede arreglar las respuestas atascadas.</item>
+        <item>Disfruta de una taza de café.</item>
+        <item>No te olvides de la proteína.</item>
+        <item>Los huevos son un desayuno sencillo y nutritivo.</item>
+        <item>Disfruta del desayuno.</item>
+    </string-array>
+    <string-array name="quickspace_psa_noon">
+        <item>¡No olvides mantenerte hidratado!</item>
+        <item>Recuerda tomarte algunos aperitivos.</item>
+        <item>Los rayos UV son más dañinos a mediodía.</item>
+        <item>Es por la tarde ahora mismo.</item>
+        <item>¡Comprueba siempre los niveles de batería del dispositivo!</item>
+        <item>Comprueba tus correos/mensajes.</item>
+        <item>Por favor, comprueba tu lista de tareas pendientes si tienes una.</item>
+        <item>No olvides preparte la cena.</item>
+        <item>Disfruta tu día.</item>
+        <item>Rehabilita la vista rápida para arreglar las respuestas atascadas.</item>
+        <item>Diviértete un poco.</item>
+    </string-array>
+    <string-array name="quickspace_psa_early_evening">
+        <item>¡Mantente siempre hidratado!</item>
+        <item>8 horas de sueño es imprescindible.</item>
+        <item>Es de noche ahora mismo.</item>
+        <item>Recuerda cargarme por completo antes de irte a dormir.</item>
+        <item>Recuerda verificar tus correos/mensajes.</item>
+        <item>Por favor, comprueba tu lista de tareas pendientes si tienes una.</item>
+        <item>Recuerda tomarte la cena.</item>
+        <item>Comprueba siempre las luces y los enchufes.</item>
+        <item>Disfruta la noche.</item>
+        <item>Rehabilita la vista rápida para arreglar las respuestas atascadas.</item>
+        <item>Relájate y descansa un poco.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>No bebas mucha agua antes de irte a dormir.</item>
+        <item>Es por la noche ahora mismo.</item>
+        <item>Intenta evitar la carga por la noche si es posible.</item>
+        <item>Recuerda verificar tus correos/mensajes.</item>
+        <item>Por favor, comprueba tu lista de tareas pendientes si tienes una.</item>
+        <item>Recuerda tomarte la cena.</item>
+        <item>8 horas de sueño es imprescindible.</item>
+        <item>Disfruta la noche.</item>
+        <item>Rehabilita la vista rápida para arreglar las respuestas atascadas.</item>
+        <item>Dulces sueños.</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>La falta de sueño es mala para la salud.</item>
+        <item>No olvides mantenerte hidratado.</item>
+        <item>Tener déficit de sueño puede interrumpir la producción de melatonina.</item>
+        <item>Es medianoche ahora mismo.</item>
+        <item>Recuerda tener en cuenta las tareas del día.</item>
+        <item>Es posible que tengas un horario importante durante el día.</item>
+        <item>No olvides dormir/preparar tu desayuno.</item>
+        <item>Disfruta la medianoche.</item>
+        <item>Rehabilita la vista rápida para arreglar las respuestas atascadas.</item>
+        <item>Por favor, cuídate.</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Hay huevos de pascua escondidos en esta ROM.</item>
+        <item>Intenta verificar la aplicación SimplyWeather.</item>
+        <item>Trata de evitar los rayos UV durante el mediodía.</item>
+        <item>¡Mantente hidratado!</item>
+        <item>Necesitas tomar más agua durante el día.</item>
+        <item>La risa puede aumentar el flujo sanguíneo.</item>
+        <item>El chocolate contiene antioxidantes.</item>
+        <item>La ansiedad puede empeorar los malos olores.</item>
+        <item>Comer huevos mejora tus reflejos.</item>
+        <item>Recuerda almorzar.</item>
+        <item>¡Recuerda comprobar los niveles de batería del dispositivo!</item>
+        <item>Comprueba tus correos/mensajes.</item>
+        <item>Comprueba tu lista de tareas pendientes si tienes una.</item>
+        <item>Puedes desactivarme a través de los ajustes de inicio.</item>
+        <item>Disfruta la medianoche.</item>
+        <item>Rehabilita la vista rápida para arreglar las respuestas atascadas.</item>
+        <item>La paella se prepara con caldo y arroz.</item>
+        <item>Las colinas de chocolate no están hechas de chocolate.</item>
+        <item>Todo el arroz blanco comienza marrón.</item>
+        <item>Una bebida helada puede ser muy refrescante.</item>
+        <item>Lleva siempre agua para mantenerte hidratado.</item>
+        <item>La vida es corta, hazla divertida.</item>
+        <item>¡Disfruta tu día!</item>
+    </string-array>
 </resources>
