@@ -23,7 +23,7 @@
     <!-- QuickSpace -->
     <style name="QuickSpaceText">
         <item name="android:fontFamily">@*android:string/config_headlineFontFamily</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">22sp</item>
         <item name="android:letterSpacing">0.02</item>
         <item name="android:maxLines">1</item>
         <item name="android:includeFontPadding">false</item>
