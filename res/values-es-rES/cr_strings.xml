@@ -159,7 +159,7 @@ Mantén presionado para establecer</string>
     <string name="quickspace_grt_night">Buenas noches.</string>
     <string name="quickspace_grt_midnight">Solemne medianoche.</string>
     <string name="quickspace_grt_general">Buen día.</string>
-    <string name="extended_clock_text">Son las</string>
+    <string name="extended_clock_text">Es</string>
     <!-- Wallpaper scrolling -->
     <string name="allow_wallpaper_scrolling">Desplazamiento del fondo de pantalla</string>
     <string name="allow_wallpaper_scrolling_desc">Efecto de desplazamiento del fondo de pantalla para múltiples pantallas</string>
