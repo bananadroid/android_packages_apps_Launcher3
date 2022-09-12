@@ -461,4 +461,7 @@
     <!--  Folder spaces  -->
     <dimen name="folder_top_padding_default">24dp</dimen>
     <dimen name="folder_footer_horiz_padding">20dp</dimen>
+
+    <!-- QuickSpace -->
+    <dimen name="quickspace_title_size">22sp</dimen>
 </resources>

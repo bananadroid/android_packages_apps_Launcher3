@@ -63,4 +63,7 @@
     <color name="preload_icon_background_color_dark">@android:color/system_neutral2_700</color>
 
     <color name="all_apps_button_color">?android:attr/textColorSecondary</color>
+    
+    <color name="widget_accent_color_dark">@android:color/system_accent1_600</color>
+    <color name="widget_accent_color_light">@android:color/system_accent1_100</color>
 </resources>

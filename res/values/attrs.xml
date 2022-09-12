@@ -55,6 +55,8 @@
     <attr name="dropTargetHoverTextColor" format="color" />
     <attr name="preloadIconAccentColor" format="color" />
     <attr name="preloadIconBackgroundColor" format="color" />
+    
+    <attr name="widgetTextColor" format="color" />
 
     <attr name="qsbFillColor" format="color" />
     <attr name="qsbIconTintPrimary" format="color" />

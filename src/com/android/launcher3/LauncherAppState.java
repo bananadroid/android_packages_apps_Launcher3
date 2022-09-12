@@ -29,6 +29,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.content.pm.LauncherApps;
 import android.os.UserHandle;
+import android.content.pm.PackageManager;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
@@ -71,6 +72,8 @@ public class LauncherAppState implements SafeCloseable {
     private final RunnableList mOnTerminateCallback = new RunnableList();
 
     private boolean mNeedsRestart;
+
+    private boolean mIsCalendarAppAvailable;
 
     public static LauncherAppState getInstance(final Context context) {
         return INSTANCE.get(context);
@@ -245,5 +248,17 @@ public class LauncherAppState implements SafeCloseable {
                 verifyIconChanged();
             }
         }
+    }
+    
+    public static boolean isGSAEnabled(Context context) {
+        try {
+            return context.getPackageManager().getApplicationInfo("com.google.android.calendar", 0).enabled;
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
+    }
+
+    public boolean isCalendarAppAvailable() {
+        return mIsCalendarAppAvailable;
     }
 }
