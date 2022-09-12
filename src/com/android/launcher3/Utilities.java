@@ -55,6 +55,8 @@ import android.graphics.drawable.Drawable;
 import android.hardware.biometrics.BiometricManager.Authenticators;
 import android.hardware.biometrics.BiometricPrompt;
 import android.net.Uri;
+import android.icu.text.DateFormat;
+import android.icu.text.DisplayContext;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.CancellationSignal;
@@ -68,6 +70,7 @@ import android.provider.Settings;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextUtils;
+import android.text.format.DateUtils;
 import android.text.style.TtsSpan;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -175,6 +178,7 @@ public final class Utilities {
     public static final String KEY_ALLOW_WALLPAPER_ZOOMING = "pref_allow_wallpaper_zooming";
     public static final String KEY_STATUS_BAR = "pref_show_statusbar";
     public static final String KEY_BLUR_DEPTH = "pref_blur_depth";
+    public static final String DESKTOP_SHOW_QUICKSPACE = "pref_show_quickspace";
 
     /**
      * Returns true if theme is dark.
@@ -968,6 +972,20 @@ public final class Utilities {
         });
     }
 
+    public static String formatDateTime(Context context, long timeInMillis) {
+        try {
+            String format = "EEEE, MMM d";
+            String formattedDate;
+            DateFormat dateFormat = DateFormat.getInstanceForSkeleton(format, Locale.getDefault());
+            dateFormat.setContext(DisplayContext.CAPITALIZATION_FOR_STANDALONE);
+            formattedDate = dateFormat.format(timeInMillis);
+            return formattedDate;
+        } catch (Throwable t) {
+            Log.e(TAG, "Error formatting At A Glance date", t);
+            return DateUtils.formatDateTime(context, timeInMillis, DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_MONTH);
+        }
+    }
+
     public static boolean isWorkspaceEditAllowed(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return !prefs.getBoolean(InvariantDeviceProfile.KEY_WORKSPACE_LOCK, false);
@@ -1068,5 +1086,10 @@ public final class Utilities {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getInt(KEY_BLUR_DEPTH,
                 (int) context.getResources().getDimension(R.dimen.max_depth_blur_radius));
+    }
+
+    public static boolean showQuickspace(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(DESKTOP_SHOW_QUICKSPACE, true);
     }
 }
