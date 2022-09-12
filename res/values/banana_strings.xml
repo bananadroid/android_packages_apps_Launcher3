@@ -124,32 +124,131 @@
     <string name="background_blur_summary">Set blur depth level for recents and app drawer</string>
 
     <!-- QuickSpace -->
-    <string name="show_quickspace_title">At A Glance</string>
-    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="show_quickspace_title">At A Glance wannabe</string>
+    <string name="show_quickspace_summary">A copy of Google\'s at a glance widget</string>
+    <string name="show_quickspace_msg_title">Random At a glance messages</string>
+    <string name="show_quickspace_msg_summary">Show random messages below at a glance - toggle switch in case message doesn\'t update</string>
+    <string name="extended_quickspace_title">Extended At a glance</string>
+    <string name="extended_quickspace_summary">Extended version of at a glance wannabe widget</string>
     <string name="abbrev_wday_month_day_no_year" translatable="false">EEEEMMMd</string>
 
-    <string-array translatable="false" name="welcome_message_variants">
-        <item>Good Morning</item>
-        <item>Good Afternoon</item>
-        <item>Good Evening</item>
-        <item>Good Night</item>
-        <item>Too late to stay awake!</item>
-    </string-array>
 
+    <string-array translatable="false" name="welcome_message_variants">
+        <item>#GetBanana &#127834;</item>
+        <item>#EatBanana &#129425;</item>
+        <item>#StayHealthy &#127858;</item>
+        <item>#KeepYourSmile &#127834;</item>
+        <item>Welcome to BananaDroid</item>
+        <item>Enjoy your banana!</item>
+        <item>Please enjoy our delicacies &#127834;</item>
+    </string-array>
+    
+    <string-array name="quickspace_psa_morning">
+        <item>A little walk seems nice.</item>
+        <item>Brush your teeth mindfully.</item>
+        <item>Start your day hydrated!</item>
+        <item>Get some exercise!</item>
+        <item>Stretch things out!</item>
+        <item>Start your day with positivity.</item>
+        <item>It is morning right now.</item>
+        <item>Always check device\'s battery levels!</item>
+        <item>Don\'t forget to prepare breakfast.</item>
+        <item>Check the weather, just in case.</item>
+        <item>Take a deep breath and go out!</item>
+        <item>Grab some banana to start your day.</item>
+        <item>Check your schedule if you have one.</item>
+        <item>Enjoy your day.</item>
+        <item>Fart first, pee later</item>
+        <item>Enjoy a cup of coffee.</item>
+        <item>Don\'t forget about protein.</item>
+        <item>Eggs make a simple, nutritious breakfast.</item>
+        <item>Enjoy your breakfast.</item>
+    </string-array>
+    <string-array name="quickspace_psa_noon">
+        <item>Don\'t forget to stay hydrated!</item>
+        <item>Remember to eat some snacks.</item>
+        <item>UV rays are more harmful in the afternoon.</item>
+        <item>It is afternoon right now.</item>
+        <item>Eat Banana &amp; Stay Healthy</item>
+        <item>Keep spirit and smile</item>
+        <item>Have a great banana day!</item>
+        <item>Don\'t be overload, it\'s still a long day to go</item>
+        <item>Make a smile as your bestfriend</item>
+        <item>Try to be a rainbow in someone\'s cloud</item>
+        <item>Have some fun.</item>
+    </string-array>
+    <string-array name="quickspace_psa_early_evening">
+        <item>Always stay hydrated!</item>
+        <item>8 hours of sleep is a must.</item>
+        <item>It is evening right now.</item>
+        <item>Remember to full charge me before you sleep.</item>
+        <item>Remember to fart and release</item>
+        <item>It\'s time to straighten your legs</item>
+        <item>Remember to eat dinner.</item>
+        <item>Farting every day makes your day easier</item>
+        <item>Enjoy the night.</item>
+        <item>Yo Ndak Tau Kok Nanya Saya</item>
+        <item>Relax and do some rest.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Don\'t drink too much water before sleeping.</item>
+        <item>It is evening right now.</item>
+        <item>Try to avoid overnight charging if possible.</item>
+        <item>Ente kadang kadang ente</item>
+        <item>Have you done any good today?</item>
+        <item>Don\'t forget to brush your teeth</item>
+        <item>Prepare your sleep well</item>
+        <item>Enjoy the night.</item>
+        <item>Don\'t forget to prepare your tomorrow</item>
+        <item>Enjoy your sleep.</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Sleep defficiency is bad for your health.</item>
+        <item>Don\'t forget to stay hydrated.</item>
+        <item>Being sleep deficit can break melatonin production.</item>
+        <item>It is midnight right now.</item>
+        <item>Remember to take consideration for day duties.</item>
+        <item>You might have a important schedule during the day.</item>
+        <item>Don\'t forget to sleep/prepare your breakfast.</item>
+        <item>Enjoy the midnight.</item>
+        <item>When nothing goes right... Go left</item>
+        <item>Please take care of yourself.</item>
+    </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Check the weather just in case</item>
-        <item>Feeling a bit sleepy yet</item>
-        <item>Have you looked outside yet?</item>
-        <item>Let\'s get this done.</item>
-        <item>Hello world! &#128072;</item>
-        <item>Its Game time &#127918;</item>
-        <item>#LightTheNight &#128154;</item>
-        <item>Positive thoughts only</item>
-        <item>See you at pochinki</item>
-        <item>Legends never die, They respawn</item>
-        <item>Winner winner chicken dinner</item>
-        <item>Touch Grass</item>
+        <item>Thank you for choosing BananaDroid</item>
+        <item>Welcome Banana Lover</item>
+        <item>Try to avoid UV rays during noon.</item>
+        <item>Stay Hydrated!</item>
+        <item>You need to take more water during the day.</item>
+        <item>Laughing can increase bloodflow.</item>
+        <item>Chocolate contains antioxidants.</item>
+        <item>Anxiety can make bad smells even worse.</item>
+        <item>Eating eggs improves your reflexes.</item>
+        <item>Remember to fart</item>
+        <item>Relax your mind</item>
+        <item>Eat Banana &amp; Stay Healthy</item>
+        <item>Check your to-do list if you have one.</item>
+        <item>Have a great banana day</item>
+        <item>Ready to grab some bananas?</item>
+        <item>Don\'t forget to be happy</item>
+        <item>Brush your teeth!</item>
+        <item>Ente kadang kadang ente</item>
+        <item>Yo Ndak Tau Kok Nanya Saya</item>
+        <item>Try to be a rainbow in someone\'s cloud</item>
+        <item>When nothing goes right... Go left</item>
+        <item>Farting every day makes your day easier</item>
+        <item>Make a smile as your best friend</item>
     </string-array>
 
     <string name="custom_date_strings">EEE, MMM d</string>
+    <string name="custom_date_strings_extended">EEEE, MMM d</string>
+    
+    <!-- Greetings -->
+    <string name="quickspace_grt_morning">Good morning.</string>
+    <string name="quickspace_grt_evening">Good evening.</string>
+    <string name="quickspace_grt_afternoon">Good afternoon.</string>
+    <string name="quickspace_grt_night">Good night.</string>
+    <string name="quickspace_grt_midnight">Solemn midnight.</string>
+    <string name="quickspace_grt_general">Good day.</string>
+    <string name="extended_clock_text">It\'s</string>
 </resources>

@@ -171,6 +171,8 @@ public final class Utilities {
     public static final String LENS_ACTIVITY = "com.google.android.apps.lens.MainActivity";
     public static final String LENS_URI = "google://lens";
 
+    public static final String KEY_EXTENDED_QUICKSPACE = "pref_extended_quickspace";
+    public static final String KEY_QUICK_EVENTS_MSGS = "pref_show_qs_messages";
     public static final String KEY_DOCK_SEARCH = "pref_dock_search";
     public static final String KEY_DOCK_THEME = "pref_dock_theme";
     public static final String KEY_SEARCH_RADIUS = "pref_search_radius_size";
@@ -1091,5 +1093,15 @@ public final class Utilities {
     public static boolean showQuickspace(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getBoolean(DESKTOP_SHOW_QUICKSPACE, true);
+    }
+    
+    public static boolean showQuickEventsMsgs(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(KEY_QUICK_EVENTS_MSGS, true);
+    }
+    
+    public static boolean isExtendedQuickSpace(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(KEY_EXTENDED_QUICKSPACE, true);
     }
 }
