@@ -43,4 +43,6 @@
     <item type="id" name="saved_floating_widget_foreground" />
     <item type="id" name="saved_floating_widget_background" />
 
+    <!-- Quickspace -->
+    <item type="id" name="reserved_container_workspace" />
 </resources>

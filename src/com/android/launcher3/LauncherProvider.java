@@ -36,6 +36,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.android.launcher3.LauncherSettings.Favorites;
+import com.android.launcher3.Utilities;
 import com.android.launcher3.config.FeatureFlags;
 import com.android.launcher3.model.ModelDbController;
 import com.android.launcher3.provider.LauncherDbUtils.SQLiteTransaction;

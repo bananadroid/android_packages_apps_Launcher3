@@ -30,6 +30,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.content.pm.LauncherApps;
 import android.os.UserHandle;
+import android.content.pm.PackageManager;
 import android.util.Log;
 import android.util.SparseArray;
 import android.widget.RemoteViews;
@@ -75,6 +76,8 @@ public class LauncherAppState implements SafeCloseable {
     private final RunnableList mOnTerminateCallback = new RunnableList();
 
     private boolean mNeedsRestart;
+
+    private boolean mIsCalendarAppAvailable;
 
     // WORKAROUND: b/269335387 remove this after widget background listener is enabled
     /* Array of RemoteViews cached by Launcher process */
@@ -256,5 +259,17 @@ public class LauncherAppState implements SafeCloseable {
                 verifyIconChanged();
             }
         }
+    }
+    
+    public static boolean isGSAEnabled(Context context) {
+        try {
+            return context.getPackageManager().getApplicationInfo("com.google.android.calendar", 0).enabled;
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
+    }
+
+    public boolean isCalendarAppAvailable() {
+        return mIsCalendarAppAvailable;
     }
 }

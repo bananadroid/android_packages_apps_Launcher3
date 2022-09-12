@@ -138,4 +138,7 @@
     <color name="material_color_primary">@android:color/system_accent1_600</color>
     <color name="material_color_secondary">@android:color/system_accent2_600</color>
     <color name="material_color_tertiary">@android:color/system_accent3_600</color>
+    
+    <color name="widget_accent_color_dark">@android:color/system_accent1_600</color>
+    <color name="widget_accent_color_light">@android:color/system_accent1_100</color>
 </resources>

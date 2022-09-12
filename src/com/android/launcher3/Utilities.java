@@ -48,6 +48,8 @@ import android.graphics.RectF;
 import android.graphics.drawable.AdaptiveIconDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.icu.text.DateFormat;
+import android.icu.text.DisplayContext;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.DeadObjectException;
@@ -59,6 +61,7 @@ import android.provider.Settings;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextUtils;
+import android.text.format.DateUtils;
 import android.text.style.TtsSpan;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -166,6 +169,8 @@ public final class Utilities {
     public static final String LENS_URI = "google://lens";
     public static final String LENS_SHARE_ACTIVITY = "com.google.android.apps.search.lens.LensShareEntryPointActivity";
 
+    public static final String KEY_EXTENDED_QUICKSPACE = "pref_extended_quickspace";
+    public static final String KEY_QUICK_EVENTS_MSGS = "pref_show_qs_messages";
     public static final String KEY_DOCK_SEARCH = "pref_dock_search";
     public static final String KEY_DOCK_THEME = "pref_dock_theme";
     public static final String KEY_SEARCH_RADIUS = "pref_search_radius_size";
@@ -179,6 +184,7 @@ public final class Utilities {
     public static final String KEY_BLUR_DEPTH = "pref_blur_depth";
     public static final String KEY_SHORT_PARALLAX = "pref_short_parallax";
     public static final String KEY_SINGLE_PAGE_CENTER = "pref_single_page_center";
+    public static final String DESKTOP_SHOW_QUICKSPACE = "pref_show_quickspace";
 
     /**
      * Returns true if theme is dark.
@@ -844,6 +850,20 @@ public final class Utilities {
         });
     }
 
+    public static String formatDateTime(Context context, long timeInMillis) {
+        try {
+            String format = "EEEE, MMM d";
+            String formattedDate;
+            DateFormat dateFormat = DateFormat.getInstanceForSkeleton(format, Locale.getDefault());
+            dateFormat.setContext(DisplayContext.CAPITALIZATION_FOR_STANDALONE);
+            formattedDate = dateFormat.format(timeInMillis);
+            return formattedDate;
+        } catch (Throwable t) {
+            Log.e(TAG, "Error formatting At A Glance date", t);
+            return DateUtils.formatDateTime(context, timeInMillis, DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_MONTH);
+        }
+    }
+
     public static boolean isWorkspaceEditAllowed(Context context) {
         SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
         return !prefs.getBoolean(InvariantDeviceProfile.KEY_WORKSPACE_LOCK, false);
@@ -925,5 +945,20 @@ public final class Utilities {
     public static boolean isSinglePageCentered(Context context) {
         SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_SINGLE_PAGE_CENTER, false);
+    }
+
+    public static boolean showQuickspace(Context context) {
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(DESKTOP_SHOW_QUICKSPACE, true);
+    }
+
+    public static boolean showQuickEventsMsgs(Context context) {
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(KEY_QUICK_EVENTS_MSGS, false);
+    }
+
+    public static boolean isExtendedQuickSpace(Context context) {
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(KEY_EXTENDED_QUICKSPACE, false);
     }
 }
