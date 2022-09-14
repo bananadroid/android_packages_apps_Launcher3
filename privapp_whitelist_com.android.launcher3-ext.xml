@@ -49,5 +49,6 @@
         <permission name="android.permission.MONITOR_INPUT"/>
         <permission name="android.permission.ALLOW_SLIPPERY_TOUCHES"/>
         <permission name="android.permission.FORCE_STOP_PACKAGES"/>
+        <permission name="android.permission.ACCESS_SURFACE_FLINGER"/>
         <permission name="org.omnirom.omnijaws.READ_WEATHER"/>
     </privapp-permissions>
