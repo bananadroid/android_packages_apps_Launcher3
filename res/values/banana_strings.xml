@@ -26,6 +26,7 @@
     <string name="misc_category_summary">Other options</string>
     <string name="general_category_title">General</string>
     <string name="interface_category_title">Interface</string>
+    <string name="quickspace_category_title">Quickspace</string>
     <string name="search_bar_category_title">Search bar</string>
     <string name="actions_category_title">Quick actions</string>
 
@@ -194,4 +195,118 @@
     <string name="restarting_launcher">Restarting launcher...</string>
     <string name="restarting_launcher_changes">Restarting launcher to apply changes...</string>
     <string name="updating_launcher_components">Restarting launcher to update launcher components...</string>
+
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">At A Glance</string>
+    <string name="show_quickspace_summary">Show at the top of your home screen</string>
+    <string name="quickspace_date_format" translatable="false">EEEE, MMM d</string>
+    <string name="quickspace_date_format_minimalistic" translatable="false">EEE, MMM d</string>
+
+    <!-- QuickSpace: QuickEvent: Device Intro Event -->
+    <string name="quick_event_rom_intro_welcome">Welcome to BananaDroid</string>
+    <string-array name="welcome_message_variants">
+        <item>Have a great day</item>
+        <item>Thank you for choosing us</item>
+        <item>Stay healthy with banana</item>
+        <item>Please enjoy your banana</item>
+        <item>Say hi to us on Telegram</item>
+        <item>Keep smiling for your own good</item>
+        <item>Peace Love Unity Respect</item>
+    </string-array>
+
+    <!-- QuickSpace: QuickEvent: Ambient Play -->
+    <string name="quick_event_ambient_now_playing">Now Playing</string>
+    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Now playing</string>
+    <string name="quickspace_now_playing_summary">Show the song you\'re playing</string>
+
+    <!-- Quickspace alternative view -->
+    <string name="quickspace_alternate_style_title">Minimalistic style</string>
+    <string name="quickspace_alternate_style_summary">Switch to modern style</string>
+
+    <!-- Quickspace PSA - Custom messages for the glance -->
+    <string name="quickspace_psa_title">Random messages</string>
+    <string name="quickspace_psa_summary">Make your companion more lively with random messages</string>
+
+    <string-array name="quickspace_psa_morning">
+        <item>Good morning!</item>
+        <item>Good morning, time to rock!</item>
+        <item>What a beautiful day!</item>
+        <item>Have a nice day!</item>
+        <item>What about a small 5 minutes nap?</item>
+        <item>That\'s one way to wake up.</item>
+        <item>You should change your alarm sounds.</item>
+        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
+        <item>Grab some banana to start your day.</item>
+        <item>Check the weather just in case</item>
+        <item>Feeling a bit sleepy yet</item>
+        <item>Have you looked outside yet?</item>
+        <item>Let\'s get this done.</item>
+    </string-array>
+
+    <string-array name="quickspace_psa_evening">
+        <item>Good night!</item>
+        <item>Sleep well!</item>
+        <item>See you tomorrow!</item>
+        <item>Sweet dreams!</item>
+        <item>Don\'t stay up too long</item>
+        <item>Have a good sleep</item>
+        <item>Get some sleep</item>
+        <item>Time to relax</item>
+        <item>Enjoy the night!</item>
+        <item>Remember to fart and release</item>
+        <item>Tomorrow might be a great day</item>
+        <item>Farting every day makes your day easier</item>
+    </string-array>
+
+    <string-array name="quickspace_psa_midnight">
+        <item>Um... good night?</item>
+        <item>It\'s a bit late now</item>
+        <item>You should fix your sleep schedule</item>
+        <item>Are you more productive at this time?</item>
+    </string-array>
+
+    <string-array name="quickspace_psa_random">
+        <item>Thank you for choosing BananaDroid</item>
+        <item>Welcome Banana Lover</item>
+        <item>Try to avoid UV rays during noon.</item>
+        <item>Stay Hydrated!</item>
+        <item>You need to take more water during the day.</item>
+        <item>Laughing can increase bloodflow.</item>
+        <item>Chocolate contains antioxidants.</item>
+        <item>Anxiety can make bad smells even worse.</item>
+        <item>Eating eggs improves your reflexes.</item>
+        <item>Remember to fart</item>
+        <item>Relax your mind</item>
+        <item>Eat Banana &amp; Stay Healthy</item>
+        <item>Check your to-do list if you have one.</item>
+        <item>Have a great banana day</item>
+        <item>Ready to grab some bananas?</item>
+        <item>Don\'t forget to be happy</item>
+        <item>Brush your teeth!</item>
+        <item>Ente kadang kadang ente</item>
+        <item>Yo Ndak Tau Kok Nanya Saya</item>
+        <item>Try to be a rainbow in someone\'s cloud</item>
+        <item>When nothing goes right... Go left</item>
+        <item>Farting every day makes your day easier</item>
+        <item>Make a smile as your best friend</item>
+        <item>Keep slepet whenever you can</item>
+        <item>Don\'t ever try asam sulfat</item>
+        <item>What a white hair you are!</item>
+        <item>Farting every day makes your day easier</item>
+        <item>What a lovely experience, isn\'t it?</item>
+        <item>Expecto Patronum</item>
+       	<item>Don\'t be shy, you are the best version of you</item>
+        <item>Hesitation is an obstacle to success</item>
+        <item>You are better than them</item>
+        <item>Envy is poison for you mind</item>
+        <item>The best source of potassium is banana</item>
+    </string-array>
+
+    <!-- QuickSpace: QuickEvent: Weather -->
+    <string name="quick_event_ambient_weather_title">Weather condition</string>
+    <string name="quick_event_ambient_weather_summary">Display current weather condition and temperature</string>
+    <string name="quick_event_ambient_weather_enabled_info">Requires weather service to be enabled</string>
 </resources>
