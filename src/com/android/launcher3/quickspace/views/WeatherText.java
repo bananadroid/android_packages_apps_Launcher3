@@ -59,7 +59,7 @@ public class WeatherText extends TextView implements
         void observe() {
             ContentResolver resolver = mContext.getContentResolver();
             resolver.registerContentObserver(Settings.System.getUriFor(
-                    Settings.System.QS_SHOW_WEATHER_TEMP), false, this,
+                    Settings.System.LAUNCHER_SHOW_WEATHER_TEMP), false, this,
                     UserHandle.USER_ALL);
             updateSettings(false);
         }
@@ -119,7 +119,7 @@ public class WeatherText extends TextView implements
     public void updateSettings(boolean onChange) {
         ContentResolver resolver = mContext.getContentResolver();
         mWeatherEnabled = Settings.System.getIntForUser(
-                resolver, Settings.System.QS_SHOW_WEATHER_TEMP, 0,
+                resolver, Settings.System.LAUNCHER_SHOW_WEATHER_TEMP, 0,
                 UserHandle.USER_CURRENT);
         if ((mWeatherEnabled != 0 && mWeatherEnabled != 5)) {
             mWeatherClient.setOmniJawsEnabled(true);
