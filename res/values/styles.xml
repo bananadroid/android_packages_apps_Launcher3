@@ -80,13 +80,13 @@
     </style>
 
     <style name="LauncherTheme.DarkMainColor" parent="@style/LauncherTheme">
-        <item name="disabledIconAlpha">.54</item>
+        <item name="disabledIconAlpha">.254</item>
 
     </style>
 
     <style name="LauncherTheme.DarkText" parent="@style/LauncherTheme">
         <item name="workspaceTextColor">@color/workspace_text_color_dark</item>
-        <item name="widgetTextColor">@color/widget_accent_color_light</item>
+        <item name="widgetTextColor">@color/widget_accent_color_dark</item>
         <item name="workspaceShadowColor">@android:color/transparent</item>
         <item name="workspaceAmbientShadowColor">@android:color/transparent</item>
         <item name="workspaceKeyShadowColor">@android:color/transparent</item>
