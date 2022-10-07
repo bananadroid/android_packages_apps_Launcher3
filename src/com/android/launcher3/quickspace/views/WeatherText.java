@@ -150,6 +150,8 @@ public class WeatherText extends TextView implements
                     if ((mWeatherEnabled != 0 || mWeatherEnabled != 5)) {
                         if (mWeatherEnabled == 2 || mWeatherEnabled == 4) {
                             setText(mWeatherData.temp);
+                        } else if (mWeatherEnabled == 6) {
+                            setText(mWeatherData.temp + mWeatherData.tempUnits + " ~ " + mWeatherData.condition);
                         } else {
                             setText(mWeatherData.temp + mWeatherData.tempUnits);
                         }

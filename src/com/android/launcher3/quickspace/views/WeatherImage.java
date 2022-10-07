@@ -146,7 +146,8 @@ public class WeatherImage extends ImageView implements
                 if (mWeatherData != null) {
                     if ((mWeatherEnabled == 1
                             || mWeatherEnabled == 2
-                            || mWeatherEnabled == 5)) {
+                            || mWeatherEnabled == 5
+                            || mWeatherEnabled == 6)) {
                         setImageDrawable(mWeatherImage);
                         setVisibility(View.VISIBLE);
                     }
