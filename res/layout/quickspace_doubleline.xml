@@ -101,7 +101,7 @@
         android:textColor="?workspaceTextColor"
         android:textSize="16sp"
         android:letterSpacing="0.02"
-        android:paddingStart="6dp" />
+        android:paddingStart="8dp" />
 
     </LinearLayout>
     
@@ -129,7 +129,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start|center_vertical"
-            android:drawablePadding="6dp"
+            android:drawablePadding="8dp"
             android:layout_marginLeft="8dp"
             android:scrollHorizontally="true"
             android:maxLines="1"
