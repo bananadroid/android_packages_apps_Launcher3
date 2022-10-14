@@ -35,8 +35,6 @@ public class QuickspaceController {
     private final Handler mHandler;
     private QuickEventsController mEventsController;
 
-    private boolean mUseImperialUnit;
-
     public interface OnDataListener {
         void onDataUpdated();
     }
@@ -55,13 +53,21 @@ public class QuickspaceController {
         mListeners.remove(listener);
     }
 
+    public QuickEventsController getEventController() {
+        return mEventsController;
+    }
+
     public void onPause() {
-        mEventsController.onPause();
+    	if (mEventsController != null) {
+          mEventsController.onPause();
+        }
     }
 
     public void onResume() {
-        mEventsController.onResume();
-        notifyListeners();
+    	if (mEventsController != null) {
+          mEventsController.onResume();
+          notifyListeners();
+        }
     }
 
     public void notifyListeners() {

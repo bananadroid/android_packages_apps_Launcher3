@@ -42,8 +42,8 @@ public class QuickEventsController {
     private OnClickListener mEventTitleSubAction = null;
     private int mEventSubIcon;
 
-    private boolean mRunning = true;
     private boolean mRegistered = false;
+    private boolean mRunning = true;
 
     // PSA + Personality
     private String[] mPSAMorningStr;
@@ -65,28 +65,30 @@ public class QuickEventsController {
     }
 
     public void initQuickEvents() {
-        registerPSAListener();
+    	registerPSAListener();
         updateQuickEvents();
     }
 
     private void registerPSAListener() {
-        if (mRegistered) return;
-        mRegistered = true;
+    	if (!mRegistered) {
         IntentFilter psonalityIntent = new IntentFilter();
         psonalityIntent.addAction(Intent.ACTION_TIME_TICK);
         psonalityIntent.addAction(Intent.ACTION_TIME_CHANGED);
         psonalityIntent.addAction(Intent.ACTION_TIMEZONE_CHANGED);
         mContext.registerReceiver(mPSAListener, psonalityIntent);
+        mRegistered = true;
+        }
     }
 
     private void unregisterPSAListener() {
-       if (!mRegistered) return;
-       mRegistered = false;
+    	if (mRegistered) {
         mContext.unregisterReceiver(mPSAListener);
+        mRegistered = false;
+        }
     }
 
     public void updateQuickEvents() {
-        if (!mRunning) return;
+        if (mRunning) {
         
         mEventTitleSub = mContext.getResources().getStringArray(R.array.quickspace_psa_random)[getLuckyNumber(0,22)];
         mGreetingsExt = mContext.getResources().getString(R.string.quickspace_grt_general);
@@ -160,6 +162,7 @@ public class QuickEventsController {
 
             default:
                 break;
+        }
       }
    }
 
@@ -189,12 +192,16 @@ public class QuickEventsController {
     }
 
     public void onPause() {
-        mRunning = false;
-        unregisterPSAListener();
+       if (mRunning) {
+         unregisterPSAListener();
+         mRunning = false;
+       }
     }
 
     public void onResume() {
-        mRunning = true;
-        registerPSAListener();
+	if (!mRunning) {
+	  registerPSAListener();
+	  mRunning = true;
+        }
     }
 }

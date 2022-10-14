@@ -66,13 +66,11 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
 
     private QuickSpaceActionReceiver mActionReceiver;
     public QuickspaceController mController;
-    public QuickEventsController mQEController;
 
     public QuickSpaceView(Context context, AttributeSet set) {
         super(context, set);
         mActionReceiver = new QuickSpaceActionReceiver(context);
         mController = new QuickspaceController(context);
-        mQEController = new QuickEventsController(context);
         mColorStateList = ColorStateList.valueOf(Themes.getAttrColor(getContext(), R.attr.workspaceTextColor));
         mQuickspaceBackgroundRes = R.drawable.bg_quickspace;
         setClipChildren(false);
@@ -80,24 +78,30 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
 
     @Override
     public void onDataUpdated() {
-        mQEController.initQuickEvents();
-        prepareLayout();
+    	if (mController != null) {
+    	  mController.getEventController().initQuickEvents();
+    	  prepareLayout();
+        }
+        mQuickspaceContent.setVisibility(View.GONE);
+        getQuickSpaceView();
         loadDoubleLine();
     }
 
     private final void loadDoubleLine() {
+    	String eventTitle = mController.getEventController().getActionTitle();
+    	String greetingsText = mController.getEventController().getGreetings();
         setBackgroundResource(mQuickspaceBackgroundRes);
-        mEventTitleSub.setText(mQEController.getActionTitle());
-        mEventTitleSub.setSelected(true);
-        mEventTitleSub.setOnClickListener(mQEController.getAction());
-        mGreetingsExt.setText(mQEController.getGreetings());
+        mEventTitleSub.setText(eventTitle);
+        mEventTitleSub.setOnClickListener(mController.getEventController().getAction());
+        mGreetingsExt.setText(greetingsText);
+        mGreetingsExt.setEllipsize(TruncateAt.MARQUEE);
+        mGreetingsExt.setMarqueeRepeatLimit(3);
         mGreetingsExt.setSelected(true);
-        mGreetingsExt.setOnClickListener(mQEController.getAction());
         mEventSubIcon.setImageTintList(mColorStateList);
-        mEventSubIcon.setImageResource(mQEController.getActionIcon());
+        mEventSubIcon.setImageResource(mController.getEventController().getActionIcon());
         loadQuickEvents();
         loadExtendedQS();
-        bindClock(true);
+        bindClock(false);
     }
 
     private final void loadQuickEvents() {
@@ -143,8 +147,17 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         loadViews();
     }
 
+    private void getQuickSpaceView() {
+        if (!(mQuickspaceContent.getVisibility() == View.VISIBLE)) {
+            mQuickspaceContent.setVisibility(View.VISIBLE);
+            mQuickspaceContent.setAlpha(0.0f);
+            mQuickspaceContent.animate().setDuration(200).alpha(1.0f);
+        }
+    }
+
     @Override
     public void onAnimationUpdate(ValueAnimator valueAnimator) {
+    	getQuickSpaceView();
         invalidate();
     }
 
@@ -186,7 +199,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         });
         mBubbleTextView.setContentDescription("");
         if (isAttachedToWindow()) {
-            if (mController != null) {
+            if (mController != null && mFinishedInflate) {
                 mController.addListener(this);
             }
         }
@@ -198,11 +211,15 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     }
 
     public void onPause() {
-        mController.onPause();
+    	if (mController != null) {
+          mController.onPause();
+        }
     }
 
     public void onResume() {
-        mController.onResume();
+    	if (mController != null) {
+          mController.onResume();;
+        }
     }
 
     public void run() {
