@@ -17,16 +17,11 @@ package com.android.launcher3.quickspace;
 
 import android.content.ActivityNotFoundException;
 import android.content.Context;
-import android.content.BroadcastReceiver;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.SharedPreferences;
-import android.provider.Settings;
 import android.view.View;
 import android.view.View.OnClickListener;
 
 import com.android.launcher3.Launcher;
-import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
 
@@ -41,8 +36,7 @@ public class QuickEventsController {
     private String mGreetingsExt;
     private OnClickListener mEventTitleSubAction = null;
     private int mEventSubIcon;
-
-    private boolean mRegistered = false;
+    
     private boolean mRunning = true;
 
     // PSA + Personality
@@ -52,12 +46,6 @@ public class QuickEventsController {
     private String[] mPSAMidniteStr;
     private String[] mPSARandomStr;
     private String[] mPSAEarlyEvenStr;
-    private BroadcastReceiver mPSAListener = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            updateQuickEvents();
-        }
-    };
 
     public QuickEventsController(Context context) {
         mContext = context;
@@ -65,31 +53,11 @@ public class QuickEventsController {
     }
 
     public void initQuickEvents() {
-    	registerPSAListener();
         updateQuickEvents();
     }
 
-    private void registerPSAListener() {
-    	if (!mRegistered) {
-        IntentFilter psonalityIntent = new IntentFilter();
-        psonalityIntent.addAction(Intent.ACTION_TIME_TICK);
-        psonalityIntent.addAction(Intent.ACTION_TIME_CHANGED);
-        psonalityIntent.addAction(Intent.ACTION_TIMEZONE_CHANGED);
-        mContext.registerReceiver(mPSAListener, psonalityIntent);
-        mRegistered = true;
-        }
-    }
-
-    private void unregisterPSAListener() {
-    	if (mRegistered) {
-        mContext.unregisterReceiver(mPSAListener);
-        mRegistered = false;
-        }
-    }
-
     public void updateQuickEvents() {
-        if (mRunning) {
-        
+    	if (!mRunning) return;
         mEventTitleSub = mContext.getResources().getStringArray(R.array.quickspace_psa_random)[getLuckyNumber(0,22)];
         mGreetingsExt = mContext.getResources().getString(R.string.quickspace_grt_general);
         mEventSubIcon = R.drawable.ic_quickspace_info;
@@ -125,45 +93,68 @@ public class QuickEventsController {
 
         switch (Calendar.getInstance().get(Calendar.HOUR_OF_DAY)) {
             case 5: case 6: case 7: case 8: case 9: case 10:
+            	if (Utilities.showQuickEventsMsgs(mContext)) {
                 psaLength = mPSAMorningStr.length - 1;
                 mEventTitleSub = mPSAMorningStr[getLuckyNumber(0, psaLength)];
+                }
+                if (Utilities.isExtendedQuickSpace(mContext)) {
                 mGreetingsExt = mContext.getResources().getString(R.string.quickspace_grt_morning);
+                }
                 break;
 
-            case 21: case 22: case 23: case 0: 
+            case 21: case 22: case 23:
+            	if (Utilities.showQuickEventsMsgs(mContext)) {
                 psaLength = mPSAEvenStr.length - 1;
                 mEventTitleSub = mPSAEvenStr[getLuckyNumber(0, psaLength)];
+                }
+                if (Utilities.isExtendedQuickSpace(mContext)) {
                 mGreetingsExt = mContext.getResources().getString(R.string.quickspace_grt_night);
+                }
                 break;
                 
             case 18: case 19: case 20:
+            	if (Utilities.showQuickEventsMsgs(mContext)) {
                 psaLength = mPSAEarlyEvenStr.length - 1;
                 mEventTitleSub = mPSAEarlyEvenStr[getLuckyNumber(0, psaLength)];
+                }
+                if (Utilities.isExtendedQuickSpace(mContext)) {
                 mGreetingsExt = mContext.getResources().getString(R.string.quickspace_grt_evening);
+                }
                 break;
 
              case 15: case 16: case 17:
+             	if (Utilities.showQuickEventsMsgs(mContext)) {
                 psaLength = mPSAAfterNoonStr.length - 1;
                 mEventTitleSub = mPSAAfterNoonStr[getLuckyNumber(0, psaLength)];
+                }
+                if (Utilities.isExtendedQuickSpace(mContext)) {
                 mGreetingsExt = mContext.getResources().getString(R.string.quickspace_grt_afternoon);
+                }
                 break;
 
-            case 1: case 2: case 3: case 4:
+            case 0: case 1: case 2: case 3: case 4:
+            	if (Utilities.showQuickEventsMsgs(mContext)) {
                 psaLength = mPSAMidniteStr.length - 1;
                 mEventTitleSub = mPSAMidniteStr[getLuckyNumber(0, psaLength)];
+                }
+                if (Utilities.isExtendedQuickSpace(mContext)) {
                 mGreetingsExt = mContext.getResources().getString(R.string.quickspace_grt_midnight);
+                }
                 break;
                 
-            case 11: case 12: case 13: case 14: 
+            case 11: case 12: case 13: case 14:
+            	if (Utilities.showQuickEventsMsgs(mContext)) {
                 psaLength = mPSARandomStr.length - 1;
                 mEventTitleSub = mPSARandomStr[getLuckyNumber(0, psaLength)];
+                }
+                if (Utilities.isExtendedQuickSpace(mContext)) {
                 mGreetingsExt = mContext.getResources().getString(R.string.quickspace_grt_general);
+                }
                 break;
 
             default:
                 break;
         }
-      }
    }
 
     public String getActionTitle() {
@@ -192,15 +183,11 @@ public class QuickEventsController {
     }
 
     public void onPause() {
-       if (mRunning) {
-         unregisterPSAListener();
-         mRunning = false;
-       }
+    	 mRunning = false;
     }
 
     public void onResume() {
 	if (!mRunning) {
-	  registerPSAListener();
 	  mRunning = true;
         }
     }

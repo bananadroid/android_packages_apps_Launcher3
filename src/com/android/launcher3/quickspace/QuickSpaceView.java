@@ -15,10 +15,9 @@
  */
 package com.android.launcher3.quickspace;
 
-import android.animation.LayoutTransition;
-import android.animation.ValueAnimator;
-import android.animation.ValueAnimator.AnimatorUpdateListener;
-import android.content.ActivityNotFoundException;
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -38,16 +37,13 @@ import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.util.Themes;
 
-import com.android.launcher3.quickspace.QuickEventsController;
-import com.android.launcher3.quickspace.QuickspaceController;
 import com.android.launcher3.quickspace.QuickspaceController.OnDataListener;
 import com.android.launcher3.quickspace.receivers.QuickSpaceActionReceiver;
 import com.android.launcher3.quickspace.views.DateTextView;
 
-public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListener, Runnable, OnDataListener {
+public class QuickSpaceView extends FrameLayout implements Runnable, OnDataListener {
 
     private static final String TAG = "Launcher3:QuickSpaceView";
-    private static final boolean DEBUG = false;
 
     public final ColorStateList mColorStateList;
     public BubbleTextView mBubbleTextView;
@@ -62,10 +58,10 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     public View mGreetingsExtView;
     public View mGreetingsExtClock;
 
-    public boolean mFinishedInflate;
-
     private QuickSpaceActionReceiver mActionReceiver;
     public QuickspaceController mController;
+    
+    private boolean mFinishedInflate;
 
     public QuickSpaceView(Context context, AttributeSet set) {
         super(context, set);
@@ -78,48 +74,29 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
 
     @Override
     public void onDataUpdated() {
-    	if (mController != null) {
-    	  mController.getEventController().initQuickEvents();
-    	  prepareLayout();
-        }
-        mQuickspaceContent.setVisibility(View.GONE);
-        getQuickSpaceView();
-        loadDoubleLine();
+    	mController.getEventController().initQuickEvents();
+    	prepareLayout();
+    	getQuickSpaceView();
+    	loadDoubleLine();
     }
 
     private final void loadDoubleLine() {
-    	String eventTitle = mController.getEventController().getActionTitle();
-    	String greetingsText = mController.getEventController().getGreetings();
         setBackgroundResource(mQuickspaceBackgroundRes);
+        if (Utilities.showQuickEventsMsgs(getContext())) {
+        String eventTitle = mController.getEventController().getActionTitle();
         mEventTitleSub.setText(eventTitle);
         mEventTitleSub.setOnClickListener(mController.getEventController().getAction());
+        mEventSubIcon.setImageTintList(mColorStateList);
+        mEventSubIcon.setImageResource(mController.getEventController().getActionIcon());
+        }
+        if (Utilities.isExtendedQuickSpace(getContext())) {
+        String greetingsText = mController.getEventController().getGreetings();
         mGreetingsExt.setText(greetingsText);
         mGreetingsExt.setEllipsize(TruncateAt.MARQUEE);
         mGreetingsExt.setMarqueeRepeatLimit(3);
-        mGreetingsExt.setSelected(true);
-        mEventSubIcon.setImageTintList(mColorStateList);
-        mEventSubIcon.setImageResource(mController.getEventController().getActionIcon());
-        loadQuickEvents();
-        loadExtendedQS();
+        mGreetingsExtClock.setVisibility(View.VISIBLE);
+        }
         bindClock(false);
-    }
-
-    private final void loadQuickEvents() {
-        if (Utilities.showQuickEventsMsgs(getContext())) {
-          mQuickEventsView.setVisibility(View.VISIBLE);
-        } else {
-          mQuickEventsView.setVisibility(View.GONE);
-        }
-    }
-    
-    private final void loadExtendedQS() {
-        if (Utilities.isExtendedQuickSpace(getContext())) {
-          mGreetingsExtView.setVisibility(View.VISIBLE);
-          mGreetingsExtClock.setVisibility(View.VISIBLE);
-        } else {
-          mGreetingsExtView.setVisibility(View.GONE);
-          mGreetingsExtClock.setVisibility(View.GONE);
-        }
     }
     
     private final void bindClock(boolean forced) {
@@ -130,14 +107,18 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     }
 
     private final void loadViews() {
-        mEventTitleSub = (TextView) findViewById(R.id.quick_event_title_sub);
-        mEventSubIcon = (ImageView) findViewById(R.id.quick_event_icon_sub);
-        mGreetingsExt = (TextView) findViewById(R.id.extended_greetings);
-        mGreetingsExtClock = (TextView) findViewById(R.id.extended_greetings_clock);
-        mGreetingsExtView = (View) findViewById(R.id.extended_greetings_view);
-        mQuickEventsView = (View) findViewById(R.id.quick_events_messages);
         mQuickspaceContent = (ViewGroup) findViewById(R.id.quickspace_content);
         mClockView = (DateTextView) findViewById(R.id.clock_view);
+    	if (Utilities.showQuickEventsMsgs(getContext())) {
+        mQuickEventsView = (View) findViewById(R.id.quick_events_messages);
+        mEventTitleSub = (TextView) findViewById(R.id.quick_event_title_sub);
+        mEventSubIcon = (ImageView) findViewById(R.id.quick_event_icon_sub);
+        }
+        if (Utilities.isExtendedQuickSpace(getContext())) {
+        mGreetingsExtClock = (TextView) findViewById(R.id.extended_greetings_clock);
+        mGreetingsExtView = (View) findViewById(R.id.extended_greetings_view);
+        mGreetingsExt = (TextView) findViewById(R.id.extended_greetings);
+        }
     }
 
     private void prepareLayout() {
@@ -149,18 +130,24 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
 
     private void getQuickSpaceView() {
         if (!(mQuickspaceContent.getVisibility() == View.VISIBLE)) {
+   	     mQuickspaceContent.animate()
+             			.alpha(0f)
+            			.setDuration(200)
+            			.setListener(new AnimatorListenerAdapter() {
+                		@Override
+                		public void onAnimationEnd(Animator animation) {
+	    			    mQuickspaceContent.setVisibility(View.GONE);
+                		}
+            			});
             mQuickspaceContent.setVisibility(View.VISIBLE);
-            mQuickspaceContent.setAlpha(0.0f);
-            mQuickspaceContent.animate().setDuration(200).alpha(1.0f);
-        }
-    }
+            mQuickspaceContent.animate()
+            		    .alpha(1.0f)
+            		    .setDuration(200)
+            		    .setListener(null);
 
-    @Override
-    public void onAnimationUpdate(ValueAnimator valueAnimator) {
-    	getQuickSpaceView();
-        invalidate();
+    	   }
     }
-
+    
     @Override
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
@@ -199,7 +186,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         });
         mBubbleTextView.setContentDescription("");
         if (isAttachedToWindow()) {
-            if (mController != null && mFinishedInflate) {
+            if (mController != null) {
                 mController.addListener(this);
             }
         }
@@ -211,14 +198,12 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
     }
 
     public void onPause() {
-    	if (mController != null) {
-          mController.onPause();
-        }
+         mController.onPause();
     }
 
     public void onResume() {
     	if (mController != null) {
-          mController.onResume();;
+        mController.onResume();
         }
     }
 

@@ -15,6 +15,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:launcher="http://schemas.android.com/apk/res-auto"
     android:id="@+id/quickspace_content"
+    android:visibility="gone"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="start|center"
@@ -25,9 +26,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="center_vertical"
-        android:visibility="gone"
-        android:gravity="start"
+        android:layout_gravity="start|center_vertical"
+        android:gravity="start|center_vertical"
         android:paddingStart="16dp"
         android:paddingTop="9dp">
 
@@ -35,7 +35,7 @@
             android:id="@+id/extended_greetings"
             style="@style/QuickSpaceText"
             android:layout_width="wrap_content"
-            android:layout_height="20dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="start|center_vertical"
             android:scrollHorizontally="true"
             android:maxLines="1"
@@ -47,8 +47,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="center_vertical"
-        android:gravity="start"
+        android:layout_gravity="start|center_vertical"
+        android:gravity="start|center_vertical"
         android:paddingStart="16dp"
         android:paddingTop="9dp">
         
@@ -56,20 +56,20 @@
             android:id="@+id/extended_greetings_clock"
             style="@style/QuickSpaceText"
             android:layout_width="wrap_content"
-            android:layout_height="20dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="start|center_vertical"
             android:scrollHorizontally="true"
             android:maxLines="1"
             android:textColor="?attr/widgetTextColor"
-            android:text="@string/extended_clock_text"
             android:visibility="gone"
+            android:text="@string/extended_clock_text"
             android:paddingEnd="6dp"/>
 
     <com.android.launcher3.quickspace.views.DateTextView
         android:id="@+id/clock_view"
         style="@style/QuickSpaceText"
-        android:layout_width="220dp"
-        android:layout_height="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="start|center_vertical"
         android:maxLines="1"
         android:textColor="?workspaceTextColor"/>
@@ -80,21 +80,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="center_vertical"
+        android:layout_gravity="start|center_vertical"
         android:gravity="start"
         android:paddingStart="16dp"
         android:paddingTop="9dp">
 
 	<com.android.launcher3.quickspace.views.WeatherImage
         android:id="@+id/weather_image"
+        android:layout_gravity="start|center_vertical"
         android:layout_width="18dp"
         android:layout_height="18dp" />
 
 	<com.android.launcher3.quickspace.views.WeatherText
         android:id="@+id/weather_temp"
-        android:layout_width="220dp"
-        android:layout_height="18dp"
-        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
         android:maxLines="1"
         android:fontFamily="@*android:string/config_bodyFontFamily"
         android:lineHeight="20sp"
@@ -110,15 +111,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="center_vertical"
-        android:visibility="gone"
-        android:gravity="start"
+        android:layout_gravity="start|center_vertical"
+        android:gravity="start|center_vertical"
         android:paddingTop="9dp">
 
         <ImageView
             android:id="@+id/quick_event_icon_sub"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
             android:layout_gravity="start|center_vertical"
             android:layout_marginStart="16dp"
             android:layout_weight="0.0" />
@@ -126,8 +126,8 @@
         <com.android.launcher3.quickspace.views.DoubleShadowTextView
             android:id="@+id/quick_event_title_sub"
             style="@style/QuickSpaceSubText"
-            android:layout_width="400dp"
-            android:layout_height="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="start|center_vertical"
             android:drawablePadding="8dp"
             android:layout_marginLeft="8dp"

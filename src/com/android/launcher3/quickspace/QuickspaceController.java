@@ -16,11 +16,8 @@
 package com.android.launcher3.quickspace;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.Icon;
 import android.os.Handler;
 import android.provider.Settings;
-import android.util.Log;
 
 import com.android.launcher3.quickspace.QuickEventsController;
 
@@ -58,15 +55,13 @@ public class QuickspaceController {
     }
 
     public void onPause() {
-    	if (mEventsController != null) {
           mEventsController.onPause();
-        }
     }
 
     public void onResume() {
-    	if (mEventsController != null) {
-          mEventsController.onResume();
-          notifyListeners();
+        if (mEventsController != null) {
+            mEventsController.onResume();
+            notifyListeners();
         }
     }
 

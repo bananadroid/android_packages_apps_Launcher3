@@ -16,12 +16,11 @@
 -->
 <com.android.launcher3.quickspace.QuickSpaceView
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@id/reserved_container_workspace"
+        android:id="@+id/reserved_container_workspace"
         android:background="?android:selectableItemBackground"
         android:clickable="false"
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:animateLayoutChanges="true">
+        android:layout_height="0dp">
 
         <com.android.launcher3.BubbleTextView
             android:layout_gravity="center"
