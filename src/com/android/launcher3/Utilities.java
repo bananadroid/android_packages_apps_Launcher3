@@ -1097,11 +1097,11 @@ public final class Utilities {
     
     public static boolean showQuickEventsMsgs(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
-        return prefs.getBoolean(KEY_QUICK_EVENTS_MSGS, true);
+        return prefs.getBoolean(KEY_QUICK_EVENTS_MSGS, false);
     }
     
     public static boolean isExtendedQuickSpace(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
-        return prefs.getBoolean(KEY_EXTENDED_QUICKSPACE, true);
+        return prefs.getBoolean(KEY_EXTENDED_QUICKSPACE, false);
     }
 }

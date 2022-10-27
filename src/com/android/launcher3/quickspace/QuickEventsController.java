@@ -36,8 +36,6 @@ public class QuickEventsController {
     private String mGreetingsExt;
     private OnClickListener mEventTitleSubAction = null;
     private int mEventSubIcon;
-    
-    private boolean mRunning = true;
 
     // PSA + Personality
     private String[] mPSAMorningStr;
@@ -57,7 +55,6 @@ public class QuickEventsController {
     }
 
     public void updateQuickEvents() {
-    	if (!mRunning) return;
         mEventTitleSub = mContext.getResources().getStringArray(R.array.quickspace_psa_random)[getLuckyNumber(0,22)];
         mGreetingsExt = mContext.getResources().getString(R.string.quickspace_grt_general);
         mEventSubIcon = R.drawable.ic_quickspace_info;
@@ -180,15 +177,5 @@ public class QuickEventsController {
     public int getLuckyNumber(int min, int max) {
         Random r = new Random();
         return r.nextInt((max - min) + 1) + min;
-    }
-
-    public void onPause() {
-    	 mRunning = false;
-    }
-
-    public void onResume() {
-	if (!mRunning) {
-	  mRunning = true;
-        }
     }
 }

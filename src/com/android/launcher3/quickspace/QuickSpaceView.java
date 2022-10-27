@@ -37,11 +37,10 @@ import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.util.Themes;
 
-import com.android.launcher3.quickspace.QuickspaceController.OnDataListener;
 import com.android.launcher3.quickspace.receivers.QuickSpaceActionReceiver;
 import com.android.launcher3.quickspace.views.DateTextView;
 
-public class QuickSpaceView extends FrameLayout implements Runnable, OnDataListener {
+public class QuickSpaceView extends FrameLayout {
 
     private static final String TAG = "Launcher3:QuickSpaceView";
 
@@ -59,22 +58,21 @@ public class QuickSpaceView extends FrameLayout implements Runnable, OnDataListe
     public View mGreetingsExtClock;
 
     private QuickSpaceActionReceiver mActionReceiver;
-    public QuickspaceController mController;
+    public QuickEventsController mController;
     
     private boolean mFinishedInflate;
 
     public QuickSpaceView(Context context, AttributeSet set) {
         super(context, set);
         mActionReceiver = new QuickSpaceActionReceiver(context);
-        mController = new QuickspaceController(context);
+        mController = new QuickEventsController(context);
         mColorStateList = ColorStateList.valueOf(Themes.getAttrColor(getContext(), R.attr.workspaceTextColor));
         mQuickspaceBackgroundRes = R.drawable.bg_quickspace;
         setClipChildren(false);
     }
 
-    @Override
-    public void onDataUpdated() {
-    	mController.getEventController().initQuickEvents();
+    public void updateGlance() {
+    	mController.initQuickEvents();
     	prepareLayout();
     	getQuickSpaceView();
     	loadDoubleLine();
@@ -83,14 +81,14 @@ public class QuickSpaceView extends FrameLayout implements Runnable, OnDataListe
     private final void loadDoubleLine() {
         setBackgroundResource(mQuickspaceBackgroundRes);
         if (Utilities.showQuickEventsMsgs(getContext())) {
-        String eventTitle = mController.getEventController().getActionTitle();
+        String eventTitle = mController.getActionTitle();
         mEventTitleSub.setText(eventTitle);
-        mEventTitleSub.setOnClickListener(mController.getEventController().getAction());
+        mEventTitleSub.setOnClickListener(mController.getAction());
         mEventSubIcon.setImageTintList(mColorStateList);
-        mEventSubIcon.setImageResource(mController.getEventController().getActionIcon());
+        mEventSubIcon.setImageResource(mController.getActionIcon());
         }
         if (Utilities.isExtendedQuickSpace(getContext())) {
-        String greetingsText = mController.getEventController().getGreetings();
+        String greetingsText = mController.getGreetings();
         mGreetingsExt.setText(greetingsText);
         mGreetingsExt.setEllipsize(TruncateAt.MARQUEE);
         mGreetingsExt.setMarqueeRepeatLimit(3);
@@ -147,21 +145,14 @@ public class QuickSpaceView extends FrameLayout implements Runnable, OnDataListe
 
     	   }
     }
-    
+
     @Override
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        if (mController != null && mFinishedInflate) {
-            mController.addListener(this);
+        if (mController == null && !mFinishedInflate) {
+             return;
         }
-    }
-
-    @Override
-    public void onDetachedFromWindow() {
-        super.onDetachedFromWindow();
-        if (mController != null) {
-            mController.removeListener(this);
-        }
+        updateGlance();
     }
 
     public boolean isPackageEnabled(String pkgName, Context context) {
@@ -186,9 +177,10 @@ public class QuickSpaceView extends FrameLayout implements Runnable, OnDataListe
         });
         mBubbleTextView.setContentDescription("");
         if (isAttachedToWindow()) {
-            if (mController != null) {
-                mController.addListener(this);
+            if (mController == null) {
+                return;
             }
+            updateGlance();
         }
     }
 
@@ -197,17 +189,11 @@ public class QuickSpaceView extends FrameLayout implements Runnable, OnDataListe
         super.onLayout(b, n, n2, n3, n4);
     }
 
-    public void onPause() {
-         mController.onPause();
-    }
-
     public void onResume() {
-    	if (mController != null) {
-        mController.onResume();
+    	if (mController == null) {
+    	   return;
         }
-    }
-
-    public void run() {
+        updateGlance();
     }
 
     public void setPadding(int n, int n2, int n3, int n4) {
