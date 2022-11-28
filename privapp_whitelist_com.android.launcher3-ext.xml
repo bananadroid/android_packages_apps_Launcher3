@@ -20,4 +20,6 @@
         <permission name="android.permission.SUSPEND_APPS"/>
         <permission name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
         <permission name="android.permission.MEDIA_CONTENT_CONTROL"/>
+        <permission name="android.permission.PACKAGE_USAGE_STATS"/>
+        <permission name="org.omnirom.omnijaws.READ_WEATHER"/>
     </privapp-permissions>
