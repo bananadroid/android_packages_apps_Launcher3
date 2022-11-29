@@ -292,4 +292,7 @@
     <string name="about">About</string>
     <string name="about_summary">Info about the Banana Home</string>
     <string name="about_app_version">Launcher for Android 13</string>
+
+    <!-- App drawer searchbar -->
+    <string name="drawer_searchbar_title">Enable app drawer searchbar</string>
 </resources>
