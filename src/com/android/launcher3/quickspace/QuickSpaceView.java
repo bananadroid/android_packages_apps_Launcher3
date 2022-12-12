@@ -18,6 +18,7 @@ package com.android.launcher3.quickspace;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
+import android.annotation.UiThread;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -71,6 +72,7 @@ public class QuickSpaceView extends FrameLayout {
         setClipChildren(false);
     }
 
+    @UiThread
     public void updateGlance() {
     	mController.initQuickEvents();
     	prepareLayout();
