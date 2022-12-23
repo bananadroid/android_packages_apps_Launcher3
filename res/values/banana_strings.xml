@@ -60,9 +60,11 @@
     <string name="custom_seekbar_default_value_is_set">Default value is set</string>
 
     <!-- About info -->
-    <string name="about_banana_title" translatable="false">Banana Home</string>
+    <string name="app_info_version">Version</string>
+    <string name="about_app_title" translatable="false">Banana Home</string>
+    <string name="about_app_subtitle">Based on AOSP Launcher3</string>
+    <string name="about_app_version">UD1A.230803.041</string>
     <string name="about_thanks_cat">Special thanks to</string>
     <string name="about">About</string>
     <string name="about_summary">Info about the Banana Home</string>
-    <string name="about_app_version">Launcher for Android 14</string>
 </resources>
