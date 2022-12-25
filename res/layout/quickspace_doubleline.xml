@@ -39,7 +39,7 @@
             android:layout_gravity="start|center_vertical"
             android:scrollHorizontally="true"
             android:maxLines="1"
-            android:textColor="?attr/widgetTextColor" />
+            android:textColor="?android:attr/colorAccent" />
 
     </LinearLayout>
 
@@ -60,7 +60,7 @@
             android:layout_gravity="start|center_vertical"
             android:scrollHorizontally="true"
             android:maxLines="1"
-            android:textColor="?attr/widgetTextColor"
+            android:textColor="?android:attr/colorAccent"
             android:visibility="gone"
             android:text="@string/extended_clock_text"
             android:paddingEnd="6dp"/>
