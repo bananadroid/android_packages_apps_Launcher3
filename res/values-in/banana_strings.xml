@@ -187,10 +187,10 @@
     <string name="custom_date_strings">EEE, MMM d</string>
     <string name="custom_date_strings_extended">EEEE, MMM d</string>
     <string name="quickspace_grt_morning">Selamat pagi.</string>
-    <string name="quickspace_grt_evening">Selamat siang.</string>
-    <string name="quickspace_grt_afternoon">Selamat sore.</string>
+    <string name="quickspace_grt_evening">Selamat sore.</string>
+    <string name="quickspace_grt_afternoon">Selamat siang.</string>
     <string name="quickspace_grt_night">Selamat malam.</string>
-    <string name="quickspace_grt_midnight">Larut malam.</string>
+    <string name="quickspace_grt_midnight">Sudah larut malam.</string>
     <string name="quickspace_grt_general">Selamat menikmati hari.</string>
     <string name="extended_clock_text">Ini</string>
     <string name="suggestion_pref_screen_title">Saran</string>
