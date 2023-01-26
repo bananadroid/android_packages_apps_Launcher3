@@ -11,4 +11,7 @@
     <color name="op_control_text_color_secondary">#89ffffff</color>
 
     <color name="mid_clear_all_background_color">@*android:color/system_neutral2_900</color>
+
+    <!-- Appseat -->
+    <color name="appseat_color">#50181c1f</color>
 </resources>
