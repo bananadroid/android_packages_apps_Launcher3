@@ -110,6 +110,7 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
             case Utilities.DESKTOP_SHOW_CENTER_QUICKSPACE:
             case Utilities.KEY_DOCK_MUSIC_SEARCH:
             case Utilities.KEY_HOTSEAT_OPACITY:
+            case Utilities.KEY_VIBRATION_TOGGLE:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:
