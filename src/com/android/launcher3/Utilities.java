@@ -192,6 +192,7 @@ public final class Utilities {
     public static final String KEY_APP_DRAWER_OPACITY = "pref_app_drawer_opacity";
     public static final String KEY_DRAWER_SEARCHBAR = "pref_drawer_searchbar";
     public static final String KEY_SHOW_MEM_INFO = "pref_show_meminfo";
+    public static final String KEY_HOTSEAT_OPACITY = "pref_hotseat_opacity";
 
     /**
      * Returns true if theme is dark.
@@ -1139,5 +1140,10 @@ public final class Utilities {
     public static boolean showSearchBar(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_DRAWER_SEARCHBAR, true);
+    }
+
+    public static int getHotseatOpacity(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getInt(KEY_HOTSEAT_OPACITY, 40);
     }
 }
