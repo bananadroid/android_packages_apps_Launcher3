@@ -103,6 +103,11 @@
             android:dependency="pref_show_hotseat_bg"
             android:defaultValue="40" />
 
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/quickspace_category_title">
+
         <SwitchPreference
             android:key="pref_show_quickspace"
             android:title="@string/show_quickspace_title"
