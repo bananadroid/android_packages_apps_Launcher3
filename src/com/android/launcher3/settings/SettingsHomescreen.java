@@ -107,6 +107,7 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
             case Utilities.KEY_QUICK_EVENTS_MSGS:
             case Utilities.KEY_EXTENDED_QUICKSPACE:
             case Utilities.DESKTOP_SHOW_QUICKSPACE:
+            case Utilities.DESKTOP_SHOW_CENTER_QUICKSPACE:
             case Utilities.KEY_DOCK_MUSIC_SEARCH:
             case Utilities.KEY_HOTSEAT_OPACITY:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();

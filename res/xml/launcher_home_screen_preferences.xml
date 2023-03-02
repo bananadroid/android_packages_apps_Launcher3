@@ -116,6 +116,14 @@
             android:persistent="true"/>
 
         <SwitchPreference
+            android:key="pref_show_center_quickspace"
+            android:title="@string/quickspace_center_style_title"
+            android:summary="@string/quickspace_center_style_summary"
+            android:dependency="pref_show_quickspace"
+            android:defaultValue="false"
+            android:persistent="true"/>
+
+        <SwitchPreference
             android:key="pref_extended_quickspace"
             android:title="@string/extended_quickspace_title"
             android:summary="@string/extended_quickspace_summary"
