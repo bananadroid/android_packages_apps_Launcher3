@@ -166,12 +166,12 @@ public class QuickEventsController {
         return mEventTitleSubAction;
     }
 
-    public int getActionIcon() {
-        return mEventSubIcon;
-    }
-
     public int getLuckyNumber(int max) {
         return getLuckyNumber(0, max);
+    }
+
+    public int getActionIcon() {
+        return mEventSubIcon;
     }
 
     public int getLuckyNumber(int min, int max) {
