@@ -79,6 +79,9 @@
     <string name="show_quickspace_msg_summary">Tamplikan pesan acak di bawah at a glance - matikan dan nyalakan kembali jika pesan tidak berganti</string>
     <string name="extended_quickspace_title">At a glance mode panjang</string>
     <string name="extended_quickspace_summary">Versi panjang dari widget At a glance</string>
+    <!-- Quickspace center view -->
+    <string name="quickspace_center_style_title">Gaya tengah</string>
+    <string name="quickspace_center_style_summary">Ubah posisi ke tengah</string>
     <string-array translatable="false" name="welcome_message_variants">
         <item>#GetBanana &#127834;</item>
         <item>#EatBanana &#129425;</item>
@@ -184,14 +187,14 @@
         <item>Ketek tak lebih bau dari selangkangan</item>
         <item>Saya aslinya dua orang</item>
     </string-array>
-    <string name="custom_date_strings">EEE, MMM d</string>
+    <string name="custom_date_strings">EEEE, MMM d</string>
     <string name="custom_date_strings_extended">EEEE, MMM d</string>
-    <string name="quickspace_grt_morning">Selamat pagi.</string>
-    <string name="quickspace_grt_evening">Selamat sore.</string>
-    <string name="quickspace_grt_afternoon">Selamat siang.</string>
-    <string name="quickspace_grt_night">Selamat malam.</string>
+    <string name="quickspace_grt_morning">Selamat pagi</string>
+    <string name="quickspace_grt_evening">Selamat sore</string>
+    <string name="quickspace_grt_afternoon">Selamat siang</string>
+    <string name="quickspace_grt_night">Selamat malam</string>
     <string name="quickspace_grt_midnight">Sudah larut malam.</string>
-    <string name="quickspace_grt_general">Selamat menikmati hari.</string>
+    <string name="quickspace_grt_general">Selamat menikmati hari</string>
     <string name="extended_clock_text">Ini</string>
     <string name="suggestion_pref_screen_title">Saran</string>
     <string name="suggestion_pref_screen_desc">Saran untuk semua aplikasi &amp; layar Home</string>

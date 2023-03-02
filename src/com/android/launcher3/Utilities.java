@@ -188,6 +188,7 @@ public final class Utilities {
     public static final String KEY_STATUS_BAR = "pref_show_statusbar";
     public static final String KEY_BLUR_DEPTH = "pref_blur_depth";
     public static final String DESKTOP_SHOW_QUICKSPACE = "pref_show_quickspace";
+    public static final String DESKTOP_SHOW_CENTER_QUICKSPACE = "pref_show_center_quickspace";
     public static final String KEY_RECENTS_OPACITY = "pref_recents_opacity";
     public static final String KEY_APP_DRAWER_OPACITY = "pref_app_drawer_opacity";
     public static final String KEY_DRAWER_SEARCHBAR = "pref_drawer_searchbar";
@@ -1117,6 +1118,11 @@ public final class Utilities {
         return prefs.getBoolean(DESKTOP_SHOW_QUICKSPACE, true);
     }
     
+    public static boolean useCenterQuickspaceUI(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(DESKTOP_SHOW_CENTER_QUICKSPACE, false);
+    }
+
     public static boolean showQuickEventsMsgs(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_QUICK_EVENTS_MSGS, false);

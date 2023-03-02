@@ -124,7 +124,11 @@ public class QuickSpaceView extends FrameLayout {
     private void prepareLayout() {
         int indexOfChild = indexOfChild(mQuickspaceContent);
         removeView(mQuickspaceContent);
+        if (Utilities.useCenterQuickspaceUI(getContext())) {
+        addView(LayoutInflater.from(getContext()).inflate(R.layout.quickspace_center_doubleline, this, false), indexOfChild);
+        } else {
         addView(LayoutInflater.from(getContext()).inflate(R.layout.quickspace_doubleline, this, false), indexOfChild);
+        }
         loadViews();
     }
 

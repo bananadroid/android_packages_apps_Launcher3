@@ -135,6 +135,9 @@
     <string name="extended_quickspace_summary">Extended version of at a glance wannabe widget</string>
     <string name="abbrev_wday_month_day_no_year" translatable="false">EEEEMMMd</string>
 
+    <!-- Quickspace center view -->
+    <string name="quickspace_center_style_title">Center style</string>
+    <string name="quickspace_center_style_summary">Switch to center position</string>
 
     <string-array translatable="false" name="welcome_message_variants">
         <item>#GetBanana &#127834;</item>
@@ -243,16 +246,16 @@
         <item>Make a smile as your best friend</item>
     </string-array>
 
-    <string name="custom_date_strings">EEE, MMM d</string>
+    <string name="custom_date_strings">EEEE, MMM d</string>
     <string name="custom_date_strings_extended">EEEE, MMM d</string>
     
     <!-- Greetings -->
-    <string name="quickspace_grt_morning">Good morning.</string>
-    <string name="quickspace_grt_evening">Good evening.</string>
-    <string name="quickspace_grt_afternoon">Good afternoon.</string>
-    <string name="quickspace_grt_night">Good night.</string>
-    <string name="quickspace_grt_midnight">Solemn midnight.</string>
-    <string name="quickspace_grt_general">Good day.</string>
+    <string name="quickspace_grt_morning">Good morning</string>
+    <string name="quickspace_grt_evening">Good evening</string>
+    <string name="quickspace_grt_afternoon">Good afternoon</string>
+    <string name="quickspace_grt_night">Good night</string>
+    <string name="quickspace_grt_midnight">Solemn midnight</string>
+    <string name="quickspace_grt_general">Good day</string>
     <string name="extended_clock_text">It\'s</string>
     
     <!-- Suggestions -->
