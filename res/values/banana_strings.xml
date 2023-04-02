@@ -408,4 +408,7 @@
     <!-- Task lock -->
     <string name="task_menu_item_unlock">Unlock</string>
     <string name="task_menu_item_lock">Lock</string>
+
+    <!-- QSB -->
+    <string name="qsb_search_hint">Search this phone and more…</string>
 </resources>
