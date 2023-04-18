@@ -31,6 +31,7 @@ import android.content.pm.LauncherApps;
 import android.os.UserHandle;
 import android.content.pm.PackageManager;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -169,6 +170,7 @@ public class LauncherAppState implements SafeCloseable {
         // we destroyed Settings activity with the back button
         // so we force a restart now if needed without waiting for home button press
         if (mNeedsRestart) {
+            Toast.makeText(mContext, R.string.restarting_launcher, Toast.LENGTH_SHORT).show();
             Utilities.restart(mContext);
         }
     }
