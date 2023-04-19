@@ -21,6 +21,8 @@ import static com.android.launcher3.util.NavigationMode.THREE_BUTTONS;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.AttributeSet;
@@ -150,6 +152,8 @@ public class MemInfoView extends TextView {
         String text = String.format(mMemInfoText,
             unitConvert(availMemMiB, false), unitConvert(totalMemMiB, true));
         setText(text);
+        setTypeface(Typeface.create("sans-serif", Typeface.NORMAL));
+        setTextColor(Color.WHITE);
     }
 
     public void setListener(Context context) {
