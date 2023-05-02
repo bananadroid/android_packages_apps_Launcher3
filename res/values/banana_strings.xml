@@ -289,7 +289,7 @@
     <!-- About info -->
     <string name="about_app_title" translatable="false">Banana Home</string>
     <string name="about_app_subtitle">Based on AOSP Launcher3</string>
-    <string name="about_app_version">TQ2A.230305.008.C1</string>
+    <string name="about_app_version">TQ2A.230505.002</string>
     <string name="about_thanks_cat">Special thanks to</string>
     <string name="about">About</string>
     <string name="about_summary">Info about the Banana Home</string>
