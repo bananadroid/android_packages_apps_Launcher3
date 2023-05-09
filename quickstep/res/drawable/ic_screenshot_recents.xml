@@ -15,18 +15,9 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="24dp"
     android:height="24dp"
-    android:viewportWidth="20"
-    android:viewportHeight="20">
+    android:viewportWidth="24"
+    android:viewportHeight="24">
   <path
-      android:pathData="M5.8334,1.666H8.3334V3.3327H5.8334V6.666H4.1667V3.3327C4.1667,2.4122 4.9129,1.666 5.8334,1.666Z"
-      android:fillColor="?android:attr/colorAccent" />
-  <path
-      android:pathData="M4.1667,13.3327V16.666C4.1667,17.5865 4.9129,18.3327 5.8334,18.3327H8.3334V16.666H5.8334V13.3327H4.1667Z"
-      android:fillColor="?android:attr/colorAccent" />
-  <path
-      android:pathData="M14.1667,13.3327V16.666H11.6667V18.3327H14.1667C15.0872,18.3327 15.8334,17.5865 15.8334,16.666V13.3327H14.1667Z"
-      android:fillColor="?android:attr/colorAccent" />
-  <path
-      android:pathData="M15.8334,6.666V3.3327C15.8334,2.4122 15.0872,1.666 14.1667,1.666H11.6667V3.3327H14.1667V6.666H15.8334Z"
+      android:pathData="M3,19c0,1.1 0.9,2 2,2h4v-2L5,19v-4L3,15v4zM21,5c0,-1.1 -0.9,-2 -2,-2h-4v2h4v4h2L21,5zM5,5h4L9,3L5,3c-1.1,0 -2,0.9 -2,2v4h2L5,5zM21,19v-4h-2v4h-4v2h4c1.1,0 2,-0.9 2,-2z"
       android:fillColor="?android:attr/colorAccent" />
 </vector>
