@@ -31,6 +31,7 @@ import androidx.annotation.Nullable;
 
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.Insettable;
+import com.android.launcher3.Launcher;
 import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
@@ -133,6 +134,8 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
     private boolean mLens;
     private boolean mShakeClearAll;
 
+    private final Launcher mLauncher;
+
     public OverviewActionsView(Context context) {
         this(context, null);
     }
@@ -150,6 +153,7 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
         prefs.registerOnSharedPreferenceChangeListener(this);
         mShakeUtils = new ShakeUtils(context);
         mShakeClearAll = prefs.getBoolean(KEY_RECENTS_SHAKE_CLEAR_ALL, true);
+        mLauncher = Launcher.getLauncher(context);
     }
 
     @Override
@@ -192,7 +196,8 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
 
     @Override
     public void onShake(double speed) {
-        if (mCallbacks != null && mShakeClearAll) {
+        if (mCallbacks != null && mShakeClearAll &&
+                mLauncher.getOverviewPanel().getVisibility() == View.VISIBLE) {
             VibratorWrapper.INSTANCE.get(getContext()).vibrate(VibratorWrapper.EFFECT_CLICK);
             mCallbacks.onClearAllTasksRequested();
         }
