@@ -53,7 +53,6 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
 
     public ViewGroup mQuickspaceContent;
     public ImageView mEventSubIcon;
-    public ImageView mNowPlayingIcon;
     public TextView mEventTitleSub;
     public TextView mEventTitleSubColored;
     public TextView mGreetingsExt;
@@ -128,16 +127,14 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
             if (useAlternativeQuickspaceUI) {
                 if (mController.getEventController().isNowPlaying()) {
                     mEventSubIcon.setVisibility(View.GONE);
+                    mEventTitleSub.setOnClickListener(mController.getEventController().getAction());
                     mEventTitleSubColored.setVisibility(View.VISIBLE);
-                    mNowPlayingIcon.setVisibility(View.VISIBLE);
-                    mNowPlayingIcon.setOnClickListener(mController.getEventController().getAction());
                     mEventTitleSubColored.setText(getContext().getString(R.string.qe_now_playing_by));
                     mEventTitleSubColored.setOnClickListener(mController.getEventController().getAction());
                 } else {
                     setEventSubIcon();
                     mEventTitleSubColored.setText("");
                     mEventTitleSubColored.setVisibility(View.GONE);
-                    mNowPlayingIcon.setVisibility(View.GONE);
                 }
             } else {
                 setEventSubIcon();
@@ -147,7 +144,6 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
             mEventSubIcon.setVisibility(View.GONE);
             if (useAlternativeQuickspaceUI) {
                 mEventTitleSubColored.setVisibility(View.GONE);
-                mNowPlayingIcon.setVisibility(View.GONE);
             }
         }
         bindWeather(mWeatherContentSub, mWeatherTempSub, mWeatherIconSub);
@@ -186,7 +182,6 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         mEventTitle = (TextView) findViewById(R.id.quick_event_title);
         mEventTitleSub = (TextView) findViewById(R.id.quick_event_title_sub);
         mEventTitleSubColored = (TextView) findViewById(R.id.quick_event_title_sub_colored);
-        mNowPlayingIcon = (ImageView) findViewById(R.id.now_playing_icon_sub);
         mEventSubIcon = (ImageView) findViewById(R.id.quick_event_icon_sub);
         mWeatherIconSub = (ImageView) findViewById(R.id.quick_event_weather_icon);
         mQuickspaceContent = (ViewGroup) findViewById(R.id.quickspace_content);

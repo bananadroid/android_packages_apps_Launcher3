@@ -45,18 +45,6 @@
             launcher:keyShadowColor="?workspaceKeyShadowColor"
             launcher:keyShadowOffsetX="0.5dip" />
 
-        <ImageView
-            android:id="@+id/now_playing_icon_sub"
-            android:layout_width="24dp"
-            android:layout_height="18dp"
-            android:visibility="gone"
-            android:src="@drawable/baseline_audiotrack_24"
-            android:tint="?workspaceAccentColor"
-            android:layout_gravity="start|center_vertical"
-            android:scaleType="fitXY"
-            android:layout_weight="0.0"
-            android:paddingEnd="6dp" />
-
         <LinearLayout
             android:id="@+id/quick_event_weather_content"
             android:layout_width="wrap_content"
