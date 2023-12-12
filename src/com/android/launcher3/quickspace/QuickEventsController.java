@@ -251,8 +251,9 @@ public class QuickEventsController {
 
     public void psonalityEvent() {
         if (!mIsFirstTimeDone || mEventNowPlaying) return;
+        mEventSubIcon = 0;
 	
-	mEventTitle = Utilities.formatDateTime(mContext);
+        mEventTitle = Utilities.formatDateTime(mContext);
         mPSAMorningStr = mContext.getResources().getStringArray(R.array.quickspace_psa_morning);
         mPSAEvenStr = mContext.getResources().getStringArray(R.array.quickspace_psa_evening);
         mPSAEarlyEvenStr = mContext.getResources().getStringArray(R.array.quickspace_psa_early_evening);
@@ -313,53 +314,53 @@ public class QuickEventsController {
             mClockExt = mContext.getResources().getString(R.string.quickspace_ext_two);
         }
 
-        if (getLuckyNumber(13) <= 7) {
+        if (Utilities.isQuickspacePersonalityEnabled(mContext)) {
+            if (getLuckyNumber(13) == 7) {
+                psaLength = mPSARandomStr.length - 1;
+                mEventTitleSub = mPSARandomStr[getLuckyNumber(0, psaLength)];
+                mEventSubIcon = R.drawable.ic_quickspace_info;
+                mIsQuickEvent = true;
+            } else {
+                switch (hourOfDay) {
+                    case 5: case 6: case 7: case 8: case 9:
+                        psaLength = mPSAMorningStr.length - 1;
+                        mEventTitleSub = mPSAMorningStr[getLuckyNumber(0, psaLength)];
+                        mIsQuickEvent = true;
+                        break;
+
+                    case 19: case 20: case 21:
+                        psaLength = mPSAEvenStr.length - 1;
+                        mEventTitleSub = mPSAEvenStr[getLuckyNumber(0, psaLength)];
+                        mIsQuickEvent = true;
+                        break;
+
+                    case 16: case 17: case 18:
+                        psaLength = mPSAEarlyEvenStr.length - 1;
+                        mEventTitleSub = mPSAEarlyEvenStr[getLuckyNumber(0, psaLength)];
+                        mIsQuickEvent = true;
+                        break;
+
+                    case 12: case 13: case 14: case 15:
+                        psaLength = mPSAAfterNoonStr.length - 1;
+                        mEventTitleSub = mPSAAfterNoonStr[getLuckyNumber(0, psaLength)];
+                        mIsQuickEvent = true;
+                        break;
+
+                    case 0: case 1: case 2: case 3:
+                        psaLength = mPSAMidniteStr.length - 1;
+                        mEventTitleSub = mPSAMidniteStr[getLuckyNumber(0, psaLength)];
+                        mIsQuickEvent = true;
+                        break;
+
+                    default:
+                        mEventTitleSub = null;
+                        mIsQuickEvent = false;
+                        break;
+                }
+            }
+        } else {
+            mEventTitleSub = null;
             mIsQuickEvent = false;
-            return;
-        } else if (getLuckyNumber(13) == 7) {
-            psaLength = mPSARandomStr.length - 1;
-            mEventTitleSub = mPSARandomStr[getLuckyNumber(0, psaLength)];
-            mEventSubIcon = R.drawable.ic_quickspace_info;
-            mIsQuickEvent = true;
-            return;
-        }
-
-        mEventSubIcon = 0;
-
-        switch (hourOfDay) {
-            case 5: case 6: case 7: case 8: case 9:
-                psaLength = mPSAMorningStr.length - 1;
-                mEventTitleSub = mPSAMorningStr[getLuckyNumber(0, psaLength)];
-                mIsQuickEvent = true;
-                break;
-
-            case 19: case 20: case 21:
-                psaLength = mPSAEvenStr.length - 1;
-                mEventTitleSub = mPSAEvenStr[getLuckyNumber(0, psaLength)];
-                mIsQuickEvent = true;
-                break;
-
-            case 16: case 17: case 18:
-                psaLength = mPSAEarlyEvenStr.length - 1;
-                mEventTitleSub = mPSAEarlyEvenStr[getLuckyNumber(0, psaLength)];
-                mIsQuickEvent = true;
-                break;
-
-            case 12: case 13: case 14: case 15:
-                psaLength = mPSAAfterNoonStr.length - 1;
-                mEventTitleSub = mPSAAfterNoonStr[getLuckyNumber(0, psaLength)];
-                mIsQuickEvent = true;
-                break;
-
-            case 0: case 1: case 2: case 3:
-                psaLength = mPSAMidniteStr.length - 1;
-                mEventTitleSub = mPSAMidniteStr[getLuckyNumber(0, psaLength)];
-                mIsQuickEvent = true;
-                break;
-
-            default:
-                mIsQuickEvent = false;
-                break;
         }
     }
 
@@ -412,7 +413,7 @@ public class QuickEventsController {
     }
 
     public boolean isNowPlaying() {
-        return mPlayingActive;
+        return mPlayingActive && Utilities.isQuickspaceNowPlaying(mContext);
     }
 
     public void onPause() {
