@@ -128,20 +128,20 @@
             android:persistent="true"/>
 
         <SwitchPreference
-            android:key="pref_quickspace_psonality"
-            android:title="@string/quickspace_psa_title"
-            android:summary="@string/quickspace_psa_summary"
-            android:dependency="pref_show_quickspace"
-            android:defaultValue="true"
-            android:persistent="true" />
-
-        <SwitchPreference
             android:key="pref_show_alt_quickspace"
             android:title="@string/quickspace_alternate_style_title"
             android:summary="@string/quickspace_alternate_style_summary"
             android:dependency="pref_show_quickspace"
             android:defaultValue="false"
             android:persistent="true"/>
+
+        <SwitchPreference
+            android:key="pref_quickspace_psonality"
+            android:title="@string/quickspace_psa_title"
+            android:summary="@string/quickspace_psa_summary"
+            android:dependency="pref_show_quickspace"
+            android:defaultValue="true"
+            android:persistent="true" />
 
         <SwitchPreference
             android:key="pref_quickspace_np"
@@ -159,13 +159,15 @@
             android:defaultValue="true"
             android:persistent="true" />
 
-        <SwitchPreference
-            android:key="pref_quickspace_weather_city"
-            android:title="@string/quick_event_weather_city_title"
-            android:summary="@string/quick_event_weather_city_summary"
-            android:dependency="pref_quickspace_weather"
-            android:defaultValue="false"
-            android:persistent="true" />
+        <Preference
+            android:title="@string/weather_settings_title"
+            android:summary="@string/weather_settings_summary"
+            android:dependency="pref_quickspace_weather">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="org.omnirom.omnijaws"
+                android:targetClass="org.omnirom.omnijaws.SettingsActivity" />
+        </Preference>
 
         <SwitchPreference
             android:key="pref_quickspace_weather_text"
@@ -173,6 +175,14 @@
             android:summary="@string/quick_event_weather_text_summary"
             android:dependency="pref_quickspace_weather"
             android:defaultValue="true"
+            android:persistent="true" />
+
+        <SwitchPreference
+            android:key="pref_quickspace_weather_city"
+            android:title="@string/quick_event_weather_city_title"
+            android:summary="@string/quick_event_weather_city_summary"
+            android:dependency="pref_quickspace_weather"
+            android:defaultValue="false"
             android:persistent="true" />
 
     </PreferenceCategory>
