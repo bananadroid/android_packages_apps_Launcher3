@@ -161,8 +161,7 @@
 
         <Preference
             android:title="@string/weather_settings_title"
-            android:summary="@string/weather_settings_summary"
-            android:dependency="pref_quickspace_weather">
+            android:summary="@string/weather_settings_summary">
             <intent
                 android:action="android.intent.action.MAIN"
                 android:targetPackage="org.omnirom.omnijaws"
